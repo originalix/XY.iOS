@@ -14,6 +14,11 @@
 
 @implementation SGHeartTable
 
+//- (instancetype)initWithMeasureTime:(NSString *)time {
+//    
+//}
+
+//2017-06-30 10:44:59
 @end
 
 @implementation SGHeartOriginTable

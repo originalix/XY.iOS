@@ -21,6 +21,8 @@
 @property (nonatomic, copy) NSString *created_at;
 @property (nonatomic, copy) NSString *updated_at;
 
+- (instancetype)initWithMeasureTime:(NSString *)time;
+
 @end
 
 @interface SGHeartOriginTable : NSObject
