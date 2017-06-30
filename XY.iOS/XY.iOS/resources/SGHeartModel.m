@@ -50,7 +50,21 @@
     for (int i = 0; i < [data length]; i++) {
         printf("byteArr = %d\n",byteArr[i]);
         NSInteger timestamp = baseTimestamp + (i * 300);
-        printf("byte Timestamp = %ld", (long)timestamp);
+        printf("byte Timestamp = %ld\n", (long)timestamp);
+        NSString *date = [SGHeartHelper convertToDateStrWithTimestamp:timestamp];
+        NSLog(@"byte date = %@", date);
+    }
+}
+
+- (void)insertToDetailsTableWithData:(NSInteger)data index:(NSInteger)index baseTimestamp:(NSInteger)baseTimestamp {
+    if (data < 1) {
+        return;
+    }
+    NSInteger timestamp = baseTimestamp + (index * 300);
+    NSString *sql = [NSString stringWithFormat:@"timestamp = '%ld'", timestamp];
+    NSArray *result = [WHC_ModelSqlite query:[SGHeartDetailsTable class] where: sql];
+    if (result.count > 0) {
+        return;
     }
 }
 

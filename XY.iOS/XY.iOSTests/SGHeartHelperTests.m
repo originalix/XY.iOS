@@ -71,7 +71,12 @@
     for(int i=0;i<[data length];i++)
         printf("testByte = %d\n",testByte[i]);
     XCTAssertTrue(check, @"十六进制转化错误");
-    
+}
+
+- (void)testTimestampToStr {
+    NSString *str = [SGHeartHelper convertToDateStrWithTimestamp:1498795200];
+    BOOL check = [str isEqualToString:@"2017-06-30 12:00:00"];
+    XCTAssertTrue(check, @"时间戳转化函数错误");
 }
 
 @end
