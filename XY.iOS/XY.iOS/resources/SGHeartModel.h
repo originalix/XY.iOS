@@ -21,6 +21,7 @@
 @property (nonatomic, copy) NSString *updated_at;
 
 - (instancetype)initWithMeasureTime:(NSString *)time;
++ (BOOL)checkRepeatDataWithTime:(NSString *)time;
 
 @end
 
@@ -35,6 +36,7 @@
 
 - (instancetype)initWithHeartID:(NSInteger)heartID srcData:(NSString *)srcData date:(NSString *)date;
 - (void)convertSrcDataToModel;
++ (BOOL)checkRepeatDataWithTime:(NSString *)time;
 
 @end
 

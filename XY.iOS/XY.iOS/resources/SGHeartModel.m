@@ -25,7 +25,15 @@
     return self;
 }
 
-//2017-06-30 10:44:59
++ (BOOL)checkRepeatDataWithTime:(NSString *)time {
+    NSString *sql = [NSString stringWithFormat:@"date = '%@'", [SGHeartHelper formatMeasureTime:time]];
+    NSArray *results = [WHC_ModelSqlite query:[SGHeartTable class] where: sql];
+    if (results.count > 0) {
+        return YES;
+    }
+    return NO;
+}
+
 @end
 
 @implementation SGHeartOriginTable
@@ -67,6 +75,15 @@
     SGHeartDetailsTable *detailsModel = [[SGHeartDetailsTable alloc] initWithHeartID:self.heartID heart:data time:date timestamp:timestamp];
     [WHC_ModelSqlite insert:detailsModel];
     NSLog(@"数据库插入数据 -> heartID = %ld, data = %ld, time = %@, timestamp = %ld", self.heartID, (long)data, date, timestamp);
+}
+
++ (BOOL)checkRepeatDataWithTime:(NSString *)time {
+    NSString *sql = [NSString stringWithFormat:@"date = '%@'", time];
+    NSArray *results = [WHC_ModelSqlite query:[SGHeartOriginTable class] where: sql];
+    if (results.count > 0) {
+        return YES;
+    }
+    return NO;
 }
 
 @end
@@ -117,7 +134,7 @@
     NSString *queryHeartTableSql = [NSString stringWithFormat:@"date = '%@'", date];
     NSArray *results = [WHC_ModelSqlite query:[SGHeartTable class] where: queryHeartTableSql];
     if (!results.count) {
-        return 0;
+        return [NSNumber numberWithInteger:0];
     }
     SGHeartTable *heartModel = [results firstObject];
     NSString *detailsSql = [NSString stringWithFormat:@"WHERE heartID = '%ld'", heartModel._id];
