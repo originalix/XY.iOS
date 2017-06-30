@@ -86,4 +86,17 @@
     return self;
 }
 
++ (NSArray *)getDataWithDate:(NSString *)date {
+    NSArray *detailsResults = [NSArray array];
+    NSString *queryHeartTableSql = [NSString stringWithFormat:@"date = '%@'", date];
+    NSArray *results = [WHC_ModelSqlite query:[SGHeartTable class] where: queryHeartTableSql];
+    if (!results.count) {
+        return detailsResults;
+    }
+    SGHeartTable *heartModel = [results firstObject];
+    NSString *detailsSql = [NSString stringWithFormat:@"heartID = '%ld'", heartModel._id];
+    detailsResults = [WHC_ModelSqlite query:[SGHeartDetailsTable class] where:detailsSql order:@"by _id asc"];
+    return detailsResults;
+}
+
 @end

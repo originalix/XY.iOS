@@ -28,6 +28,8 @@
 //    [WHC_ModelSqlite removeModel:[SGHeartTable class]];
 //    [WHC_ModelSqlite removeModel:[SGHeartOriginTable class]];
 //    [WHC_ModelSqlite removeModel:[SGHeartDetailsTable class]];
+    NSArray *array = [SGHeartDetailsTable getDataWithDate:@"2017-06-30"];
+    NSLog(@"%@", array);
     NSLog(@"%@", [WHC_ModelSqlite localPathWithModel:[SGHeartTable class]]);
 }
 

@@ -47,5 +47,6 @@
 @property (nonatomic, copy) NSString *updated_at;
 
 - (instancetype)initWithHeartID:(NSInteger)heartID heart:(NSInteger)heart time:(NSString *)time timestamp:(NSInteger)timestamp;
++ (NSArray *)getDataWithDate:(NSString *)date;
 
 @end
