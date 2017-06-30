@@ -14,6 +14,7 @@
 		567B20B11F0604A200B970CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B20AF1F0604A200B970CB /* LaunchScreen.storyboard */; };
 		567B20BC1F0604A200B970CB /* XY_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20BB1F0604A200B970CB /* XY_iOSTests.swift */; };
 		567B20C71F0604A200B970CB /* XY_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20C61F0604A200B970CB /* XY_iOSUITests.swift */; };
+		567B20D81F06067700B970CB /* SGHeartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20D71F06067700B970CB /* SGHeartModel.m */; };
 		A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */; };
 		EDD47BCA96D8F15E1024F496 /* Pods_XY_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,10 @@
 		567B20C21F0604A200B970CB /* XY.iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XY.iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		567B20C61F0604A200B970CB /* XY_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XY_iOSUITests.swift; sourceTree = "<group>"; };
 		567B20C81F0604A200B970CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		567B20D51F06067700B970CB /* XY.iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XY.iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		567B20D61F06067700B970CB /* SGHeartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHeartModel.h; sourceTree = "<group>"; };
+		567B20D71F06067700B970CB /* SGHeartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartModel.m; sourceTree = "<group>"; };
+		567B20D91F0606A400B970CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CD685FCC1C835A141CDD9F60 /* Pods-XY.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XY_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,8 +134,10 @@
 		567B20A51F0604A200B970CB /* XY.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				567B20D41F06064F00B970CB /* resources */,
 				567B20A61F0604A200B970CB /* AppDelegate.swift */,
 				567B20A81F0604A200B970CB /* ViewController.swift */,
+				567B20D91F0606A400B970CB /* PrefixHeader.pch */,
 				567B20AA1F0604A200B970CB /* Main.storyboard */,
 				567B20AD1F0604A200B970CB /* Assets.xcassets */,
 				567B20AF1F0604A200B970CB /* LaunchScreen.storyboard */,
@@ -155,6 +162,16 @@
 				567B20C81F0604A200B970CB /* Info.plist */,
 			);
 			path = XY.iOSUITests;
+			sourceTree = "<group>";
+		};
+		567B20D41F06064F00B970CB /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				567B20D61F06067700B970CB /* SGHeartModel.h */,
+				567B20D71F06067700B970CB /* SGHeartModel.m */,
+				567B20D51F06067700B970CB /* XY.iOS-Bridging-Header.h */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +249,7 @@
 					567B20A21F0604A200B970CB = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = R92MB35B2J;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					567B20B61F0604A200B970CB = {
@@ -395,6 +413,7 @@
 			files = (
 				567B20A91F0604A200B970CB /* ViewController.swift in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
+				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,12 +566,18 @@
 			baseConfigurationReference = 53C60691B6620450D1A44F9C /* Pods-XY.iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XY.iOS/PrefixHeader.pch";
 				INFOPLIST_FILE = XY.iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lix.XY-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XY.iOS/resources/XY.iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -561,12 +586,17 @@
 			baseConfigurationReference = 403ADC937E724FCC7A3BD248 /* Pods-XY.iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XY.iOS/PrefixHeader.pch";
 				INFOPLIST_FILE = XY.iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lix.XY-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XY.iOS/resources/XY.iOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
@@ -649,6 +679,7 @@
 				567B20CD1F0604A200B970CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		567B20CE1F0604A200B970CB /* Build configuration list for PBXNativeTarget "XY.iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -657,6 +688,7 @@
 				567B20D01F0604A200B970CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		567B20D11F0604A200B970CB /* Build configuration list for PBXNativeTarget "XY.iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -665,6 +697,7 @@
 				567B20D31F0604A200B970CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

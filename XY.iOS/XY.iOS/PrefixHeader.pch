@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  XY.iOS
+//
+//  Created by Lix on 2017/6/30.
+//  Copyright © 2017年 Lix. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "WHC_ModelSqlite.h"
+
+#endif /* PrefixHeader_pch */
