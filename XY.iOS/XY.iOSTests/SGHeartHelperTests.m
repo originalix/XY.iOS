@@ -39,8 +39,8 @@
 
 
 - (void)testFormatMeasureTime {
-    NSString *dataStr = [SGHeartHelper formatMeasureTime:@"2017-06-30 10:44:59"];
-    BOOL check = [dataStr isEqualToString:@"2017-06-30"];
+    NSString *dataStr = [SGHeartHelper formatMeasureTime:@"2017-12-31 23:59:59"];
+    BOOL check = [dataStr isEqualToString:@"2017-12-31"];
     XCTAssertTrue(check, @"时间验证失败");
 }
 
