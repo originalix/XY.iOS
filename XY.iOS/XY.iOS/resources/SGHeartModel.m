@@ -19,6 +19,8 @@
     self = [super init];
     if (self) {
         self.date = [SGHeartHelper formatMeasureTime:time];
+        self.created_at = [SGHeartHelper formatCurrentTime];
+        self.updated_at = [SGHeartHelper formatCurrentTime];
     }
     return self;
 }

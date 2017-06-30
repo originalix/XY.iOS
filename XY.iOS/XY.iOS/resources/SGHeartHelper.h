@@ -19,10 +19,11 @@
  */
 + (NSString *)formatMeasureTime:(NSString *)time;
 
-+ (NSString *)formatCurrentTime;
+/**
+ 格式化输出当天的时间 yyyy-MM-dd HH:mm:ss
 
-//BASE
-+ (NSString *)convertCurrentDate:(NSString *)format;
-+ (NSString *)convertTimeBeforeFormat:(NSString *)beforeFormat convertFormat:(NSString *)converFormat timeStr:(NSString *)time;
+ @return String
+ */
++ (NSString *)formatCurrentTime;
 
 @end

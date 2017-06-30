@@ -50,4 +50,10 @@
     XCTAssertTrue(check, @"时间验证失败");
 }
 
+- (void)testCurrentCovertFunc {
+    NSString *test = [SGHeartHelper convertCurrentDate:@"yyyy-MM-dd-HH-mm-ss"];
+    BOOL check = test.length > 10;
+    XCTAssertTrue(check, @"时间验证失败");
+}
+
 @end

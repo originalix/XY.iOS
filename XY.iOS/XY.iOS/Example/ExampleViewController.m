@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self testInsertDB];
     [self testGetFromDB];
     
     NSLog(@"%@", [WHC_ModelSqlite localPathWithModel:[SGHeartTable class]]);
@@ -28,10 +29,7 @@
 }
 
 - (void)testInsertDB {
-    SGHeartTable *t1 = [[SGHeartTable alloc] init];
-    t1.date = @"2017-06-30";
-    t1.created_at = @"2017-06-30";
-    t1.updated_at = @"2017-06-30";
+    SGHeartTable *t1 = [[SGHeartTable alloc] initWithMeasureTime:@"2017-06-30 10:44:59"];
     [WHC_ModelSqlite insert:t1];
 }
 
