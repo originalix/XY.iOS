@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class SGHeartModel, SGHeartTable, SGHeartOriginTable, SGHeartDetailsTable;
+
 @interface SGHeartModel : NSObject
 
 @end
