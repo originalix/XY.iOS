@@ -7,6 +7,7 @@
 //
 
 #import "SGHeartModel.h"
+#import "SGHeartHelper.h"
 
 @implementation SGHeartModel
 
@@ -14,9 +15,13 @@
 
 @implementation SGHeartTable
 
-//- (instancetype)initWithMeasureTime:(NSString *)time {
-//    
-//}
+- (instancetype)initWithMeasureTime:(NSString *)time {
+    self = [super init];
+    if (self) {
+        self.date = [SGHeartHelper formatMeasureTime:time];
+    }
+    return self;
+}
 
 //2017-06-30 10:44:59
 @end

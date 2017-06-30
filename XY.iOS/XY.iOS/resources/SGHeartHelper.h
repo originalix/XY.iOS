@@ -10,6 +10,15 @@
 
 @interface SGHeartHelper : NSObject
 
+
+/**
+ 将测量时间转化成 yyyy-MM-dd格式输出
+
+ @param time MeasureTime
+ @return String
+ */
 + (NSString *)formatMeasureTime:(NSString *)time;
+
++ (NSString *)formatCurrentTime;
 
 @end

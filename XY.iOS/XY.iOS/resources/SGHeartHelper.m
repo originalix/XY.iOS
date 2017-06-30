@@ -19,5 +19,27 @@
     return dateStr;
 }
 
++ (NSString *)formatCurrentTime {
+    return [SGHeartHelper convertCurrentDate:@"yyyy-MM-dd HH:mm:ss"];
+}
+
++ (NSString *)convertTimeBeforeFormat:(NSString *)beforeFormat convertFormat:(NSString *)converFormat timeStr:(NSString *)time {
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    dateformatter.dateFormat = beforeFormat;
+    NSDate *date = [dateformatter dateFromString:time];
+    dateformatter.dateFormat = converFormat;
+    NSString *dateStr = [dateformatter stringFromDate:date];
+    return dateStr;
+}
+
++ (NSString *)convertCurrentDate:(NSString *)format {
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    dateformatter.dateFormat = format;
+    NSString *dateStr = [dateformatter stringFromDate:[NSDate date]];
+    return dateStr;
+}
+
+
+
 @end
 //2017-06-30 10:44:59
