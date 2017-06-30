@@ -23,6 +23,14 @@
     return [SGHeartHelper convertCurrentDate:@"yyyy-MM-dd HH:mm:ss"];
 }
 
++ (NSInteger)convertToTimestamp:(NSString *)time format:(NSString *)format {
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    dateformatter.dateFormat = format;
+    NSDate *date = [dateformatter dateFromString:time];
+    NSInteger timestamp = [date timeIntervalSince1970];
+    return timestamp;
+}
+
 + (NSString *)convertTimeBeforeFormat:(NSString *)beforeFormat convertFormat:(NSString *)converFormat timeStr:(NSString *)time {
     NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
     dateformatter.dateFormat = beforeFormat;

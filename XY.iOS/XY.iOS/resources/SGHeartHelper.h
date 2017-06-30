@@ -26,4 +26,13 @@
  */
 + (NSString *)formatCurrentTime;
 
+/**
+ 转换时间成时间戳
+
+ @param time 时间
+ @param format 时间格式
+ @return Integer
+ */
++ (NSInteger)convertToTimestamp:(NSString *)time format:(NSString *)format;
+
 @end
