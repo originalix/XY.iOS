@@ -8,6 +8,7 @@
 
 #import "ExampleViewController.h"
 #import "SGHeartModel.h"
+#import "LogObjcConst.h"
 
 @interface ExampleViewController ()
 
@@ -17,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // [self testDB];
+    [self testGetFromDB];
     
     NSLog(@"%@", [WHC_ModelSqlite localPathWithModel:[SGHeartTable class]]);
 }
@@ -26,12 +27,19 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)testDB {
+- (void)testInsertDB {
     SGHeartTable *t1 = [[SGHeartTable alloc] init];
     t1.date = @"2017-06-30";
     t1.created_at = @"2017-06-30";
     t1.updated_at = @"2017-06-30";
     [WHC_ModelSqlite insert:t1];
+}
+
+- (void)testGetFromDB {
+    NSArray *array = [WHC_ModelSqlite query:[SGHeartTable class]];
+    for (SGHeartTable *model in array) {
+        NSLog(@"%@", model);
+    }
 }
 
 @end
