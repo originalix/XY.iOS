@@ -18,7 +18,6 @@
 
 @property (nonatomic, assign) NSInteger _id;
 @property (nonatomic, copy) NSString *date;
-@property (nonatomic, copy) NSString *created_at;
 @property (nonatomic, copy) NSString *updated_at;
 
 - (instancetype)initWithMeasureTime:(NSString *)time;
@@ -27,11 +26,14 @@
 
 @interface SGHeartOriginTable : NSObject
 
+@property (nonatomic, assign) NSInteger _id;
+@property (nonatomic, assign) NSInteger heartID;
 @property (nonatomic, copy) NSString *srcData;
 @property (nonatomic, copy) NSString *date;
 @property (nonatomic, assign) NSInteger timestamp;
-@property (nonatomic, copy) NSString *created_at;
 @property (nonatomic, copy) NSString *updated_at;
+
+- (instancetype)initWithHeartID:(NSInteger)heartID srcData:(NSString *)srcData date:(NSString *)date;
 
 @end
 
@@ -41,6 +43,6 @@
 @property (nonatomic, assign) NSInteger heart;
 @property (nonatomic, copy) NSString *time;
 @property (nonatomic, copy) NSString *timestamp;
-@property (nonatomic, copy) NSString *created_at;
+@property (nonatomic, copy) NSString *updated_at;
 
 @end

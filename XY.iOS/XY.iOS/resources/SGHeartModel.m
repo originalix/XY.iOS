@@ -19,9 +19,9 @@
     self = [super init];
     if (self) {
         self.date = [SGHeartHelper formatMeasureTime:time];
-        self.created_at = [SGHeartHelper formatCurrentTime];
         self.updated_at = [SGHeartHelper formatCurrentTime];
     }
+    
     return self;
 }
 
@@ -29,6 +29,18 @@
 @end
 
 @implementation SGHeartOriginTable
+
+- (instancetype)initWithHeartID:(NSInteger)heartID srcData:(NSString *)srcData date:(NSString *)date {
+    self = [super init];
+    if (self) {
+        self.heartID = heartID;
+        self.srcData = srcData;
+        self.date = date;
+        self.updated_at = [SGHeartHelper formatCurrentTime];
+    }
+    
+    return self;
+}
 
 @end
 
