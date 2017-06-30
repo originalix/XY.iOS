@@ -40,10 +40,12 @@
 
 @interface SGHeartDetailsTable : NSObject
 
-@property (nonatomic, assign) NSInteger dataID;
+@property (nonatomic, assign) NSInteger heartID;
 @property (nonatomic, assign) NSInteger heart;
 @property (nonatomic, copy) NSString *time;
-@property (nonatomic, copy) NSString *timestamp;
+@property (nonatomic, assign) NSInteger timestamp;
 @property (nonatomic, copy) NSString *updated_at;
+
+- (instancetype)initWithHeartID:(NSInteger)heartID heart:(NSInteger)heart time:(NSString *)time timestamp:(NSInteger)timestamp;
 
 @end

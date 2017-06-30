@@ -49,10 +49,7 @@
     NSInteger baseTimestamp = [SGHeartHelper convertToTimestamp:self.date format:@"yyyy-MM-dd HH:mm:ss"];
     for (int i = 0; i < [data length]; i++) {
         printf("byteArr = %d\n",byteArr[i]);
-        NSInteger timestamp = baseTimestamp + (i * 300);
-        printf("byte Timestamp = %ld\n", (long)timestamp);
-        NSString *date = [SGHeartHelper convertToDateStrWithTimestamp:timestamp];
-        NSLog(@"byte date = %@", date);
+        [self insertToDetailsTableWithData:byteArr[i] index:i baseTimestamp:baseTimestamp];
     }
 }
 
@@ -66,10 +63,27 @@
     if (result.count > 0) {
         return;
     }
+    NSString *date = [SGHeartHelper convertToDateStrWithTimestamp:timestamp];
+    SGHeartDetailsTable *detailsModel = [[SGHeartDetailsTable alloc] initWithHeartID:self.heartID heart:data time:date timestamp:timestamp];
+    [WHC_ModelSqlite insert:detailsModel];
+    NSLog(@"数据库插入数据 -> heartID = %ld, data = %ld, time = %@, timestamp = %ld", self.heartID, (long)data, date, timestamp);
 }
 
 @end
 
 @implementation SGHeartDetailsTable
+
+- (instancetype)initWithHeartID:(NSInteger)heartID heart:(NSInteger)heart time:(NSString *)time timestamp:(NSInteger)timestamp {
+    self = [super init];
+    if (self) {
+        self.heartID = heartID;
+        self.heart = heart;
+        self.time = time;
+        self.timestamp = timestamp;
+        self.updated_at = [SGHeartHelper formatCurrentTime];
+    }
+    
+    return self;
+}
 
 @end
