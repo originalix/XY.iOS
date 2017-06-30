@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.4.0)
+  - CuteLog (0.0.2):
+    - SSZipArchive (~> 1.8.1)
+  - LNTS_HttpClient (0.1.0):
+    - Alamofire (~> 4.4.0)
+    - Reachability (~> 3.2)
+    - SwiftyJSON (~> 3.1.4)
+  - Reachability (3.2)
+  - SSZipArchive (1.8.1)
+  - SwiftyJSON (3.1.4)
+  - WHC_ModelSqliteKit (1.2.6):
+    - WHC_ModelSqliteKit/standard (= 1.2.6)
+  - WHC_ModelSqliteKit/standard (1.2.6)
+
+DEPENDENCIES:
+  - CuteLog
+  - LNTS_HttpClient (~> 0.1.0)
+  - WHC_ModelSqliteKit
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CuteLog: f0113ec512f2ee06aba99408b4b1764d6c24cad3
+  LNTS_HttpClient: 327cc4702dd6121a76a77ad685b4dce13cb8536f
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  WHC_ModelSqliteKit: 8600471b427856c5babe389686297d97ed94f5d8
+
+PODFILE CHECKSUM: 1e79c6f3005faf925ab7330ccb9de79e76db5109
+
+COCOAPODS: 1.1.1
