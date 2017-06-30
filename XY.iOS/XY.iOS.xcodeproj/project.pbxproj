@@ -17,6 +17,7 @@
 		567B20D81F06067700B970CB /* SGHeartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20D71F06067700B970CB /* SGHeartModel.m */; };
 		567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20DC1F06093000B970CB /* ExampleViewController.m */; };
 		567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20DF1F061A2500B970CB /* SGHeartHelper.m */; };
+		567B20E31F061BC800B970CB /* SGHeartHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20E21F061BC800B970CB /* SGHeartHelperTests.m */; };
 		A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */; };
 		EDD47BCA96D8F15E1024F496 /* Pods_XY_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,8 @@
 		567B20DC1F06093000B970CB /* ExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
 		567B20DE1F061A2500B970CB /* SGHeartHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHeartHelper.h; sourceTree = "<group>"; };
 		567B20DF1F061A2500B970CB /* SGHeartHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartHelper.m; sourceTree = "<group>"; };
+		567B20E11F061BC800B970CB /* XY.iOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XY.iOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		567B20E21F061BC800B970CB /* SGHeartHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartHelperTests.m; sourceTree = "<group>"; };
 		CD685FCC1C835A141CDD9F60 /* Pods-XY.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XY_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,7 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				567B20BB1F0604A200B970CB /* XY_iOSTests.swift */,
+				567B20E21F061BC800B970CB /* SGHeartHelperTests.m */,
 				567B20BD1F0604A200B970CB /* Info.plist */,
+				567B20E11F061BC800B970CB /* XY.iOSTests-Bridging-Header.h */,
 			);
 			path = XY.iOSTests;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 					567B20B61F0604A200B970CB = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = R92MB35B2J;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 567B20A21F0604A200B970CB;
 					};
@@ -441,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567B20E31F061BC800B970CB /* SGHeartHelperTests.m in Sources */,
 				567B20BC1F0604A200B970CB /* XY_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,11 +635,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
 				INFOPLIST_FILE = XY.iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lix.XY-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XY.iOSTests/XY.iOSTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XY.iOS.app/XY.iOS";
 			};
@@ -644,11 +654,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
 				INFOPLIST_FILE = XY.iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lix.XY-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XY.iOSTests/XY.iOSTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XY.iOS.app/XY.iOS";
 			};

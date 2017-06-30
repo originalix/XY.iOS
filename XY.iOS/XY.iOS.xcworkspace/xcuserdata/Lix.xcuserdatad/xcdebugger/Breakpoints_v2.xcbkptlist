@@ -2,4 +2,84 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XY.iOSTests/SGHeartHelperTests.m"
+            timestampString = "520494174.291627"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-testFormatMeasureTime"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SGHeartHelperTests testFormatMeasureTime]"
+                  moduleName = "XY.iOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/WorkDemo/XY.iOS/XY.iOS/XY.iOSTests/SGHeartHelperTests.m"
+                  timestampString = "520494188.339122"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "103">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SGHeartHelperTests testFormatMeasureTime]"
+                  moduleName = "XY.iOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/WorkDemo/XY.iOS/XY.iOS/XY.iOSTests/SGHeartHelperTests.m"
+                  timestampString = "520494188.342788"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "477">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SGHeartHelperTests testFormatMeasureTime]"
+                  moduleName = "XY.iOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/WorkDemo/XY.iOS/XY.iOS/XY.iOSTests/SGHeartHelperTests.m"
+                  timestampString = "520494188.34481"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "547">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SGHeartHelperTests testFormatMeasureTime]"
+                  moduleName = "XY.iOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lix/Documents/WorkDemo/XY.iOS/XY.iOS/XY.iOSTests/SGHeartHelperTests.m"
+                  timestampString = "520494188.346715"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "669">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
