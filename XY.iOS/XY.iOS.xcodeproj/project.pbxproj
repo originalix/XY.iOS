@@ -15,6 +15,7 @@
 		567B20BC1F0604A200B970CB /* XY_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20BB1F0604A200B970CB /* XY_iOSTests.swift */; };
 		567B20C71F0604A200B970CB /* XY_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20C61F0604A200B970CB /* XY_iOSUITests.swift */; };
 		567B20D81F06067700B970CB /* SGHeartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20D71F06067700B970CB /* SGHeartModel.m */; };
+		567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20DC1F06093000B970CB /* ExampleViewController.m */; };
 		A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */; };
 		EDD47BCA96D8F15E1024F496 /* Pods_XY_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 		567B20D61F06067700B970CB /* SGHeartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHeartModel.h; sourceTree = "<group>"; };
 		567B20D71F06067700B970CB /* SGHeartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartModel.m; sourceTree = "<group>"; };
 		567B20D91F0606A400B970CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		567B20DB1F06093000B970CB /* ExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
+		567B20DC1F06093000B970CB /* ExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
 		CD685FCC1C835A141CDD9F60 /* Pods-XY.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XY_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +137,7 @@
 		567B20A51F0604A200B970CB /* XY.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				567B20DA1F06091300B970CB /* Example */,
 				567B20D41F06064F00B970CB /* resources */,
 				567B20A61F0604A200B970CB /* AppDelegate.swift */,
 				567B20A81F0604A200B970CB /* ViewController.swift */,
@@ -172,6 +176,15 @@
 				567B20D51F06067700B970CB /* XY.iOS-Bridging-Header.h */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		567B20DA1F06091300B970CB /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				567B20DB1F06093000B970CB /* ExampleViewController.h */,
+				567B20DC1F06093000B970CB /* ExampleViewController.m */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				567B20A91F0604A200B970CB /* ViewController.swift in Sources */,
+				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,
 			);
