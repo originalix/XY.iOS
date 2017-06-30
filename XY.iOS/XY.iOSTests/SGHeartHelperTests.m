@@ -62,4 +62,16 @@
     XCTAssertTrue(check, @"时间戳转化函数错误");
 }
 
+- (void)testStringToData {
+    NSString *str = @"6555513e494e54544a41463f4258575a";
+    NSData *data = [SGHeartHelper convertHexStrToData:str];
+    BOOL check = data != nil;
+    
+    Byte *testByte = (Byte *)[data bytes];
+    for(int i=0;i<[data length];i++)
+        printf("testByte = %d\n",testByte[i]);
+    XCTAssertTrue(check, @"十六进制转化错误");
+    
+}
+
 @end
