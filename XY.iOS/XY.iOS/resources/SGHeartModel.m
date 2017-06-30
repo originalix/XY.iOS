@@ -99,4 +99,30 @@
     return detailsResults;
 }
 
++ (NSNumber *)getMaxHeartWithDate:(NSString *)date {
+    return [SGHeartDetailsTable getNumberWithType:1 Date:date];
+}
+
++ (NSNumber *)getMinHeartWithDate:(NSString *)date {
+    return [SGHeartDetailsTable getNumberWithType:2 Date:date];
+}
+
++ (NSNumber *)getNumberWithType:(NSInteger)type Date:(NSString *)date {
+    NSString *typeStr = @"max(heart)";
+    if (type == 1) {
+        typeStr = @"max(heart)";
+    } else {
+        typeStr = @"min(heart)";
+    }
+    NSString *queryHeartTableSql = [NSString stringWithFormat:@"date = '%@'", date];
+    NSArray *results = [WHC_ModelSqlite query:[SGHeartTable class] where: queryHeartTableSql];
+    if (!results.count) {
+        return 0;
+    }
+    SGHeartTable *heartModel = [results firstObject];
+    NSString *detailsSql = [NSString stringWithFormat:@"WHERE heartID = '%ld'", heartModel._id];
+    NSNumber *number = [WHC_ModelSqlite query:[SGHeartDetailsTable class] func:typeStr condition: detailsSql];
+    return number;
+}
+
 @end

@@ -30,6 +30,8 @@
 //    [WHC_ModelSqlite removeModel:[SGHeartDetailsTable class]];
     NSArray *array = [SGHeartDetailsTable getDataWithDate:@"2017-06-30"];
     NSLog(@"%@", array);
+    NSNumber *num = [SGHeartDetailsTable getMaxHeartWithDate:@"2017-06-30"];
+    NSLog(@"%@", num);
     NSLog(@"%@", [WHC_ModelSqlite localPathWithModel:[SGHeartTable class]]);
 }
 

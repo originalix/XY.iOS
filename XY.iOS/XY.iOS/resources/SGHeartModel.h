@@ -48,5 +48,7 @@
 
 - (instancetype)initWithHeartID:(NSInteger)heartID heart:(NSInteger)heart time:(NSString *)time timestamp:(NSInteger)timestamp;
 + (NSArray *)getDataWithDate:(NSString *)date;
++ (NSNumber *)getMaxHeartWithDate:(NSString *)date;
++ (NSNumber *)getMinHeartWithDate:(NSString *)date;
 
 @end
