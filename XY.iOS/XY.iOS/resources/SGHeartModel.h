@@ -34,6 +34,7 @@
 @property (nonatomic, copy) NSString *updated_at;
 
 - (instancetype)initWithHeartID:(NSInteger)heartID srcData:(NSString *)srcData date:(NSString *)date;
+- (void)convertSrcDataToModel;
 
 @end
 

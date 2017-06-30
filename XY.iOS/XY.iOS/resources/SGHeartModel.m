@@ -36,6 +36,7 @@
         self.heartID = heartID;
         self.srcData = srcData;
         self.date = date;
+        self.timestamp = [SGHeartHelper convertToTimestamp:date format:@"yyyy-MM-dd HH:mm:ss"];
         self.updated_at = [SGHeartHelper formatCurrentTime];
     }
     

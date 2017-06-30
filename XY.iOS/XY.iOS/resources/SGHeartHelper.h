@@ -35,4 +35,20 @@
  */
 + (NSInteger)convertToTimestamp:(NSString *)time format:(NSString *)format;
 
+/**
+ 十六进制字符串转化成NSData对象
+
+ @param str 十六进制字符串
+ @return Data
+ */
++ (NSData *)convertHexStrToData:(NSString *)str;
+
+/**
+ NSData对象转化为十六进制字符串
+
+ @param data NSData obj
+ @return String
+ */
++ (NSString *)convertDataToHexStr:(NSData *)data;
+
 @end
