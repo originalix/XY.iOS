@@ -44,16 +44,22 @@
     XCTAssertTrue(check, @"时间验证失败");
 }
 
-- (void)testBaseFormatFunc {
-    NSString *test = [SGHeartHelper convertTimeBeforeFormat:@"yyyy-MM-dd HH:mm:ss" convertFormat:@"HH-mm" timeStr:@"2016-12-01 12:21:21"];
-    BOOL check = [test isEqualToString:@"12-21"];
-    XCTAssertTrue(check, @"时间验证失败");
-}
+//- (void)testBaseFormatFunc {
+//    NSString *test = [SGHeartHelper convertTimeBeforeFormat:@"yyyy-MM-dd HH:mm:ss" convertFormat:@"HH-mm" timeStr:@"2016-12-01 12:21:21"];
+//    BOOL check = [test isEqualToString:@"12-21"];
+//    XCTAssertTrue(check, @"时间验证失败");
+//}
+//
+//- (void)testCurrentCovertFunc {
+//    NSString *test = [SGHeartHelper convertCurrentDate:@"yyyy-MM-dd-HH-mm-ss"];
+//    BOOL check = test.length > 10;
+//    XCTAssertTrue(check, @"时间验证失败");
+//}
 
-- (void)testCurrentCovertFunc {
-    NSString *test = [SGHeartHelper convertCurrentDate:@"yyyy-MM-dd-HH-mm-ss"];
-    BOOL check = test.length > 10;
-    XCTAssertTrue(check, @"时间验证失败");
+- (void)testTimeToTimestamp {
+    NSInteger timestamp = [SGHeartHelper convertToTimestamp:@"2017-06-30 12:00:00" format:@"yyyy-MM-dd HH:mm:ss"];
+    BOOL check = timestamp == 1498795200;
+    XCTAssertTrue(check, @"时间戳转化函数错误");
 }
 
 @end

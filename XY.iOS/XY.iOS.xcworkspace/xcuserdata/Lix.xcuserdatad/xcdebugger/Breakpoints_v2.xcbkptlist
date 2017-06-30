@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XY.iOS/Example/ExampleViewController.m"
-            timestampString = "520495632.995736"
+            filePath = "XY.iOSTests/SGHeartHelperTests.m"
+            timestampString = "520496590.443499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "-testGetFromDB"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-testTimeToTimestamp"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
