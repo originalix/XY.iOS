@@ -21,4 +21,8 @@
 
 + (NSString *)formatCurrentTime;
 
+//BASE
++ (NSString *)convertCurrentDate:(NSString *)format;
++ (NSString *)convertTimeBeforeFormat:(NSString *)beforeFormat convertFormat:(NSString *)converFormat timeStr:(NSString *)time;
+
 @end

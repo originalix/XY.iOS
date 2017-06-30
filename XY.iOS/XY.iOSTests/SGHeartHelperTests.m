@@ -44,4 +44,10 @@
     XCTAssertTrue(check, @"时间验证失败");
 }
 
+- (void)testBaseFormatFunc {
+    NSString *test = [SGHeartHelper convertTimeBeforeFormat:@"yyyy-MM-dd HH:mm:ss" convertFormat:@"HH-mm" timeStr:@"2016-12-01 12:21:21"];
+    BOOL check = [test isEqualToString:@"12-21"];
+    XCTAssertTrue(check, @"时间验证失败");
+}
+
 @end
