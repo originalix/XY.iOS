@@ -19,9 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self testInsertDB];
-    [self testGetFromDB];
+//    [self testGetFromDB];
     
 //    [self testInsertOriginTable];
+    
+    [self testConverToByteArray];
 //    [WHC_ModelSqlite removeModel:[SGHeartTable class]];
     NSLog(@"%@", [WHC_ModelSqlite localPathWithModel:[SGHeartTable class]]);
 }
@@ -52,6 +54,13 @@
     SGHeartTable *model = array.lastObject;
     SGHeartOriginTable *ot1 = [[SGHeartOriginTable alloc] initWithHeartID:model._id srcData:@"6555513e494e54544a41463f4258575a" date:@"2017-06-30 10:44:59"];
     [WHC_ModelSqlite insert:ot1];
+}
+
+- (void)testConverToByteArray {
+    NSArray *array = [WHC_ModelSqlite query:[SGHeartOriginTable class]];
+    for (SGHeartOriginTable *model in array) {
+        [model convertSrcDataToModel];
+    }
 }
 
 @end

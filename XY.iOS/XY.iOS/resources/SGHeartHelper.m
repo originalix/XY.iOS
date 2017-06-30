@@ -47,6 +47,14 @@
     return dateStr;
 }
 
++ (NSString *)convertToDateStrWithTimestamp:(NSInteger)timestamp {
+    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:timestamp];
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    dateformatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSString *dateStr = [dateformatter stringFromDate:date];
+    return dateStr;
+}
+
 + (NSData *)convertHexStrToData:(NSString *)str {
     if (!str || [str length] == 0) {
         return nil;

@@ -36,6 +36,14 @@
 + (NSInteger)convertToTimestamp:(NSString *)time format:(NSString *)format;
 
 /**
+ 时间戳格式化时间输出
+
+ @param timestamp 时间戳
+ @return String
+ */
++ (NSString *)convertToDateStrWithTimestamp:(NSInteger)timestamp;
+
+/**
  十六进制字符串转化成NSData对象
 
  @param str 十六进制字符串

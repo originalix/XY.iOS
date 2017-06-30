@@ -43,6 +43,17 @@
     return self;
 }
 
+- (void)convertSrcDataToModel {
+    NSData *data = [SGHeartHelper convertHexStrToData:self.srcData];
+    Byte *byteArr = (Byte *)[data bytes];
+    NSInteger baseTimestamp = [SGHeartHelper convertToTimestamp:self.date format:@"yyyy-MM-dd HH:mm:ss"];
+    for (int i = 0; i < [data length]; i++) {
+        printf("byteArr = %d\n",byteArr[i]);
+        NSInteger timestamp = baseTimestamp + (i * 300);
+        printf("byte Timestamp = %ld", (long)timestamp);
+    }
+}
+
 @end
 
 @implementation SGHeartDetailsTable
