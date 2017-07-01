@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "SGHeartHelper.h"
+#import "SGHeartModel.h"
 
 @interface SGHeartHelperTests : XCTestCase
 
@@ -77,6 +78,31 @@
     NSString *str = [SGHeartHelper convertToDateStrWithTimestamp:1498795200];
     BOOL check = [str isEqualToString:@"2017-06-30 12:00:00"];
     XCTAssertTrue(check, @"时间戳转化函数错误");
+}
+
+- (void)testRecord {
+    NSString *measureTime = @"2017-06-30 09:24:59";
+    NSString *srcData = @"6555513e494e54544a41463f4258575a";
+    if (! [SGHeartTable checkRepeatDataWithTime:measureTime]) {
+        SGHeartTable *t1 = [[SGHeartTable alloc] initWithMeasureTime:measureTime];
+        [WHC_ModelSqlite insert:t1];
+    }
+    
+    NSString *queryHeartID = [NSString stringWithFormat:@"date = '%@'", [SGHeartHelper formatMeasureTime:measureTime]];
+    NSArray *heartTable = [WHC_ModelSqlite query:[SGHeartTable class] where:queryHeartID];
+    if (! heartTable) {
+        return;
+    }
+    SGHeartTable *heartModel = heartTable.firstObject;
+    if ([SGHeartOriginTable checkRepeatDataWithTime:measureTime]) {
+        return;
+    }
+    SGHeartOriginTable *originModel = [[SGHeartOriginTable alloc] initWithHeartID:heartModel._id srcData:srcData date:measureTime];
+    [WHC_ModelSqlite insert:originModel];
+    [originModel convertSrcDataToModel];
+    
+    BOOL check = originModel != nil;
+    XCTAssertTrue(check, @"测试失败");
 }
 
 @end
