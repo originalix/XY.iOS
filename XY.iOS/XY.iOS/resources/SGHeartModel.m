@@ -88,7 +88,9 @@
 }
 
 + (NSArray *)checkNotUploadData {
-    return nil;
+    NSString *sql = [NSString stringWithFormat:@"done = '0'"];
+    NSArray *results = [WHC_ModelSqlite query:[SGHeartOriginTable class] where: sql];
+    return results;
 }
 
 @end
