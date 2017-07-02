@@ -22,6 +22,7 @@
 
 - (instancetype)initWithMeasureTime:(NSString *)time;
 + (BOOL)checkRepeatDataWithTime:(NSString *)time;
++ (void)cleanHeartData;
 
 @end
 

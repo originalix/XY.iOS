@@ -34,6 +34,12 @@
     return NO;
 }
 
++ (void)cleanHeartData {
+    [WHC_ModelSqlite removeModel:[SGHeartTable class]];
+    [WHC_ModelSqlite removeModel:[SGHeartOriginTable class]];
+    [WHC_ModelSqlite removeModel:[SGHeartDetailsTable class]];
+}
+
 @end
 
 @implementation SGHeartOriginTable
