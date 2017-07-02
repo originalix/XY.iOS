@@ -33,6 +33,7 @@
 @property (nonatomic, copy) NSString *date;
 @property (nonatomic, assign) NSInteger timestamp;
 @property (nonatomic, copy) NSString *updated_at;
+@property (nonatomic, assign) NSInteger done;
 
 - (instancetype)initWithHeartID:(NSInteger)heartID srcData:(NSString *)srcData date:(NSString *)date;
 - (void)convertSrcDataToModel;
