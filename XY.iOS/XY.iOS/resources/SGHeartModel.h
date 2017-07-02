@@ -38,6 +38,7 @@
 - (instancetype)initWithHeartID:(NSInteger)heartID srcData:(NSString *)srcData date:(NSString *)date;
 - (void)convertSrcDataToModel;
 + (BOOL)checkRepeatDataWithTime:(NSString *)time;
++ (NSArray *)checkNotUploadData;
 
 @end
 

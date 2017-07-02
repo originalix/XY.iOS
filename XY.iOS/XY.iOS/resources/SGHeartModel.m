@@ -87,6 +87,10 @@
     return NO;
 }
 
++ (NSArray *)checkNotUploadData {
+    return nil;
+}
+
 @end
 
 @implementation SGHeartDetailsTable
