@@ -38,13 +38,6 @@
 //    [SGHeartOriginTable checkNotUploadData];
 //    [SGHeartTable cleanHeartData];
 //    [self record];
-    NSArray *array = [SGHeartOriginTable checkNotUploadData];
-    NSLog(@"%@", array);
-    for (SGHeartOriginTable *model in array) {
-        if ([SGHeartOriginTable updateDataUploadStateWithID:model._id]) {
-            NSLog(@"更新上传状态成功");
-        }
-    }
     NSLog(@"%@", [WHC_ModelSqlite localPathWithModel:[SGHeartTable class]]);
 }
 
