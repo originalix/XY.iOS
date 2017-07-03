@@ -40,6 +40,7 @@
 - (void)convertSrcDataToModel;
 + (BOOL)checkRepeatDataWithTime:(NSString *)time;
 + (NSArray *)checkNotUploadData;
++ (BOOL)updateDataUploadStateWithID:(NSInteger)_id;
 
 @end
 

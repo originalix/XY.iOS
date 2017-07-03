@@ -99,6 +99,11 @@
     return results;
 }
 
++ (BOOL)updateDataUploadStateWithID:(NSInteger)_id {
+    NSString *sql = [NSString stringWithFormat:@"_id = '%ld'", _id];
+    return [WHC_ModelSqlite update:SGHeartOriginTable.self value:@"done = 1" where: sql];
+}
+
 @end
 
 @implementation SGHeartDetailsTable

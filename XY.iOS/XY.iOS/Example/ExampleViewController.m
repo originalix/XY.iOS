@@ -29,13 +29,22 @@
 //    [WHC_ModelSqlite removeModel:[SGHeartTable class]];
 //    [WHC_ModelSqlite removeModel:[SGHeartOriginTable class]];
 //    [WHC_ModelSqlite removeModel:[SGHeartDetailsTable class]];
-    NSArray *array = [SGHeartDetailsTable getDataWithDate:@"2017-06-29"];
+//    NSArray *array = [SGHeartDetailsTable getDataWithDate:@"2017-06-29"];
+//    NSLog(@"%@", array);
+//    NSNumber *num = [SGHeartDetailsTable getMaxHeartWithDate:@"2017-06-29"];
+//    NSLog(@"%@", num);
+//    NSNumber *min = [SGHeartDetailsTable getMinHeartWithDate:@"2017-06-29"];
+//    NSLog(@"%@", min);
+//    [SGHeartOriginTable checkNotUploadData];
+//    [SGHeartTable cleanHeartData];
+//    [self record];
+    NSArray *array = [SGHeartOriginTable checkNotUploadData];
     NSLog(@"%@", array);
-    NSNumber *num = [SGHeartDetailsTable getMaxHeartWithDate:@"2017-06-29"];
-    NSLog(@"%@", num);
-    NSNumber *min = [SGHeartDetailsTable getMinHeartWithDate:@"2017-06-29"];
-    NSLog(@"%@", min);
-    [self record];
+    for (SGHeartOriginTable *model in array) {
+        if ([SGHeartOriginTable updateDataUploadStateWithID:model._id]) {
+            NSLog(@"更新上传状态成功");
+        }
+    }
     NSLog(@"%@", [WHC_ModelSqlite localPathWithModel:[SGHeartTable class]]);
 }
 
