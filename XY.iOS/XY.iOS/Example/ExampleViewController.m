@@ -29,16 +29,19 @@
 //    [WHC_ModelSqlite removeModel:[SGHeartTable class]];
 //    [WHC_ModelSqlite removeModel:[SGHeartOriginTable class]];
 //    [WHC_ModelSqlite removeModel:[SGHeartDetailsTable class]];
-//    NSArray *array = [SGHeartDetailsTable getDataWithDate:@"2017-06-29"];
+//    NSArray *array1 = [WHC_ModelSqlite query:[SGHeartTable class]];
+//    NSLog(@"%@", array1);
+//    NSArray *array = [SGHeartDetailsTable getDataWithDate:@"2017-06-30"];
 //    NSLog(@"%@", array);
-//    NSNumber *num = [SGHeartDetailsTable getMaxHeartWithDate:@"2017-06-29"];
+//    NSNumber *num = [SGHeartDetailsTable getMaxHeartWithDate:@"2017-06-30"];
 //    NSLog(@"%@", num);
-//    NSNumber *min = [SGHeartDetailsTable getMinHeartWithDate:@"2017-06-29"];
+//    NSNumber *min = [SGHeartDetailsTable getMinHeartWithDate:@"2017-06-30"];
 //    NSLog(@"%@", min);
-//    [SGHeartOriginTable checkNotUploadData];
-//    [SGHeartTable cleanHeartData];
-//    [self record];
-    NSLog(@"%@", [WHC_ModelSqlite localPathWithModel:[SGHeartTable class]]);
+////    [SGHeartOriginTable checkNotUploadData];
+////    [SGHeartTable cleanHeartData];
+////    [self record];
+//    NSLog(@"%@", [WHC_ModelSqlite localPathWithModel:[SGHeartTable class]]);
+    [self testConvertHEX];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,6 +108,14 @@
     model.date = @"2017-06-29 18:04:59";
     [model convertSrcDataToModel];
 }
+
+- (void)testConvertHEX {
+    NSData *data = [SGHeartHelper convertHexStrToData:@"400"];
+    NSString *str = [SGHeartHelper convertDataToHexStr:data];
+    NSLog(@"%@", str);
+}
+
+
 
 @end
 

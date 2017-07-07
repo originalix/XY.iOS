@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5649140D1F0F7FE600693F51 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140C1F0F7FE600693F51 /* CameraController.m */; };
 		567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20A61F0604A200B970CB /* AppDelegate.swift */; };
 		567B20A91F0604A200B970CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20A81F0604A200B970CB /* ViewController.swift */; };
 		567B20AC1F0604A200B970CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B20AA1F0604A200B970CB /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 		403ADC937E724FCC7A3BD248 /* Pods-XY.iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOS/Pods-XY.iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4464DB901B05F8C4CFAF425D /* Pods-XY.iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		53C60691B6620450D1A44F9C /* Pods-XY.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOS/Pods-XY.iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5649140B1F0F7FE600693F51 /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
+		5649140C1F0F7FE600693F51 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 		567B20A31F0604A200B970CB /* XY.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XY.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		567B20A61F0604A200B970CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		567B20A81F0604A200B970CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 			children = (
 				567B20DB1F06093000B970CB /* ExampleViewController.h */,
 				567B20DC1F06093000B970CB /* ExampleViewController.m */,
+				5649140B1F0F7FE600693F51 /* CameraController.h */,
+				5649140C1F0F7FE600693F51 /* CameraController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
+				5649140D1F0F7FE600693F51 /* CameraController.m in Sources */,
 				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
