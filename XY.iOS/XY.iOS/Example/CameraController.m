@@ -20,7 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.imageView.image = [UIImage imageNamed:@"face"];
+    UIImage *image = [UIImage imageNamed:@"face1"];
+    self.imageView.image = image;
+    [self.faceDetect faceDetectWithImage:image ImageView:self.imageView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
