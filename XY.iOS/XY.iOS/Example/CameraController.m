@@ -7,10 +7,12 @@
 //
 
 #import "CameraController.h"
+#import "FaceDetect.h"
 
 @interface CameraController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) FaceDetect *faceDetect;
 
 @end
 
@@ -23,6 +25,13 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (FaceDetect *)faceDetect {
+    if (!_faceDetect) {
+        _faceDetect = [[FaceDetect alloc] init];
+    }
+    return _faceDetect;
 }
 
 @end
