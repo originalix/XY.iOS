@@ -22,7 +22,7 @@
     [super viewDidLoad];
     UIImage *image = [UIImage imageNamed:@"face1"];
     self.imageView.image = image;
-    [self.faceDetect faceDetectWithImage:image ImageView:self.imageView];
+//    [self.faceDetect faceDetectWithImage:image ImageView:self.imageView];
     
 }
 
