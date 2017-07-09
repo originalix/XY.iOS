@@ -46,16 +46,16 @@
     NSString *str2 = @"wsxxxxxx";
     NSLog(@"Before swap str1 address = %p", str1);
     NSLog(@"Before swap str2 address = %p", str2);
-    [self checkAddress:str1 str2:str2];
+    [self checkAddress:&str1 str2:&str2];
     NSLog(@"str1 = %@", str1);
     NSLog(@"str2 = %@", str2);
 }
 
-- (void)checkAddress:(NSString *)str1 str2:(NSString *)str2 {
-    NSLog(@"str1 address = %p", str1);
-    NSLog(@"str2 address = %p", str2);
-    str1 = @"Test change word";
-    str2 = @"修改参数";
+- (void)checkAddress:(NSString * __strong *)str1 str2:(NSString * __strong *)str2 {
+    NSLog(@"str1 address = %p", *str1);
+    NSLog(@"str2 address = %p", *str2);
+    *str1 = @"Test change word";
+    *str2 = @"修改参数";
 }
 
 - (void)didReceiveMemoryWarning {
