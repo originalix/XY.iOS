@@ -7,12 +7,12 @@
 //
 
 #import "CameraController.h"
-#import "FaceDetect.h"
+#import <iflyMSC/IFlyFaceSDK.h>
 
 @interface CameraController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (nonatomic, strong) FaceDetect *faceDetect;
+@property (nonatomic, strong) IFlyFaceDetector *faceDetector;
 
 @end
 
@@ -22,19 +22,18 @@
     [super viewDidLoad];
     UIImage *image = [UIImage imageNamed:@"face1"];
     self.imageView.image = image;
-//    [self.faceDetect faceDetectWithImage:image ImageView:self.imageView];
-    
+    self.faceDetector = [IFlyFaceDetector sharedInstance];
+    [self.faceDetector setParameter:@"1" forKey:@"detect"];
+    [self imageDetector];
+}
+
+- (void)imageDetector {
+    NSString *rs = [self.faceDetector detectARGB:[self.imageView image]];
+    NSLog(@"result = %@", rs);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (FaceDetect *)faceDetect {
-    if (!_faceDetect) {
-        _faceDetect = [[FaceDetect alloc] init];
-    }
-    return _faceDetect;
 }
 
 @end

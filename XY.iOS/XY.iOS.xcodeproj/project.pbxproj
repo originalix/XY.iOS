@@ -20,6 +20,15 @@
 		567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20DC1F06093000B970CB /* ExampleViewController.m */; };
 		567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20DF1F061A2500B970CB /* SGHeartHelper.m */; };
 		567B20E31F061BC800B970CB /* SGHeartHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20E21F061BC800B970CB /* SGHeartHelperTests.m */; };
+		56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39291F132F5600D6C597 /* libc++.tbd */; };
+		56DC392E1F132F6900D6C597 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC392D1F132F6900D6C597 /* SystemConfiguration.framework */; };
+		56DC39301F132F7100D6C597 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC392F1F132F7100D6C597 /* MobileCoreServices.framework */; };
+		56DC39341F132F8300D6C597 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39331F132F8300D6C597 /* CoreGraphics.framework */; };
+		56DC393A1F13355F00D6C597 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39391F13355F00D6C597 /* iflyMSC.framework */; };
+		56DC394C1F1336EC00D6C597 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC394B1F1336EC00D6C597 /* libz.tbd */; };
+		56DC394F1F1337B100D6C597 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC392B1F132F6000D6C597 /* libstdc++.tbd */; };
+		56DC39511F1337E100D6C597 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39501F1337E100D6C597 /* CoreAudio.framework */; };
+		56DC39521F1337E900D6C597 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC393F1F13362600D6C597 /* CoreTelephony.framework */; };
 		A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */; };
 		EDD47BCA96D8F15E1024F496 /* Pods_XY_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +82,25 @@
 		567B20DF1F061A2500B970CB /* SGHeartHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartHelper.m; sourceTree = "<group>"; };
 		567B20E11F061BC800B970CB /* XY.iOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XY.iOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		567B20E21F061BC800B970CB /* SGHeartHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartHelperTests.m; sourceTree = "<group>"; };
+		56DC39291F132F5600D6C597 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		56DC392B1F132F6000D6C597 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		56DC392D1F132F6900D6C597 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		56DC392F1F132F7100D6C597 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		56DC39311F132F7900D6C597 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		56DC39331F132F8300D6C597 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		56DC39351F13327B00D6C597 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		56DC39391F13355F00D6C597 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = XY.iOS/lib/iflyMSC.framework; sourceTree = "<group>"; };
+		56DC393B1F13361700D6C597 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		56DC393D1F13361F00D6C597 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		56DC393F1F13362600D6C597 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		56DC39411F13362D00D6C597 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		56DC39431F13363600D6C597 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		56DC39451F13363F00D6C597 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		56DC39471F13364600D6C597 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		56DC39491F13364D00D6C597 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		56DC394B1F1336EC00D6C597 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		56DC394D1F13377D00D6C597 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		56DC39501F1337E100D6C597 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		CD685FCC1C835A141CDD9F60 /* Pods-XY.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XY_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +110,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56DC39521F1337E900D6C597 /* CoreTelephony.framework in Frameworks */,
+				56DC39511F1337E100D6C597 /* CoreAudio.framework in Frameworks */,
+				56DC394F1F1337B100D6C597 /* libstdc++.tbd in Frameworks */,
+				56DC394C1F1336EC00D6C597 /* libz.tbd in Frameworks */,
+				56DC393A1F13355F00D6C597 /* iflyMSC.framework in Frameworks */,
+				56DC39341F132F8300D6C597 /* CoreGraphics.framework in Frameworks */,
+				56DC39301F132F7100D6C597 /* MobileCoreServices.framework in Frameworks */,
+				56DC392E1F132F6900D6C597 /* SystemConfiguration.framework in Frameworks */,
+				56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */,
 				A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +144,25 @@
 		469AB29FE5E9AC67E763B857 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56DC39501F1337E100D6C597 /* CoreAudio.framework */,
+				56DC394D1F13377D00D6C597 /* libsqlite3.tbd */,
+				56DC394B1F1336EC00D6C597 /* libz.tbd */,
+				56DC39491F13364D00D6C597 /* QuartzCore.framework */,
+				56DC39471F13364600D6C597 /* AVFoundation.framework */,
+				56DC39451F13363F00D6C597 /* AssetsLibrary.framework */,
+				56DC39431F13363600D6C597 /* AudioToolbox.framework */,
+				56DC39411F13362D00D6C597 /* AddressBook.framework */,
+				56DC393F1F13362600D6C597 /* CoreTelephony.framework */,
+				56DC393D1F13361F00D6C597 /* CoreMotion.framework */,
+				56DC393B1F13361700D6C597 /* CoreVideo.framework */,
+				56DC39391F13355F00D6C597 /* iflyMSC.framework */,
+				56DC39351F13327B00D6C597 /* Foundation.framework */,
+				56DC39331F132F8300D6C597 /* CoreGraphics.framework */,
+				56DC39311F132F7900D6C597 /* UIKit.framework */,
+				56DC392F1F132F7100D6C597 /* MobileCoreServices.framework */,
+				56DC392D1F132F6900D6C597 /* SystemConfiguration.framework */,
+				56DC392B1F132F6000D6C597 /* libstdc++.tbd */,
+				56DC39291F132F5600D6C597 /* libc++.tbd */,
 				3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */,
 				F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */,
 			);
@@ -607,11 +663,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XY.iOS/lib",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XY.iOS/PrefixHeader.pch";
 				INFOPLIST_FILE = XY.iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Lix.XY-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XY.iOS/resources/XY.iOS-Bridging-Header.h";
@@ -628,11 +689,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XY.iOS/lib",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XY.iOS/PrefixHeader.pch";
 				INFOPLIST_FILE = XY.iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Lix.XY-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XY.iOS/resources/XY.iOS-Bridging-Header.h";
