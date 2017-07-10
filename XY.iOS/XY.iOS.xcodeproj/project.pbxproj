@@ -29,6 +29,7 @@
 		56DC394F1F1337B100D6C597 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC392B1F132F6000D6C597 /* libstdc++.tbd */; };
 		56DC39511F1337E100D6C597 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39501F1337E100D6C597 /* CoreAudio.framework */; };
 		56DC39521F1337E900D6C597 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC393F1F13362600D6C597 /* CoreTelephony.framework */; };
+		56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC39541F134AD500D6C597 /* FaceConfig.m */; };
 		A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */; };
 		EDD47BCA96D8F15E1024F496 /* Pods_XY_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,8 @@
 		56DC394B1F1336EC00D6C597 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		56DC394D1F13377D00D6C597 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		56DC39501F1337E100D6C597 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		56DC39531F134AD500D6C597 /* FaceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceConfig.h; sourceTree = "<group>"; };
+		56DC39541F134AD500D6C597 /* FaceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceConfig.m; sourceTree = "<group>"; };
 		CD685FCC1C835A141CDD9F60 /* Pods-XY.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XY_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -247,6 +250,8 @@
 				567B20DF1F061A2500B970CB /* SGHeartHelper.m */,
 				5649140E1F0F82C900693F51 /* FaceDetect.h */,
 				5649140F1F0F82C900693F51 /* FaceDetect.m */,
+				56DC39531F134AD500D6C597 /* FaceConfig.h */,
+				56DC39541F134AD500D6C597 /* FaceConfig.m */,
 				567B20D51F06067700B970CB /* XY.iOS-Bridging-Header.h */,
 			);
 			path = resources;
@@ -505,6 +510,7 @@
 				564914101F0F82CA00693F51 /* FaceDetect.m in Sources */,
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,
+				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				5649140D1F0F7FE600693F51 /* CameraController.m in Sources */,
 				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,

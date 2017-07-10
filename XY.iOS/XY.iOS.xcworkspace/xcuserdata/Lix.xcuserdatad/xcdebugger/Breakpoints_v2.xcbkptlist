@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XY.iOS/Example/CameraController.m"
-            timestampString = "521353591.122198"
+            timestampString = "521360593.965061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-imageDetector"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -4,3 +4,4 @@
 
 #import "ExampleViewController.h"
 #import "CameraController.h"
+#import "FaceConfig.h"

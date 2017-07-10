@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let camera = storyBoard.instantiateViewController(withIdentifier: "CameraController")
         self.window?.rootViewController = UINavigationController.init(rootViewController: camera)
 //        self.window?.rootViewController = UINavigationController.init(rootViewController: ExampleViewController())
+        
+        FaceConfig.config()
         self.window?.makeKeyAndVisible()
         return true
     }
