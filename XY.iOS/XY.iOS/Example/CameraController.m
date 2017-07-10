@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) IFlyFaceDetector *faceDetector;
 @property (nonatomic, strong) IFlyFaceRequest *faceRequest;
-
+@property (nonatomic, copy) NSString *resultString;
 @end
 
 @implementation CameraController
@@ -39,6 +39,7 @@
     [self.faceRequest setParameter:IFLY_APPID forKey:[IFlySpeechConstant APPID]];
     NSData *data = UIImageJPEGRepresentation(self.imageView.image, 0);
     [self.faceRequest sendRequest:data];
+    self.resultString = @"";
 }
 
 - (void)onEvent:(int)eventType WithBundle:(NSString *)params {
@@ -48,7 +49,13 @@
 - (void)onData:(NSData *)data {
     NSLog(@"onData |");
     NSString *rs = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"result = %@", rs);
+    NSLog(@"!--! -> -> %@", rs);
+    if (rs) {
+        self.resultString = [self.resultString stringByAppendingString:rs];
+        NSData *jsonData = [self.resultString dataUsingEncoding:NSUTF8StringEncoding];
+        id json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
+        NSLog(@"json --->>>> %@", json);
+    }
 }
 
 - (void)onCompleted:(IFlySpeechError *)error {
