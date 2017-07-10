@@ -11,6 +11,5 @@
 
 @interface FaceDetect : NSObject
 
-- (void)faceDetectWithImage:(UIImage *)image ImageView:(UIImageView *)imageView;
 
 @end
