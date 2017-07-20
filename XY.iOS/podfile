@@ -8,6 +8,7 @@ target 'XY.iOS' do
     pod 'LNTS_HttpClient', '~> 0.1.0'
     pod 'WHC_ModelSqliteKit'
     pod 'CuteLog'
+    pod 'SCLAlertView'
 end
 
 target 'XY.iOSTests' do

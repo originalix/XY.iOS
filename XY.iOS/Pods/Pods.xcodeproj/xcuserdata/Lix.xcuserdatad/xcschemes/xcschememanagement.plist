@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SCLAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SSZipArchive.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,22 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>337F730CC8F659BAF0035C680E64D227</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3ECAA3E8ACBC2CD3EAF861E295AFB962</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A4563E10195C9D86A789AE7B9581D1E</key>
+		<key>40586D48873E4AC85160CAFE186DFF9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74E247481E791F3A2B0465D19241BEEF</key>
+		<key>6A4563E10195C9D86A789AE7B9581D1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>91906A25E07E3F18D16F1E8B719960B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C285408CB1AD17D4CE881DA682906D03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC3650200A0203353CF24578934A4200</key>
 		<dict>
 			<key>primary</key>
 			<true/>

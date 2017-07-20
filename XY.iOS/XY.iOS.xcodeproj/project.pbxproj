@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5649140D1F0F7FE600693F51 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140C1F0F7FE600693F51 /* CameraController.m */; };
 		564914101F0F82CA00693F51 /* FaceDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140F1F0F82C900693F51 /* FaceDetect.m */; };
+		566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCC81F20809300EDA8C4 /* VueController.swift */; };
 		567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20A61F0604A200B970CB /* AppDelegate.swift */; };
 		567B20A91F0604A200B970CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20A81F0604A200B970CB /* ViewController.swift */; };
 		567B20AC1F0604A200B970CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B20AA1F0604A200B970CB /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		5649140C1F0F7FE600693F51 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 		5649140E1F0F82C900693F51 /* FaceDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
 		5649140F1F0F82C900693F51 /* FaceDetect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetect.m; sourceTree = "<group>"; };
+		566EDCC81F20809300EDA8C4 /* VueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VueController.swift; sourceTree = "<group>"; };
 		567B20A31F0604A200B970CB /* XY.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XY.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		567B20A61F0604A200B970CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		567B20A81F0604A200B970CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				5649140C1F0F7FE600693F51 /* CameraController.m */,
 				56DC39561F13578100D6C597 /* DetectViewController.h */,
 				56DC39571F13578100D6C597 /* DetectViewController.m */,
+				566EDCC81F20809300EDA8C4 /* VueController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -441,7 +444,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		678F1853C4DC3067E352D3E2 /* [CP] Embed Pods Frameworks */ = {
@@ -501,7 +504,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -515,6 +518,7 @@
 				564914101F0F82CA00693F51 /* FaceDetect.m in Sources */,
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,
+				566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */,
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
 				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
