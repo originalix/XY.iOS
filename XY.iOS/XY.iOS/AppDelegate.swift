@@ -15,12 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let camera = storyBoard.instantiateViewController(withIdentifier: "DetectViewController")
-        self.window?.rootViewController = UINavigationController.init(rootViewController: camera)
+//        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+//        let camera = storyBoard.instantiateViewController(withIdentifier: "DetectViewController")
+        let vueVC = VueController()
+        self.window?.rootViewController = UINavigationController.init(rootViewController: vueVC)
 //        self.window?.rootViewController = UINavigationController.init(rootViewController: ExampleViewController())
-        
-        FaceConfig.config()
+//        FaceConfig.config()
         self.window?.makeKeyAndVisible()
         return true
     }

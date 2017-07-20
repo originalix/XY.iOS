@@ -8,10 +8,11 @@
 
 import UIKit
 
-class VueController: UIViewController {
+class VueController: BaseWebViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.url = "http://www.cnblogs.com/zqzjs/p/6834843.html"
     }
 
     override func didReceiveMemoryWarning() {
