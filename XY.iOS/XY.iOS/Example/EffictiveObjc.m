@@ -7,6 +7,7 @@
 //
 
 #import "EffictiveObjc.h"
+#import <objc/objc-runtime.h>
 
 #define ANIMATION_DURATION 0.3 //NOT GOOD
 
@@ -26,6 +27,7 @@ NSString *const EFCStringConstant = @"VALUE";
     if (self) {
         self.on = false;
         self.firstName = [firstName copy];
+        [self test];
     }
     return self;
 }
@@ -33,5 +35,24 @@ NSString *const EFCStringConstant = @"VALUE";
 - (void)test {
     NSMutableArray *array = [@[@1, @2] mutableCopy];
     NSLog(@"%@", array);
+    
+    Method originalMethod = class_getInstanceMethod([EffictiveObjc class], @selector(lowercaseString));
+    Method swappedMethod = class_getInstanceMethod([EffictiveObjc class], @selector(uppercaseString));
+    
+    method_exchangeImplementations(originalMethod, swappedMethod);
+    
+    NSString *lower = [self lowercaseString];
+    NSLog(@"%@", lower);
+    NSString *uppper = [self uppercaseString];
+    NSLog(@"%@", uppper);
 }
+
+- (NSString *)lowercaseString {
+    return @"this is lowercase string";
+}
+
+- (NSString *)uppercaseString {
+    return @"this is uppercase string";
+}
+
 @end

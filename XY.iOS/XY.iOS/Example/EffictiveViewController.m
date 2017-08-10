@@ -21,8 +21,9 @@ static const NSString *EOCMyAlertViewKey = @"EOCMyAlertViewKey";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    EffictiveObjc *objc = [[EffictiveObjc alloc] init];
+    EffictiveObjc *objc = [[EffictiveObjc alloc] initWithFirstName:@"Lix"];
     objc.on = YES;
+    [self askUserAQuestion];
 }
 
 - (void)didReceiveMemoryWarning {
