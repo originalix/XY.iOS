@@ -21,13 +21,17 @@ NSString *const EFCStringConstant = @"VALUE";
 
 @implementation EffictiveObjc
 
-- (instancetype)init
-{
+- (instancetype)initWithFirstName:(NSString *)firstName {
     self = [super init];
     if (self) {
-        
+        self.on = false;
+        self.firstName = [firstName copy];
     }
     return self;
 }
 
+- (void)test {
+    NSMutableArray *array = [@[@1, @2] mutableCopy];
+    NSLog(@"%@", array);
+}
 @end
