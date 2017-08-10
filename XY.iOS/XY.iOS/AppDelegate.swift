@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 //        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
 //        let camera = storyBoard.instantiateViewController(withIdentifier: "DetectViewController")
-        let vueVC = VueController()
-        self.window?.rootViewController = UINavigationController.init(rootViewController: vueVC)
+        let effictiveVC = EffictiveViewController()
+        self.window?.rootViewController = UINavigationController.init(rootViewController: effictiveVC)
 //        self.window?.rootViewController = UINavigationController.init(rootViewController: ExampleViewController())
 //        FaceConfig.config()
         self.window?.makeKeyAndVisible()

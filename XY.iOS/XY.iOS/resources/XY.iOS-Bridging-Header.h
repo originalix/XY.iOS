@@ -6,3 +6,4 @@
 #import "CameraController.h"
 #import "FaceConfig.h"
 #import "DetectViewController.h"
+#import "EffictiveViewController.h"

@@ -22,6 +22,8 @@
 		567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20DC1F06093000B970CB /* ExampleViewController.m */; };
 		567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20DF1F061A2500B970CB /* SGHeartHelper.m */; };
 		567B20E31F061BC800B970CB /* SGHeartHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20E21F061BC800B970CB /* SGHeartHelperTests.m */; };
+		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
+		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
 		56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39291F132F5600D6C597 /* libc++.tbd */; };
 		56DC392E1F132F6900D6C597 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC392D1F132F6900D6C597 /* SystemConfiguration.framework */; };
 		56DC39301F132F7100D6C597 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC392F1F132F7100D6C597 /* MobileCoreServices.framework */; };
@@ -88,6 +90,10 @@
 		567B20DF1F061A2500B970CB /* SGHeartHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartHelper.m; sourceTree = "<group>"; };
 		567B20E11F061BC800B970CB /* XY.iOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XY.iOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		567B20E21F061BC800B970CB /* SGHeartHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartHelperTests.m; sourceTree = "<group>"; };
+		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
+		56D5BF671F3C323D003CB716 /* EffictiveObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffictiveObjc.m; sourceTree = "<group>"; };
+		56D5BF691F3C325F003CB716 /* EffictiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveViewController.h; sourceTree = "<group>"; };
+		56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffictiveViewController.m; sourceTree = "<group>"; };
 		56DC39291F132F5600D6C597 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		56DC392B1F132F6000D6C597 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		56DC392D1F132F6900D6C597 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -275,6 +281,10 @@
 				56DC39561F13578100D6C597 /* DetectViewController.h */,
 				56DC39571F13578100D6C597 /* DetectViewController.m */,
 				566EDCC81F20809300EDA8C4 /* VueController.swift */,
+				56D5BF661F3C323D003CB716 /* EffictiveObjc.h */,
+				56D5BF671F3C323D003CB716 /* EffictiveObjc.m */,
+				56D5BF691F3C325F003CB716 /* EffictiveViewController.h */,
+				56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -518,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				567B20A91F0604A200B970CB /* ViewController.swift in Sources */,
+				56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */,
 				564914101F0F82CA00693F51 /* FaceDetect.m in Sources */,
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,
@@ -526,6 +537,7 @@
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
 				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
+				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
 				5649140D1F0F7FE600693F51 /* CameraController.m in Sources */,
 				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,
 			);

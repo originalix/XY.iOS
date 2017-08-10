@@ -12,7 +12,7 @@ class VueController: BaseWebViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.url = "http://www.cnblogs.com/zqzjs/p/6834843.html"
+        self.url = "http://localhost:8080/#/"
     }
 
     override func didReceiveMemoryWarning() {

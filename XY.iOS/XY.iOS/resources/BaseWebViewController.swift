@@ -157,6 +157,12 @@ class BaseWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegat
         print("加载完成")
         progressView.isHidden = true
         getPageTitle(webView)
+        let jsStr = "this.msg = 'helllllll';"
+        webView.evaluateJavaScript(jsStr) { (id, error) in
+            if (id != nil) {
+                print(id!)
+            }
+        }
     }
     
     func getPageTitle(_ webView: WKWebView) {
@@ -258,5 +264,11 @@ class BaseWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegat
         }))
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    // 通过JSON传过来
+//    - (void)callWithDict:(NSDictionary *)params;
+    func sendJSON(dic: Dictionary<String, Any>) {
+        print(dic)
     }
 }
