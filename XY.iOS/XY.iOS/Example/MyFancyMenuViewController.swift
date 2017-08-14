@@ -11,10 +11,17 @@ import SideMenu
 
 let Identifier: String = "TABLEVIEW_CELL"
 
+protocol MenuViewControllerDelegate: class {
+    func menu(_ menu: MyFancyMenuViewController, didSelectItemAt index: Int, at point: CGPoint)
+    func menuDidCancel(_ menu: MyFancyMenuViewController)
+}
+
 class MyFancyMenuViewController: UIViewController {
 
     
     @IBOutlet weak var tableView: UITableView!
+    
+    weak var delegate: MenuViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,5 +55,12 @@ extension MyFancyMenuViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifier)
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rect = tableView.rectForRow(at: indexPath)
+        var point = CGPoint(x: rect.midX, y: rect.midY)
+        point = tableView.convert(point, to: nil)
+        delegate?.menu(self, didSelectItemAt: indexPath.row, at: point)
     }
 }
