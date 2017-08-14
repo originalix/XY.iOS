@@ -91,5 +91,38 @@
             </objects>
             <point key="canvasLocation" x="831.20000000000005" y="844.22788605697156"/>
         </scene>
+        <!--My Fancy Menu View Controller-->
+        <scene sceneID="YmG-rE-LaX">
+            <objects>
+                <viewController storyboardIdentifier="MyFancyMenuViewController" id="osT-gT-wbI" customClass="MyFancyMenuViewController" customModule="XY_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F9s-sv-LMB"/>
+                        <viewControllerLayoutGuide type="bottom" id="VbQ-oq-Gk0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OiG-kh-Mew">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pgR-Ro-xVp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pgR-Ro-xVp" secondAttribute="trailing" id="ViL-RL-byy"/>
+                            <constraint firstItem="pgR-Ro-xVp" firstAttribute="leading" secondItem="OiG-kh-Mew" secondAttribute="leading" id="YJs-15-P0X"/>
+                            <constraint firstItem="pgR-Ro-xVp" firstAttribute="top" secondItem="OiG-kh-Mew" secondAttribute="top" id="bD8-fV-Gp9"/>
+                            <constraint firstItem="VbQ-oq-Gk0" firstAttribute="top" secondItem="pgR-Ro-xVp" secondAttribute="bottom" id="oJB-d2-BUu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="pgR-Ro-xVp" id="VZg-rA-iAq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTj-UU-I3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594.4000000000001" y="844.22788605697156"/>
+        </scene>
     </scenes>
 </document>
