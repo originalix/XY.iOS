@@ -9,6 +9,7 @@ target 'XY.iOS' do
     pod 'WHC_ModelSqliteKit'
     pod 'CuteLog'
     pod 'SCLAlertView'
+    pod 'RxSwift', '~> 4.0.0-alpha.0'
 end
 
 target 'XY.iOSTests' do
