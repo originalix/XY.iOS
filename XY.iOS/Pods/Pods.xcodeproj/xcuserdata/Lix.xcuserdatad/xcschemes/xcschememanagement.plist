@@ -64,10 +64,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YALSideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>12941E65C5A39331E2365577C9DB72E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3965326F398AFF08EC96703E1219BFC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +87,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>41098D07F2E02ADBADDE6E7630F6B3DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6A4563E10195C9D86A789AE7B9581D1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6DAB6A8C923B759B57468116DB37579E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,32 +117,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A4394299CE8668F579D2D1E5188D9C8C</key>
+		<key>93315CF0722669C5A4B02F8485A4212B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2F206AFC9CDFF5EEA50D387EEE25798</key>
+		<key>B285050CD6B68AA9B7703C09EF5FDF5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B941EC6F33AC3A8E9C01DF81F7A0F07E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C19D855A1E4520C0806FA5680698D204</key>
+		<key>BECE08E7728E5D5F78B5F497C3773AD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C285408CB1AD17D4CE881DA682906D03</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8570630CFCC38ADFC5F2F08B514C0C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

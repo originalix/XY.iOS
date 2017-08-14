@@ -16,6 +16,7 @@ PODS:
   - WHC_ModelSqliteKit (1.2.6):
     - WHC_ModelSqliteKit/standard (= 1.2.6)
   - WHC_ModelSqliteKit/standard (1.2.6)
+  - YALSideMenu (2.0.1)
 
 DEPENDENCIES:
   - CuteLog
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - RxSwift (~> 4.0.0-alpha.0)
   - SCLAlertView
   - WHC_ModelSqliteKit
+  - YALSideMenu (~> 2.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -36,7 +38,8 @@ SPEC CHECKSUMS:
   SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WHC_ModelSqliteKit: 8600471b427856c5babe389686297d97ed94f5d8
+  YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: ad5e5d5b32772260100825d7620135766dbf4d9b
+PODFILE CHECKSUM: 2ad48f4dc91730569cc603e28907536f44144106
 
 COCOAPODS: 1.2.1
