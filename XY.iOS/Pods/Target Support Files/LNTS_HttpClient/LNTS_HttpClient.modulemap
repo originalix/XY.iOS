@@ -1,6 +1,0 @@
-framework module LNTS_HttpClient {
-  umbrella header "LNTS_HttpClient-umbrella.h"
-
-  export *
-  module * { export * }
-}
