@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5649140D1F0F7FE600693F51 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140C1F0F7FE600693F51 /* CameraController.m */; };
 		564914101F0F82CA00693F51 /* FaceDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140F1F0F82C900693F51 /* FaceDetect.m */; };
+		564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564AFD101F57AC26004BE2A5 /* RichTextViewController.m */; };
 		566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCC81F20809300EDA8C4 /* VueController.swift */; };
 		566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */; };
 		567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20A61F0604A200B970CB /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 		567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20DF1F061A2500B970CB /* SGHeartHelper.m */; };
 		567B20E31F061BC800B970CB /* SGHeartHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20E21F061BC800B970CB /* SGHeartHelperTests.m */; };
 		567C2DD91F415D9100565FFF /* MyFancyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2DD81F415D9100565FFF /* MyFancyMenuViewController.swift */; };
+		567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2DDB1F416BE700565FFF /* MainViewController.swift */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
 		56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39291F132F5600D6C597 /* libc++.tbd */; };
@@ -66,6 +68,8 @@
 		5649140C1F0F7FE600693F51 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 		5649140E1F0F82C900693F51 /* FaceDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
 		5649140F1F0F82C900693F51 /* FaceDetect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetect.m; sourceTree = "<group>"; };
+		564AFD0F1F57AC26004BE2A5 /* RichTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichTextViewController.h; sourceTree = "<group>"; };
+		564AFD101F57AC26004BE2A5 /* RichTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RichTextViewController.m; sourceTree = "<group>"; };
 		566EDCC81F20809300EDA8C4 /* VueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VueController.swift; sourceTree = "<group>"; };
 		566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		567B20A31F0604A200B970CB /* XY.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XY.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +96,7 @@
 		567B20E11F061BC800B970CB /* XY.iOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XY.iOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		567B20E21F061BC800B970CB /* SGHeartHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartHelperTests.m; sourceTree = "<group>"; };
 		567C2DD81F415D9100565FFF /* MyFancyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFancyMenuViewController.swift; sourceTree = "<group>"; };
+		567C2DDB1F416BE700565FFF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
 		56D5BF671F3C323D003CB716 /* EffictiveObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffictiveObjc.m; sourceTree = "<group>"; };
 		56D5BF691F3C325F003CB716 /* EffictiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveViewController.h; sourceTree = "<group>"; };
@@ -288,6 +293,9 @@
 				56D5BF691F3C325F003CB716 /* EffictiveViewController.h */,
 				56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */,
 				567C2DD81F415D9100565FFF /* MyFancyMenuViewController.swift */,
+				567C2DDB1F416BE700565FFF /* MainViewController.swift */,
+				564AFD0F1F57AC26004BE2A5 /* RichTextViewController.h */,
+				564AFD101F57AC26004BE2A5 /* RichTextViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -539,9 +547,11 @@
 				566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */,
 				566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */,
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
+				567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */,
 				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
+				564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */,
 				5649140D1F0F7FE600693F51 /* CameraController.m in Sources */,
 				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,
 			);

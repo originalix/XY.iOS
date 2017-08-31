@@ -23,9 +23,11 @@ class MyFancyMenuViewController: UIViewController {
     
     weak var delegate: MenuViewControllerDelegate?
     
+    var selectedItem = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        registerTableView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +56,8 @@ extension MyFancyMenuViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifier)
+        cell?.textLabel?.text = "Hello wsx"
+        cell?.backgroundColor = .yellow
         return cell!
     }
     
