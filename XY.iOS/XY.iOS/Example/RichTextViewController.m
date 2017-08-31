@@ -35,12 +35,12 @@
     NSError *error = nil;
     NSRegularExpression *expression = [[NSRegularExpression alloc] initWithPattern:patterns options:NSRegularExpressionCaseInsensitive error:&error];
     [expression enumerateMatchesInString:text options:NSMatchingReportProgress range:textRange usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
-//        NSLog(@"%@", result);
 //        NSString *subString = [text substringWithRange:[result range]];
-        NSDictionary *dic = @{
-                              @"NSForegroundColorAttributeName" : [UIColor blueColor]
-                              };
-        [attributedString addAttributes:dic range:result.range];
+        [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:30] range:[result range]];
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:[result range]];
+//        self.textView.text = @"";
+        self.textView.attributedText = attributedString;
+        
     }];
 }
 
