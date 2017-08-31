@@ -14,24 +14,33 @@
 
 @implementation RichTextViewController
 
+#pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self checkRichText];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Private Method
+- (void)checkRichText {
+    NSString *text = @"#话题# Do you like wsx";
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
+    NSRange textRange = NSMakeRange(0, text.length);
+    NSString *patterns = @"#[^#]+#";
+    NSError *error = nil;
+    NSRegularExpression *expression = [[NSRegularExpression alloc] initWithPattern:patterns options:NSRegularExpressionCaseInsensitive error:&error];
+    [expression enumerateMatchesInString:text options:NSMatchingReportProgress range:textRange usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
+//        NSLog(@"%@", result);
+//        NSString *subString = [text substringWithRange:[result range]];
+        NSDictionary *dic = @{
+                              @"NSForegroundColorAttributeName" : [UIColor blueColor]
+                              };
+        [attributedString addAttributes:dic range:result.range];
+    }];
 }
-*/
+
 
 @end

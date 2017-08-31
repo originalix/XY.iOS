@@ -7,3 +7,4 @@
 #import "FaceConfig.h"
 #import "DetectViewController.h"
 #import "EffictiveViewController.h"
+#import "RichTextViewController.h"
