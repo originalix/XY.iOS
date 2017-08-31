@@ -9,6 +9,7 @@
 #import "RichTextViewController.h"
 
 @interface RichTextViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -17,7 +18,8 @@
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self checkRichText];
+    self.textView.text = @"#话题# Do you like wsx";
+    [self checkRichText:self.textView.text];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,8 +27,8 @@
 }
 
 #pragma mark - Private Method
-- (void)checkRichText {
-    NSString *text = @"#话题# Do you like wsx";
+- (void)checkRichText:(NSString *)text {
+//    NSString *text = @"#话题# Do you like wsx";
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
     NSRange textRange = NSMakeRange(0, text.length);
     NSString *patterns = @"#[^#]+#";
