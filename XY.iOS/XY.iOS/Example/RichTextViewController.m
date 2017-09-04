@@ -49,7 +49,11 @@
         
         [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:30] range:[result range]];
         [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:[result range]];
-        [attributedString addAttribute:NSLinkAttributeName value:@"topic:1" range:[result range]];
+        NSString *matchString = [text substringWithRange:result.range];
+        NSLog(@"%@", matchString);
+        NSString *test = @"话题";
+        test = [test stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [attributedString addAttribute:NSLinkAttributeName value:test range:[result range]];
         self.textView.attributedText = attributedString;
     }];
 }
@@ -65,7 +69,8 @@
 }
 
 - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
-    NSLog(@"%@", URL.scheme);
+    NSString *url = [[URL absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@", url);
     return true;
 }
 
