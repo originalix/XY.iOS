@@ -1,0 +1,6 @@
+framework module LSDeviceComponent {
+  umbrella header "LSDeviceComponent.h"
+
+  export *
+  module * { export * }
+}

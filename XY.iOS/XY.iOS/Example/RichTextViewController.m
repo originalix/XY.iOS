@@ -50,10 +50,11 @@
         [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:30] range:[result range]];
         [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:[result range]];
         NSString *matchString = [text substringWithRange:result.range];
+        matchString = [matchString stringByReplacingOccurrencesOfString:@"#" withString:@""];
+//        NSString *test = @"话题";
         NSLog(@"%@", matchString);
-        NSString *test = @"话题";
-        test = [test stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        [attributedString addAttribute:NSLinkAttributeName value:test range:[result range]];
+        matchString = [matchString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [attributedString addAttribute:NSLinkAttributeName value:matchString range:[result range]];
         self.textView.attributedText = attributedString;
     }];
 }
