@@ -8,6 +8,7 @@
 
 #import "XYMainViewController.h"
 #import "XYSearchViewController.h"
+#import "XYDeviceManager.h"
 
 @interface XYMainViewController ()
 
@@ -17,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[XYDeviceManager shared] initializeSDK];
 }
 
 - (void)didReceiveMemoryWarning {

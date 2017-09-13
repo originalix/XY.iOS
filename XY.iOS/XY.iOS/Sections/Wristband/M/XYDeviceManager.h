@@ -10,4 +10,8 @@
 
 @interface XYDeviceManager : NSObject
 
+IMSingletonH()
+
+- (void)initializeSDK;
+
 @end
