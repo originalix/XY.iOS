@@ -28,6 +28,8 @@
 		56B12E301F69044300F7FAED /* LSDeviceComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */; };
 		56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E381F69075D00F7FAED /* XYSearchViewController.m */; };
 		56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E3B1F690BC800F7FAED /* XYMainViewController.m */; };
+		56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC394D1F13377D00D6C597 /* libsqlite3.tbd */; };
+		56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E401F69113600F7FAED /* XYDeviceManager.m */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
 		56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39291F132F5600D6C597 /* libc++.tbd */; };
@@ -105,6 +107,9 @@
 		56B12E381F69075D00F7FAED /* XYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSearchViewController.m; sourceTree = "<group>"; };
 		56B12E3A1F690BC800F7FAED /* XYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYMainViewController.h; sourceTree = "<group>"; };
 		56B12E3B1F690BC800F7FAED /* XYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYMainViewController.m; sourceTree = "<group>"; };
+		56B12E3E1F69110000F7FAED /* XYWristbandConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYWristbandConst.h; sourceTree = "<group>"; };
+		56B12E3F1F69113600F7FAED /* XYDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYDeviceManager.h; sourceTree = "<group>"; };
+		56B12E401F69113600F7FAED /* XYDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYDeviceManager.m; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
 		56D5BF671F3C323D003CB716 /* EffictiveObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffictiveObjc.m; sourceTree = "<group>"; };
 		56D5BF691F3C325F003CB716 /* EffictiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveViewController.h; sourceTree = "<group>"; };
@@ -141,10 +146,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56DC39521F1337E900D6C597 /* CoreTelephony.framework in Frameworks */,
-				56DC39511F1337E100D6C597 /* CoreAudio.framework in Frameworks */,
 				56DC394F1F1337B100D6C597 /* libstdc++.tbd in Frameworks */,
 				56DC394C1F1336EC00D6C597 /* libz.tbd in Frameworks */,
+				56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */,
+				56DC39521F1337E900D6C597 /* CoreTelephony.framework in Frameworks */,
+				56DC39511F1337E100D6C597 /* CoreAudio.framework in Frameworks */,
 				56DC393A1F13355F00D6C597 /* iflyMSC.framework in Frameworks */,
 				56DC39341F132F8300D6C597 /* CoreGraphics.framework in Frameworks */,
 				56DC39301F132F7100D6C597 /* MobileCoreServices.framework in Frameworks */,
@@ -351,6 +357,9 @@
 				56B12E381F69075D00F7FAED /* XYSearchViewController.m */,
 				56B12E3A1F690BC800F7FAED /* XYMainViewController.h */,
 				56B12E3B1F690BC800F7FAED /* XYMainViewController.m */,
+				56B12E3E1F69110000F7FAED /* XYWristbandConst.h */,
+				56B12E3F1F69113600F7FAED /* XYDeviceManager.h */,
+				56B12E401F69113600F7FAED /* XYDeviceManager.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -617,6 +626,7 @@
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
 				564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */,
 				5649140D1F0F7FE600693F51 /* CameraController.m in Sources */,
+				56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */,
 				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,6 +783,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XY.iOS/lib",
@@ -800,6 +811,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XY.iOS/lib",
