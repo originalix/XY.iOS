@@ -212,5 +212,30 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="1558.4707646176912"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="MF8-Q7-6gf">
+            <objects>
+                <viewController id="kBF-nA-SvE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qQb-bQ-jJJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5J0-4S-zYk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fZ8-mz-d5y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsn-o4-gxu">
+                                <rect key="frame" x="156" y="50" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="搜索手环"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8O-I3-uOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="1558"/>
+        </scene>
     </scenes>
 </document>

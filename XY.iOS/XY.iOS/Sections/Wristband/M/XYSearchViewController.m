@@ -8,7 +8,7 @@
 
 #import "XYSearchViewController.h"
 
-@interface XYSearchViewController ()
+@interface XYSearchViewController ()<LSScanDeviceDelegate>
 
 @end
 
@@ -16,10 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self startSearch];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)startSearch {
+    [[LSDeviceManager shared] scanDevice:self];
+}
+
+#pragma mark - LSScanDeviceDelegate
+- (void)onScanResult:(LSScanDeviceInfo *)deviceInfo {
+    NSLog(@"deviceInfo = %@", [deviceInfo description]);
 }
 
 @end
