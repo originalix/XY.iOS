@@ -26,6 +26,7 @@
 		567C2DD91F415D9100565FFF /* MyFancyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2DD81F415D9100565FFF /* MyFancyMenuViewController.swift */; };
 		567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2DDB1F416BE700565FFF /* MainViewController.swift */; };
 		56B12E301F69044300F7FAED /* LSDeviceComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */; };
+		56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E381F69075D00F7FAED /* XYSearchViewController.m */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
 		56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39291F132F5600D6C597 /* libc++.tbd */; };
@@ -99,6 +100,8 @@
 		567C2DD81F415D9100565FFF /* MyFancyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFancyMenuViewController.swift; sourceTree = "<group>"; };
 		567C2DDB1F416BE700565FFF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LSDeviceComponent.framework; sourceTree = "<group>"; };
+		56B12E371F69075D00F7FAED /* XYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSearchViewController.h; sourceTree = "<group>"; };
+		56B12E381F69075D00F7FAED /* XYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSearchViewController.m; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
 		56D5BF671F3C323D003CB716 /* EffictiveObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffictiveObjc.m; sourceTree = "<group>"; };
 		56D5BF691F3C325F003CB716 /* EffictiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveViewController.h; sourceTree = "<group>"; };
@@ -231,6 +234,7 @@
 		567B20A51F0604A200B970CB /* XY.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				56B12E311F6906FF00F7FAED /* Sections */,
 				56B12E2E1F69042900F7FAED /* Vendor */,
 				567B20DA1F06091300B970CB /* Example */,
 				567B20D41F06064F00B970CB /* resources */,
@@ -310,6 +314,47 @@
 				56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		56B12E311F6906FF00F7FAED /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				56B12E321F6906FF00F7FAED /* Wristband */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		56B12E321F6906FF00F7FAED /* Wristband */ = {
+			isa = PBXGroup;
+			children = (
+				56B12E331F6906FF00F7FAED /* C */,
+				56B12E341F6906FF00F7FAED /* M */,
+				56B12E351F6906FF00F7FAED /* V */,
+			);
+			path = Wristband;
+			sourceTree = "<group>";
+		};
+		56B12E331F6906FF00F7FAED /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		56B12E341F6906FF00F7FAED /* M */ = {
+			isa = PBXGroup;
+			children = (
+				56B12E371F69075D00F7FAED /* XYSearchViewController.h */,
+				56B12E381F69075D00F7FAED /* XYSearchViewController.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		56B12E351F6906FF00F7FAED /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -561,6 +606,7 @@
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
 				567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */,
 				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
+				56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
 				564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */,

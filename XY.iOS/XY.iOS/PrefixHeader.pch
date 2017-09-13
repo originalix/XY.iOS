@@ -10,5 +10,6 @@
 #define PrefixHeader_pch
 
 #import "WHC_ModelSqlite.h"
+#import <LSDeviceComponent/LSDeviceComponent.h>
 
 #endif /* PrefixHeader_pch */
