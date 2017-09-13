@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uxz-N0-M5D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IlN-K3-u0m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -212,15 +212,15 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="1558.4707646176912"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="MF8-Q7-6gf">
             <objects>
-                <viewController id="kBF-nA-SvE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XYMainViewController" id="kBF-nA-SvE" customClass="XYMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qQb-bQ-jJJ"/>
                         <viewControllerLayoutGuide type="bottom" id="5J0-4S-zYk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fZ8-mz-d5y">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="XYMainViewController" id="fZ8-mz-d5y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -228,14 +228,34 @@
                                 <rect key="frame" x="156" y="50" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="搜索手环"/>
+                                <connections>
+                                    <action selector="searchDevice:" destination="kBF-nA-SvE" eventType="touchUpInside" id="Cbd-O1-LN5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ehm-1J-rv5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8O-I3-uOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="831" y="1558"/>
+            <point key="canvasLocation" x="906" y="2316"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ork-p9-GmV">
+            <objects>
+                <navigationController id="IlN-K3-u0m" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="28i-Zu-PWF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kBF-nA-SvE" kind="relationship" relationship="rootViewController" id="4tS-kF-prf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNZ-cH-EsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="2316"/>
         </scene>
     </scenes>
 </document>
