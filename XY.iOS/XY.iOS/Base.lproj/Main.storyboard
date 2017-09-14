@@ -250,17 +250,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="kBF-nA-SvE" kind="relationship" relationship="rootViewController" id="4tS-kF-prf"/>
+                        <segue destination="AeI-5n-N0G" kind="relationship" relationship="rootViewController" id="LnO-YP-v3D"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNZ-cH-EsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="80" y="2316"/>
         </scene>
-        <!--I-->
+        <!--Main View Controller-->
         <scene sceneID="1VJ-oo-yeV">
             <objects>
-                <viewController id="AeI-5n-N0G" customClass="I" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XYXMainViewController" id="AeI-5n-N0G" customClass="XYXMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="otd-k6-9Or"/>
                         <viewControllerLayoutGuide type="bottom" id="jdI-PC-7HB"/>
@@ -270,6 +270,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oTh-R1-MNa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFL-zM-ZAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

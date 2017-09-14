@@ -7,6 +7,7 @@
 //
 
 #import "XYXMainViewController.h"
+#import "XYXNetWorkFetcher.h"
 
 @interface XYXMainViewController ()
 
@@ -16,10 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testCache];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)testCache {
+    XYXNetworkClass *networkClass = [[XYXNetworkClass alloc] init];
+    NSURL *url = [NSURL URLWithString:@"wsx.com"];
+    [networkClass downloadDataForURL:url];
 }
 
 @end
