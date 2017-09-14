@@ -8,7 +8,25 @@
 
 #import "XYXNetWorkFetcher.h"
 
-@implementation XYXNetWorkFetcher
+@implementation XYXNetWorkFetcher {
+    NSURL *_url;
+}
+
+- (id)initWithURL:(NSURL *)url {
+    self = [super init];
+    if (self) {
+        _url = url;
+    }
+    return self;
+}
+
+- (void)startWithCompletionHandler:(XYXNetworkFetcherCompletionHandler)handler {
+    if (handler) {
+        NSString *string = @"Hello wsx";
+        NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+        handler(data);
+    }
+}
 
 @end
 
@@ -34,7 +52,6 @@
         [fetcher startWithCompletionHandler:^(NSData *data) {
             [_cache setObject:data forKey:url cost:data.length];
             [self useData:data];
-            
         }];
     }
 }
