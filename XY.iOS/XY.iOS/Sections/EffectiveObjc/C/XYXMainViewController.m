@@ -17,11 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testCache];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)cacheButtonAction:(id)sender {
+    [self testCache];
 }
 
 - (void)testCache {
