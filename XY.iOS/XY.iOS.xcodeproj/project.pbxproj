@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */; };
 		561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25451F6A522B0033959F /* XYXMainViewController.m */; };
+		561F25491F6A63300033959F /* XYXImageZip.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25481F6A63300033959F /* XYXImageZip.m */; };
 		5649140D1F0F7FE600693F51 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140C1F0F7FE600693F51 /* CameraController.m */; };
 		564914101F0F82CA00693F51 /* FaceDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140F1F0F82C900693F51 /* FaceDetect.m */; };
 		564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564AFD101F57AC26004BE2A5 /* RichTextViewController.m */; };
@@ -75,6 +76,8 @@
 		561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXNetWorkFetcher.m; sourceTree = "<group>"; };
 		561F25441F6A522B0033959F /* XYXMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXMainViewController.h; sourceTree = "<group>"; };
 		561F25451F6A522B0033959F /* XYXMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXMainViewController.m; sourceTree = "<group>"; };
+		561F25471F6A63300033959F /* XYXImageZip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXImageZip.h; sourceTree = "<group>"; };
+		561F25481F6A63300033959F /* XYXImageZip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXImageZip.m; sourceTree = "<group>"; };
 		5649140B1F0F7FE600693F51 /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
 		5649140C1F0F7FE600693F51 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 		5649140E1F0F82C900693F51 /* FaceDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 			children = (
 				561F25411F6A4DF90033959F /* XYXNetWorkFetcher.h */,
 				561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */,
+				561F25471F6A63300033959F /* XYXImageZip.h */,
+				561F25481F6A63300033959F /* XYXImageZip.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -656,6 +661,7 @@
 				561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */,
 				564914101F0F82CA00693F51 /* FaceDetect.m in Sources */,
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
+				561F25491F6A63300033959F /* XYXImageZip.m in Sources */,
 				561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */,
 				56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,

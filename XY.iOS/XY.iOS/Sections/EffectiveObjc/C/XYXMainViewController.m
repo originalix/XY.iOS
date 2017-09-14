@@ -8,8 +8,11 @@
 
 #import "XYXMainViewController.h"
 #import "XYXNetWorkFetcher.h"
+#import "XYXImageZip.h"
 
 @interface XYXMainViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -33,6 +36,13 @@
 - (void)testCache:(XYXNetworkClass *)p_networkClass {
     NSURL *url = [NSURL URLWithString:@"wsx.com"];
     [p_networkClass downloadDataForURL:url];
+}
+
+- (IBAction)imageDataAction:(id)sender {
+    UIImage *image = [UIImage imageNamed:@"face"];
+    XYXImageZip *imageZip = [[XYXImageZip alloc] init];
+    [imageZip calculateImage:image];
+    [self.imageView setImage:image];
 }
 
 @end

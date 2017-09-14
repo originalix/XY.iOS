@@ -269,22 +269,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-Aw-6DS">
-                                <rect key="frame" x="165" y="128" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-Aw-6DS">
+                                <rect key="frame" x="165" y="148" width="44" height="30"/>
                                 <state key="normal" title="Cache"/>
                                 <connections>
                                     <action selector="cacheButtonAction:" destination="AeI-5n-N0G" eventType="touchUpInside" id="SaZ-Vt-uKH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-ye-XK3">
+                                <rect key="frame" x="127" y="198" width="122" height="30"/>
+                                <state key="normal" title="ImageDataLength"/>
+                                <connections>
+                                    <action selector="imageDataAction:" destination="AeI-5n-N0G" eventType="touchUpInside" id="0NL-7n-eth"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wpx-7P-aEH">
+                                <rect key="frame" x="60" y="348" width="255" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="GOt-E9-jms"/>
+                                    <constraint firstAttribute="height" constant="299" id="pJ4-1S-ndf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Jc-Aw-6DS" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="Wrg-pI-YRu"/>
+                            <constraint firstItem="Wpx-7P-aEH" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="b7m-Bg-toF"/>
+                            <constraint firstItem="Wpx-7P-aEH" firstAttribute="top" secondItem="hWr-ye-XK3" secondAttribute="bottom" constant="120" id="c8p-VM-A4N"/>
+                            <constraint firstItem="6Jc-Aw-6DS" firstAttribute="top" secondItem="otd-k6-9Or" secondAttribute="bottom" constant="84" id="csc-qA-Vs8"/>
+                            <constraint firstItem="hWr-ye-XK3" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="fLY-le-xHl"/>
+                            <constraint firstItem="jdI-PC-7HB" firstAttribute="top" secondItem="Wpx-7P-aEH" secondAttribute="bottom" constant="20" id="ulM-ko-ZFd"/>
+                            <constraint firstItem="hWr-ye-XK3" firstAttribute="top" secondItem="6Jc-Aw-6DS" secondAttribute="bottom" constant="20" id="v06-So-8oG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oTh-R1-MNa"/>
+                    <connections>
+                        <outlet property="imageView" destination="Wpx-7P-aEH" id="MSC-nr-bGt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFL-zM-ZAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79" y="3021"/>
+            <point key="canvasLocation" x="77.599999999999994" y="3020.2398800599703"/>
         </scene>
     </scenes>
 </document>
