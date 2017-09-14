@@ -46,17 +46,18 @@
 - (void)downloadDataForURL:(NSURL *)url {
     NSData *cacheData = [_cache objectForKey:url];
     if (cacheData) {
-        [self useData:cacheData];
+        NSLog(@"显示缓存data");
+        [self p_useData:cacheData];
     } else {
         XYXNetWorkFetcher *fetcher = [[XYXNetWorkFetcher alloc] initWithURL:url];
         [fetcher startWithCompletionHandler:^(NSData *data) {
             [_cache setObject:data forKey:url cost:data.length];
-            [self useData:data];
+            [self p_useData:data];
         }];
     }
 }
 
-- (void)useData:(NSData *)data {
+- (void)p_useData:(NSData *)data {
     NSLog(@"data->>> : %@", data);
 }
 

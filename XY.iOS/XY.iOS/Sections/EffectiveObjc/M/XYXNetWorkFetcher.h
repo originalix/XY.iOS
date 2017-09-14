@@ -16,5 +16,6 @@ typedef void(^XYXNetworkFetcherCompletionHandler)(NSData *data);
 @end
 
 @interface XYXNetworkClass: NSObject
-
+- (id)init;
+- (void)downloadDataForURL:(NSURL *)url;
 @end
