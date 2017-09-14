@@ -13,10 +13,13 @@
 
 @end
 
-@implementation XYXMainViewController
+@implementation XYXMainViewController {
+    XYXNetworkClass *_networkClass;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _networkClass = [[XYXNetworkClass alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,13 +27,12 @@
 }
 
 - (IBAction)cacheButtonAction:(id)sender {
-    [self testCache];
+    [self testCache:_networkClass];
 }
 
-- (void)testCache {
-    XYXNetworkClass *networkClass = [[XYXNetworkClass alloc] init];
+- (void)testCache:(XYXNetworkClass *)p_networkClass {
     NSURL *url = [NSURL URLWithString:@"wsx.com"];
-    [networkClass downloadDataForURL:url];
+    [p_networkClass downloadDataForURL:url];
 }
 
 @end

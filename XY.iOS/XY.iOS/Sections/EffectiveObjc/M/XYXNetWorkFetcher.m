@@ -36,7 +36,7 @@
 
 - (id)init {
     if ((self = [super init])) {
-        _cache = [NSCache new];
+        _cache = [[NSCache alloc] init];
         _cache.countLimit = 100;
         _cache.totalCostLimit = 5 * 1024 * 1024;
     }
@@ -44,14 +44,15 @@
 }
 
 - (void)downloadDataForURL:(NSURL *)url {
-    NSData *cachedData = [_cache objectForKey:url];
+    NSData *cachedData = [_cache objectForKey:[url absoluteString]];
     if (cachedData) {
         NSLog(@"显示缓存data");
         [self p_useData:cachedData];
     } else {
         XYXNetWorkFetcher *fetcher = [[XYXNetWorkFetcher alloc] initWithURL:url];
         [fetcher startWithCompletionHandler:^(NSData *data) {
-            [_cache setObject:data forKey:url cost:data.length];
+            [_cache setObject:data forKey:[url absoluteString]];
+//            NSData *cachedData = [_cache objectForKey:url];
             [self p_useData:data];
         }];
     }
