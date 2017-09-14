@@ -14,3 +14,7 @@ typedef void(^XYXNetworkFetcherCompletionHandler)(NSData *data);
 - (void)startWithCompletionHandler:(XYXNetworkFetcherCompletionHandler)handler;
 
 @end
+
+@interface XYXNetworkClass: NSObject
+
+@end
