@@ -27,12 +27,26 @@
 //    [self.layerView.layer addSublayer:blueLayer];
     
     // contents 属性
-    UIImage *image = [UIImage imageNamed:@"face"];
-    self.layerView.layer.contents = (__bridge id)image.CGImage;
+//    UIImage *image = [UIImage imageNamed:@"face"];
+//    self.layerView.layer.contents = (__bridge id)image.CGImage;
+//    self.layerView.layer.contentsGravity = kCAGravityCenter;
+//
+//    self.layerView.layer.contentsScale = [UIScreen mainScreen].scale;
+//    self.layerView.layer.masksToBounds = true;
+//
+//    [self addSpriteImage:image withContentRect:CGRectMake(0.25, 0.25, 0.5, 0.5) toLayer:self.layerView.layer];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)addSpriteImage:(UIImage *)image withContentRect:(CGRect)rect toLayer:(CALayer *)layer {
+    layer.contents = (__bridge id)image.CGImage;
+    layer.contentsGravity = kCAGravityResizeAspect;
+//    layer.contentsRect = rect;
+    layer.contentsCenter = rect;
 }
 
 @end
