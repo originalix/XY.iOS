@@ -39,10 +39,15 @@
 }
 
 - (IBAction)imageDataAction:(id)sender {
-    UIImage *image = [UIImage imageNamed:@"face"];
+    UIImage *image = [UIImage imageNamed:@"face1.jpg"];
     XYXImageZip *imageZip = [[XYXImageZip alloc] init];
     [imageZip calculateImage:image];
     [self.imageView setImage:image];
+    
+    UIImage *image1 = [UIImage imageNamed:@"face1.jpg"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"face2" ofType:@"png"];
+    UIImage *image2 = [UIImage imageWithContentsOfFile:path];
+    NSLog(@"image1 = %@, image2 = %@, path = %@", image1, image2, path);
 }
 
 @end

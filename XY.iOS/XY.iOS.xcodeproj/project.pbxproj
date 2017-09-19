@@ -28,6 +28,8 @@
 		567B20E31F061BC800B970CB /* SGHeartHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20E21F061BC800B970CB /* SGHeartHelperTests.m */; };
 		567C2DD91F415D9100565FFF /* MyFancyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2DD81F415D9100565FFF /* MyFancyMenuViewController.swift */; };
 		567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2DDB1F416BE700565FFF /* MainViewController.swift */; };
+		568A6AB31F70F8DC0023F6AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39491F13364D00D6C597 /* QuartzCore.framework */; };
+		568A6ABA1F70FAE70023F6AC /* XYLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568A6AB91F70FAE70023F6AC /* XYLayerViewController.m */; };
 		56B12E301F69044300F7FAED /* LSDeviceComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */; };
 		56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E381F69075D00F7FAED /* XYSearchViewController.m */; };
 		56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E3B1F690BC800F7FAED /* XYMainViewController.m */; };
@@ -111,6 +113,10 @@
 		567B20E21F061BC800B970CB /* SGHeartHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartHelperTests.m; sourceTree = "<group>"; };
 		567C2DD81F415D9100565FFF /* MyFancyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFancyMenuViewController.swift; sourceTree = "<group>"; };
 		567C2DDB1F416BE700565FFF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		568A6AB81F70FAE70023F6AC /* XYLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLayerViewController.h; sourceTree = "<group>"; };
+		568A6AB91F70FAE70023F6AC /* XYLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLayerViewController.m; sourceTree = "<group>"; };
+		56A32E081F6A6FB30015FCA0 /* face1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face1.jpg; sourceTree = "<group>"; };
+		56A32E091F6A6FB30015FCA0 /* face123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face123.jpg; sourceTree = "<group>"; };
 		56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LSDeviceComponent.framework; sourceTree = "<group>"; };
 		56B12E371F69075D00F7FAED /* XYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSearchViewController.h; sourceTree = "<group>"; };
 		56B12E381F69075D00F7FAED /* XYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSearchViewController.m; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568A6AB31F70F8DC0023F6AC /* QuartzCore.framework in Frameworks */,
 				56DC394F1F1337B100D6C597 /* libstdc++.tbd in Frameworks */,
 				56DC394C1F1336EC00D6C597 /* libz.tbd in Frameworks */,
 				56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */,
@@ -289,6 +296,8 @@
 		567B20A51F0604A200B970CB /* XY.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				56A32E081F6A6FB30015FCA0 /* face1.jpg */,
+				56A32E091F6A6FB30015FCA0 /* face123.jpg */,
 				56B12E311F6906FF00F7FAED /* Sections */,
 				56B12E2E1F69042900F7FAED /* Vendor */,
 				567B20DA1F06091300B970CB /* Example */,
@@ -363,6 +372,39 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		568A6AB41F70F9440023F6AC /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				568A6AB51F70F9440023F6AC /* C */,
+				568A6AB61F70F9440023F6AC /* M */,
+				568A6AB71F70F9440023F6AC /* V */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		568A6AB51F70F9440023F6AC /* C */ = {
+			isa = PBXGroup;
+			children = (
+				568A6AB81F70FAE70023F6AC /* XYLayerViewController.h */,
+				568A6AB91F70FAE70023F6AC /* XYLayerViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		568A6AB61F70F9440023F6AC /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		568A6AB71F70F9440023F6AC /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 		56B12E2E1F69042900F7FAED /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +416,7 @@
 		56B12E311F6906FF00F7FAED /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				568A6AB41F70F9440023F6AC /* CoreAnimation */,
 				561F253D1F6A4DA20033959F /* EffectiveObjc */,
 				56B12E321F6906FF00F7FAED /* Wristband */,
 			);
@@ -661,6 +704,7 @@
 				561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */,
 				564914101F0F82CA00693F51 /* FaceDetect.m in Sources */,
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
+				568A6ABA1F70FAE70023F6AC /* XYLayerViewController.m in Sources */,
 				561F25491F6A63300033959F /* XYXImageZip.m in Sources */,
 				561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */,
 				56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */,

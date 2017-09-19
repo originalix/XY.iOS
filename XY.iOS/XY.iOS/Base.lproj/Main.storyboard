@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -290,15 +292,21 @@
                                     <constraint firstAttribute="height" constant="299" id="pJ4-1S-ndf"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-QE-sxl">
+                                <rect key="frame" x="159" y="248" width="58" height="30"/>
+                                <state key="normal" title="CALayer"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jdI-PC-7HB" firstAttribute="top" secondItem="Wpx-7P-aEH" secondAttribute="bottom" constant="20" id="G1I-Pq-pAm"/>
+                            <constraint firstItem="M7d-QE-sxl" firstAttribute="top" secondItem="hWr-ye-XK3" secondAttribute="bottom" constant="20" id="NmQ-fL-QqY"/>
                             <constraint firstItem="6Jc-Aw-6DS" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="Wrg-pI-YRu"/>
                             <constraint firstItem="Wpx-7P-aEH" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="b7m-Bg-toF"/>
+                            <constraint firstItem="M7d-QE-sxl" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="bcV-NB-5GB"/>
                             <constraint firstItem="Wpx-7P-aEH" firstAttribute="top" secondItem="hWr-ye-XK3" secondAttribute="bottom" constant="120" id="c8p-VM-A4N"/>
-                            <constraint firstItem="6Jc-Aw-6DS" firstAttribute="top" secondItem="otd-k6-9Or" secondAttribute="bottom" constant="84" id="csc-qA-Vs8"/>
                             <constraint firstItem="hWr-ye-XK3" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="fLY-le-xHl"/>
-                            <constraint firstItem="jdI-PC-7HB" firstAttribute="top" secondItem="Wpx-7P-aEH" secondAttribute="bottom" constant="20" id="ulM-ko-ZFd"/>
+                            <constraint firstItem="6Jc-Aw-6DS" firstAttribute="top" secondItem="otd-k6-9Or" secondAttribute="bottom" constant="84" id="l2V-Wj-paZ"/>
                             <constraint firstItem="hWr-ye-XK3" firstAttribute="top" secondItem="6Jc-Aw-6DS" secondAttribute="bottom" constant="20" id="v06-So-8oG"/>
                         </constraints>
                     </view>
@@ -310,6 +318,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFL-zM-ZAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="77.599999999999994" y="3020.2398800599703"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FTZ-5Q-KlV">
+            <objects>
+                <viewController id="CoH-9d-win" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lj8-4m-Sqq"/>
+                        <viewControllerLayoutGuide type="bottom" id="CA1-B9-pt9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7vG-pi-lvg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXm-SL-axW">
+                                <rect key="frame" x="21.5" y="166.5" width="333.5" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XXm-SL-axW" firstAttribute="centerY" secondItem="7vG-pi-lvg" secondAttribute="centerY" id="Fft-fg-5Y2"/>
+                            <constraint firstItem="XXm-SL-axW" firstAttribute="width" secondItem="7vG-pi-lvg" secondAttribute="height" multiplier="1:2" id="RPY-Df-2ck"/>
+                            <constraint firstItem="XXm-SL-axW" firstAttribute="height" secondItem="7vG-pi-lvg" secondAttribute="height" multiplier="1:2" id="eN4-MR-5E8"/>
+                            <constraint firstItem="XXm-SL-axW" firstAttribute="centerX" secondItem="7vG-pi-lvg" secondAttribute="centerX" id="raB-ve-cBd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfK-St-3Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.79999999999995" y="3020.2398800599703"/>
         </scene>
     </scenes>
 </document>

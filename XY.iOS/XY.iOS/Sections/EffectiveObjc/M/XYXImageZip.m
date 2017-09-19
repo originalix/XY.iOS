@@ -11,7 +11,7 @@
 @implementation XYXImageZip
 
 - (void)calculateImage:(UIImage *)image {
-    NSData *data = UIImageJPEGRepresentation(image, 1);
+    NSData *data = UIImageJPEGRepresentation(image, 0.5);
     
     NSString *docsDir;
     NSArray *dirPaths;
@@ -20,6 +20,8 @@
     NSString *databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:@"foo.jpg"]];
     NSLog(@"%@", databasePath);
     [data writeToFile:databasePath atomically:true];
+    UIImage *testImage = [UIImage imageWithData:data];
+    
     
     NSInteger imageDataLen = [data length];
     NSLog(@"image data length = %ld", imageDataLen);
