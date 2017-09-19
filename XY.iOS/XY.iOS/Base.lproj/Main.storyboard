@@ -295,18 +295,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-QE-sxl">
                                 <rect key="frame" x="159" y="248" width="58" height="30"/>
                                 <state key="normal" title="CALayer"/>
+                                <connections>
+                                    <action selector="calayerButtonAction:" destination="AeI-5n-N0G" eventType="touchUpInside" id="ZVy-I2-5gU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jdI-PC-7HB" firstAttribute="top" secondItem="Wpx-7P-aEH" secondAttribute="bottom" constant="20" id="G1I-Pq-pAm"/>
                             <constraint firstItem="M7d-QE-sxl" firstAttribute="top" secondItem="hWr-ye-XK3" secondAttribute="bottom" constant="20" id="NmQ-fL-QqY"/>
                             <constraint firstItem="6Jc-Aw-6DS" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="Wrg-pI-YRu"/>
+                            <constraint firstItem="6Jc-Aw-6DS" firstAttribute="top" secondItem="otd-k6-9Or" secondAttribute="bottom" constant="84" id="X8a-Oh-qTI"/>
                             <constraint firstItem="Wpx-7P-aEH" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="b7m-Bg-toF"/>
                             <constraint firstItem="M7d-QE-sxl" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="bcV-NB-5GB"/>
                             <constraint firstItem="Wpx-7P-aEH" firstAttribute="top" secondItem="hWr-ye-XK3" secondAttribute="bottom" constant="120" id="c8p-VM-A4N"/>
                             <constraint firstItem="hWr-ye-XK3" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="fLY-le-xHl"/>
-                            <constraint firstItem="6Jc-Aw-6DS" firstAttribute="top" secondItem="otd-k6-9Or" secondAttribute="bottom" constant="84" id="l2V-Wj-paZ"/>
+                            <constraint firstItem="jdI-PC-7HB" firstAttribute="top" secondItem="Wpx-7P-aEH" secondAttribute="bottom" constant="20" id="hhF-bi-olj"/>
                             <constraint firstItem="hWr-ye-XK3" firstAttribute="top" secondItem="6Jc-Aw-6DS" secondAttribute="bottom" constant="20" id="v06-So-8oG"/>
                         </constraints>
                     </view>
@@ -319,10 +322,10 @@
             </objects>
             <point key="canvasLocation" x="77.599999999999994" y="3020.2398800599703"/>
         </scene>
-        <!--View Controller-->
+        <!--Layer View Controller-->
         <scene sceneID="FTZ-5Q-KlV">
             <objects>
-                <viewController id="CoH-9d-win" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XYLayerViewController" id="CoH-9d-win" customClass="XYLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lj8-4m-Sqq"/>
                         <viewControllerLayoutGuide type="bottom" id="CA1-B9-pt9"/>
@@ -344,6 +347,9 @@
                             <constraint firstItem="XXm-SL-axW" firstAttribute="centerX" secondItem="7vG-pi-lvg" secondAttribute="centerX" id="raB-ve-cBd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="layerView" destination="XXm-SL-axW" id="var-Bf-tex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfK-St-3Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

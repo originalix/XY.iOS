@@ -9,6 +9,7 @@
 #import "XYXMainViewController.h"
 #import "XYXNetWorkFetcher.h"
 #import "XYXImageZip.h"
+#import "XYLayerViewController.h"
 
 @interface XYXMainViewController ()
 
@@ -31,6 +32,11 @@
 
 - (IBAction)cacheButtonAction:(id)sender {
     [self testCache:_networkClass];
+}
+
+- (IBAction)calayerButtonAction:(id)sender {
+    XYLayerViewController *layerController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"XYLayerViewController"];
+    [self.navigationController pushViewController:layerController animated:true];
 }
 
 - (void)testCache:(XYXNetworkClass *)p_networkClass {
