@@ -8,7 +8,7 @@
 
 #import "XYLayerViewController.h"
 
-@interface XYLayerViewController ()
+@interface XYLayerViewController ()<CALayerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIView *layerView;
 
@@ -20,9 +20,9 @@
     [super viewDidLoad];
     
     // 使用图层
-//    CALayer *blueLayer = [CALayer layer];
-//    blueLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);
-//    blueLayer.backgroundColor = [UIColor blueColor].CGColor;
+    CALayer *blueLayer = [CALayer layer];
+    blueLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);
+    blueLayer.backgroundColor = [UIColor blueColor].CGColor;
 //
 //    [self.layerView.layer addSublayer:blueLayer];
     
@@ -36,6 +36,10 @@
 //
 //    [self addSpriteImage:image withContentRect:CGRectMake(0.25, 0.25, 0.5, 0.5) toLayer:self.layerView.layer];
     
+    blueLayer.delegate = self;
+    blueLayer.contentsScale = [UIScreen mainScreen].scale;
+    [self.layerView.layer addSublayer:blueLayer];
+    [blueLayer display];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +51,18 @@
     layer.contentsGravity = kCAGravityResizeAspect;
 //    layer.contentsRect = rect;
     layer.contentsCenter = rect;
+}
+
+#pragma mark - CALayerDelegate
+//- (void)displayLayer:(CALayer *)layer {
+//    NSLog(@"%@%s", layer,__func__);
+//}
+
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
+    NSLog(@"%s", __func__);
+    CGContextSetLineWidth(ctx, 10.f);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
+    CGContextStrokeEllipseInRect(ctx, layer.bounds);
 }
 
 @end
