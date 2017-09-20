@@ -336,6 +336,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXm-SL-axW">
                                 <rect key="frame" x="21.5" y="166.5" width="333.5" height="333.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="miaozhen" translatesAutoresizingMaskIntoConstraints="NO" id="A3D-nJ-y6s">
+                                        <rect key="frame" x="113" y="86" width="124" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fenzhen" translatesAutoresizingMaskIntoConstraints="NO" id="u6J-iT-6GP">
+                                        <rect key="frame" x="135.5" y="138.5" width="62" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shizhen" translatesAutoresizingMaskIntoConstraints="NO" id="WkW-M8-9v7">
+                                        <rect key="frame" x="136" y="119" width="62" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -356,4 +370,9 @@
             <point key="canvasLocation" x="904.79999999999995" y="3020.2398800599703"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fenzhen" width="216" height="200"/>
+        <image name="miaozhen" width="200" height="200"/>
+        <image name="shizhen" width="200" height="200"/>
+    </resources>
 </document>
