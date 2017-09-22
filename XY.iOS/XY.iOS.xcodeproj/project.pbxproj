@@ -10,6 +10,7 @@
 		561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */; };
 		561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25451F6A522B0033959F /* XYXMainViewController.m */; };
 		561F25491F6A63300033959F /* XYXImageZip.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25481F6A63300033959F /* XYXImageZip.m */; };
+		56206FA81F74B13100AE2183 /* XYXChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56206FA71F74B13100AE2183 /* XYXChartViewController.m */; };
 		5649140D1F0F7FE600693F51 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140C1F0F7FE600693F51 /* CameraController.m */; };
 		564914101F0F82CA00693F51 /* FaceDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140F1F0F82C900693F51 /* FaceDetect.m */; };
 		564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564AFD101F57AC26004BE2A5 /* RichTextViewController.m */; };
@@ -80,6 +81,8 @@
 		561F25451F6A522B0033959F /* XYXMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXMainViewController.m; sourceTree = "<group>"; };
 		561F25471F6A63300033959F /* XYXImageZip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXImageZip.h; sourceTree = "<group>"; };
 		561F25481F6A63300033959F /* XYXImageZip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXImageZip.m; sourceTree = "<group>"; };
+		56206FA61F74B13100AE2183 /* XYXChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXChartViewController.h; sourceTree = "<group>"; };
+		56206FA71F74B13100AE2183 /* XYXChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXChartViewController.m; sourceTree = "<group>"; };
 		5649140B1F0F7FE600693F51 /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
 		5649140C1F0F7FE600693F51 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 		5649140E1F0F82C900693F51 /* FaceDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
@@ -271,6 +274,39 @@
 			path = V;
 			sourceTree = "<group>";
 		};
+		56206FA21F74B11400AE2183 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				56206FA31F74B11400AE2183 /* C */,
+				56206FA41F74B11400AE2183 /* M */,
+				56206FA51F74B11400AE2183 /* V */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		56206FA31F74B11400AE2183 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				56206FA61F74B13100AE2183 /* XYXChartViewController.h */,
+				56206FA71F74B13100AE2183 /* XYXChartViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		56206FA41F74B11400AE2183 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		56206FA51F74B11400AE2183 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 		567B209A1F0604A200B970CB = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +452,7 @@
 		56B12E311F6906FF00F7FAED /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				56206FA21F74B11400AE2183 /* Chart */,
 				568A6AB41F70F9440023F6AC /* CoreAnimation */,
 				561F253D1F6A4DA20033959F /* EffectiveObjc */,
 				56B12E321F6906FF00F7FAED /* Wristband */,
@@ -704,6 +741,7 @@
 				561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */,
 				564914101F0F82CA00693F51 /* FaceDetect.m in Sources */,
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
+				56206FA81F74B13100AE2183 /* XYXChartViewController.m in Sources */,
 				568A6ABA1F70FAE70023F6AC /* XYLayerViewController.m in Sources */,
 				561F25491F6A63300033959F /* XYXImageZip.m in Sources */,
 				561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */,

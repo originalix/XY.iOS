@@ -10,6 +10,7 @@
 #import "XYXNetWorkFetcher.h"
 #import "XYXImageZip.h"
 #import "XYLayerViewController.h"
+#import "XYXChartViewController.h"
 
 @interface XYXMainViewController ()
 
@@ -54,6 +55,11 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"face2" ofType:@"png"];
     UIImage *image2 = [UIImage imageWithContentsOfFile:path];
     NSLog(@"image1 = %@, image2 = %@, path = %@", image1, image2, path);
+}
+
+- (IBAction)go2ChartController:(id)sender {
+    XYXChartViewController *chartVC = [[XYXChartViewController alloc] init];
+    [self.navigationController pushViewController:chartVC animated:true];
 }
 
 @end

@@ -299,9 +299,17 @@
                                     <action selector="calayerButtonAction:" destination="AeI-5n-N0G" eventType="touchUpInside" id="ZVy-I2-5gU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGr-aJ-EJl">
+                                <rect key="frame" x="168" y="298" width="39" height="30"/>
+                                <state key="normal" title="Chart"/>
+                                <connections>
+                                    <action selector="go2ChartController:" destination="AeI-5n-N0G" eventType="touchUpInside" id="BSn-MQ-ASt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GGr-aJ-EJl" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="ERW-OQ-4II"/>
                             <constraint firstItem="M7d-QE-sxl" firstAttribute="top" secondItem="hWr-ye-XK3" secondAttribute="bottom" constant="20" id="NmQ-fL-QqY"/>
                             <constraint firstItem="6Jc-Aw-6DS" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="Wrg-pI-YRu"/>
                             <constraint firstItem="6Jc-Aw-6DS" firstAttribute="top" secondItem="otd-k6-9Or" secondAttribute="bottom" constant="84" id="X8a-Oh-qTI"/>
@@ -309,6 +317,7 @@
                             <constraint firstItem="M7d-QE-sxl" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="bcV-NB-5GB"/>
                             <constraint firstItem="Wpx-7P-aEH" firstAttribute="top" secondItem="hWr-ye-XK3" secondAttribute="bottom" constant="120" id="c8p-VM-A4N"/>
                             <constraint firstItem="hWr-ye-XK3" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="fLY-le-xHl"/>
+                            <constraint firstItem="GGr-aJ-EJl" firstAttribute="top" secondItem="M7d-QE-sxl" secondAttribute="bottom" constant="20" id="hek-uu-A4X"/>
                             <constraint firstItem="jdI-PC-7HB" firstAttribute="top" secondItem="Wpx-7P-aEH" secondAttribute="bottom" constant="20" id="hhF-bi-olj"/>
                             <constraint firstItem="hWr-ye-XK3" firstAttribute="top" secondItem="6Jc-Aw-6DS" secondAttribute="bottom" constant="20" id="v06-So-8oG"/>
                         </constraints>
