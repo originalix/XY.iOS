@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '44667FF3CA125C6C1CA3C54E8B9DEBD5'
-               BlueprintName = 'WHC_ModelSqliteKit'
+               BlueprintIdentifier = 'DA392EE8E5B24D16FB9910405A0AFC2E'
+               BlueprintName = 'UICountingLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'WHC_ModelSqliteKit.framework'>
+               BuildableName = 'UICountingLabel.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
