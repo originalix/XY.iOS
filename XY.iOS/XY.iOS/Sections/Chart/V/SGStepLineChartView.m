@@ -133,6 +133,10 @@ static const NSInteger kMaxIndex = 9999;
 #pragma mark - PNChartDelegate
 - (void)userClickedOnLineKeyPoint:(CGPoint)point lineIndex:(NSInteger)lineIndex pointIndex:(NSInteger)pointIndex {
     NSLog(@"Click Key on line %f, %f line index is %d and point index is %d",point.x, point.y,(int)lineIndex, (int)pointIndex);
+    [self p_refreshSelectedViewWithPointIndex:pointIndex];
+}
+
+- (void)p_refreshSelectedViewWithPointIndex:(NSInteger)pointIndex {
     
     static const CGFloat kDataLabelWidth = 50.f;
     static const CGFloat kDataLabelHeight = 40.f;
@@ -141,12 +145,7 @@ static const NSInteger kMaxIndex = 9999;
     
     if (_oldSelectedIndex < kMaxIndex) {
         // 恢复之前View状态
-        PNChartLabel *chartLabel = [self.lineChart.xChartLabels objectAtIndex:_oldSelectedIndex];
-        chartLabel.textColor = kDeSelectedLabelColor;
-        UIView *pointView = [self.pointViewArray objectAtIndex:_oldSelectedIndex];
-        [pointView removeFromSuperview];
-        pointView.backgroundColor = kDeSelectedLabelColor;
-        [self.lineChart addSubview:pointView];
+        [self p_selectedChartLabelWithIndex:_oldSelectedIndex Selected:false];
     }
     
     _oldSelectedIndex = pointIndex;
@@ -157,11 +156,20 @@ static const NSInteger kMaxIndex = 9999;
         [self.dataLabel setFrame:CGRectMake(point.x - kDataLabelOffSetX, point.y - kDataLabelOffSetY, kDataLabelWidth, kDataLabelHeight)];
     }
     
+    [self p_selectedChartLabelWithIndex:pointIndex Selected:true];
+}
+
+- (void)p_selectedChartLabelWithIndex:(NSInteger)pointIndex Selected:(BOOL)selected {
     PNChartLabel *chartLabel = [self.lineChart.xChartLabels objectAtIndex:pointIndex];
-    chartLabel.textColor = kSelectedLabelColor;
     UIView *pointView = [self.pointViewArray objectAtIndex:pointIndex];
     [pointView removeFromSuperview];
-    pointView.backgroundColor = kSelectedLabelColor;
+    if (!selected) {
+        chartLabel.textColor = kDeSelectedLabelColor;
+        pointView.backgroundColor = [UIColor redColor];
+    } else {
+        chartLabel.textColor = kSelectedLabelColor;
+        pointView.backgroundColor = kSelectedLabelColor;
+    }
     [self.lineChart addSubview:pointView];
 }
 
