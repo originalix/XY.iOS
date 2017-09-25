@@ -22,7 +22,7 @@
     NSArray *yLabel = @[@6666, @160000, @126400, @66778, @280000];
     SGStepLineChartView *chartView = [[SGStepLineChartView alloc] initWithFrame:CGRectMake(0, 100, 350, 180) XLabel:xLabel YLabel:yLabel];
     [self.view addSubview:chartView];
-    [chartView strokeChart];
+//    [chartView strokeChart];
     
 }
 

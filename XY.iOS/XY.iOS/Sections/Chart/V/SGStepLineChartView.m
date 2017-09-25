@@ -12,9 +12,15 @@
 
 #define kInflexionPointColor [UIColor redColor]
 #define kLineColor PNFreshGreen
+#define kSublineColor [UIColor lightGrayColor]
+#define kCicleColor [UIColor redColor]
 
 static const CGFloat kInflexionPointWidth = 6.f;
 static const CGFloat kLineWidth = 4.f;
+static const CGFloat kSublineBottomMargin = 40.f;
+static const CGFloat kSublineWidth = 1.f;
+static const CGFloat kCicleWidth = 5.f;
+static const CGFloat kDataLabelFontSize = 13.f;
 
 @interface SGStepLineChartView() <PNChartDelegate>
 
@@ -26,6 +32,7 @@ static const CGFloat kLineWidth = 4.f;
 
 @implementation SGStepLineChartView
 
+#pragma mark - initialize
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -45,6 +52,7 @@ static const CGFloat kLineWidth = 4.f;
     return self;
 }
 
+#pragma mark - 创建折线图View
 - (void)p_setupLineView {
     _lineChart.showGenYLabels = false;
     _lineChart.showSmoothLines = true;
@@ -64,7 +72,44 @@ static const CGFloat kLineWidth = 4.f;
     
     _lineChart.chartData = @[data];
     _lineChart.delegate = self;
+    [_lineChart strokeChart];
     [self addSubview: _lineChart];
+    [self p_setupCicleViewAndSublineView];
+}
+
+- (void)p_setupCicleViewAndSublineView {
+    for (NSArray *arr in self.lineChart.pathPoints) {
+        self.pointViewArray = [NSMutableArray array];
+        for (int i = 0; i < [arr count]; i++) {
+            CGPoint point = [[arr objectAtIndex:i] CGPointValue];
+            [self p_createCicleViewAndSublineViewWithPoint:point];
+        }
+    }
+    _dataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    _dataLabel.backgroundColor = [UIColor clearColor];
+    _dataLabel.font = [UIFont systemFontOfSize:kDataLabelFontSize];
+    _dataLabel.textAlignment = NSTextAlignmentCenter;
+    [self.lineChart addSubview:_dataLabel];
+}
+
+- (void)p_createCicleViewAndSublineViewWithPoint:(CGPoint)point {
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(point.x, 0, kSublineWidth, _lineChart.frame.size.height - kSublineBottomMargin)];
+    lineView.backgroundColor = kSublineColor;
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(strokeChart)];
+    tapGesture.numberOfTapsRequired = 1;
+    tapGesture.numberOfTouchesRequired = 1;
+    [lineView addGestureRecognizer:tapGesture];
+    
+    [self.lineChart addSubview:lineView];
+    
+    UIView *cicleView = [[UIView alloc] initWithFrame:CGRectMake(point.x - kCicleWidth / 2, point.y - kCicleWidth / 2, kCicleWidth, kCicleWidth)];
+    cicleView.layer.masksToBounds = true;
+    cicleView.layer.cornerRadius = 3.f;
+    cicleView.backgroundColor = kCicleColor;
+    [self.pointViewArray addObject:cicleView];
+    
+    [self.lineChart addSubview:cicleView];
 }
 
 - (void)strokeChart {
