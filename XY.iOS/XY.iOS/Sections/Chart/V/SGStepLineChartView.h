@@ -10,4 +10,7 @@
 
 @interface SGStepLineChartView : UIView
 
+@property (nonatomic, copy) NSArray *xLabels;
+@property (nonatomic, copy) NSArray *dataSource;
+
 @end
