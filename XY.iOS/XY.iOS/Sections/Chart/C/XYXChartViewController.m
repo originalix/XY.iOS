@@ -11,6 +11,10 @@
 
 @interface XYXChartViewController () <PNChartDelegate>
 
+@property (nonatomic, strong) PNLineChart *lineChart;
+@property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) UILabel *dataLabel;
+
 @end
 
 @implementation XYXChartViewController
@@ -28,14 +32,15 @@
 #pragma mark - PNChart
 - (void)forLineChart {
     //For Line Chart
-    PNLineChart * lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 135.0, SCREEN_WIDTH, 150)];
-    lineChart.showGenYLabels = false;
-    lineChart.showSmoothLines = true;
+    _lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 135.0, SCREEN_WIDTH, 150)];
+    _lineChart.showGenYLabels = false;
+    _lineChart.showSmoothLines = true;
 
-    [lineChart setXLabels:@[@"第21周",@"第22周",@"第23周",@"第24周",@"第25周"]];
+    [_lineChart setXLabels:@[@"第21周",@"第22周",@"第23周",@"第24周",@"第25周"]];
     
     // Line Chart No.1
-    NSArray * data01Array = @[@6666, @1600, @12640, @26220, @1862];
+    NSArray * data01Array = @[@6666, @160000, @126400, @66778, @280000];
+    self.dataSource = [NSMutableArray arrayWithArray:data01Array];
     PNLineChartData *data01 = [PNLineChartData new];
     data01.inflexionPointStyle = PNLineChartPointStyleNone;
     data01.inflexionPointColor = [UIColor redColor];
@@ -43,7 +48,7 @@
     data01.lineWidth = 4.f;
     data01.alpha = 1.f;
     data01.color = PNFreshGreen;
-    data01.itemCount = lineChart.xLabels.count;
+    data01.itemCount = _lineChart.xLabels.count;
 //    data01.showPointLabel = true;
     data01.pointLabelFont = [UIFont systemFontOfSize:10.f];
     data01.pointLabelColor = [UIColor blackColor];
@@ -52,33 +57,62 @@
         return [PNLineChartDataItem dataItemWithY:yValue];
     };
 
-    lineChart.chartData = @[data01];
-    lineChart.delegate = self;
+    _lineChart.chartData = @[data01];
+    _lineChart.delegate = self;
     
-    [lineChart strokeChart];
+    [_lineChart strokeChart];
 //    lineChart.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:lineChart];
+    [self.view addSubview:_lineChart];
     
-    NSLog(@"line1 = %@", lineChart.pathPoints);
-    NSMutableArray *array = lineChart.pathPoints;
+    NSLog(@"line1 = %@", _lineChart.pathPoints);
+    NSMutableArray *array = _lineChart.pathPoints;
     for (NSArray *arr in array) {
         for (int i = 0; i < arr.count; i++) {
             CGPoint pt = [[arr objectAtIndex:i] CGPointValue];
             NSLog(@"%f", pt.x);
-            UIView *line = [[UIView alloc] initWithFrame:CGRectMake(pt.x, 0, 1, lineChart.frame.size.height - 40)];
+            UIView *line = [[UIView alloc] initWithFrame:CGRectMake(pt.x, 0, 1, _lineChart.frame.size.height - 40)];
             line.backgroundColor = [UIColor lightGrayColor];
-            [lineChart addSubview:line];
+            [_lineChart addSubview:line];
+            
+            UIView *cicle = [[UIView alloc] initWithFrame:CGRectMake(pt.x - 2.5, pt.y - 2.5, 5, 5)];
+            cicle.layer.masksToBounds = true;
+            cicle.layer.cornerRadius = 3.f;
+            cicle.backgroundColor = [UIColor redColor];
+            [_lineChart addSubview:cicle];
         }
     }
+    
+    _dataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    _dataLabel.backgroundColor = [UIColor clearColor];
+    _dataLabel.font = [UIFont systemFontOfSize:13.f];
+    _dataLabel.textAlignment = NSTextAlignmentCenter;
+    [_lineChart addSubview:_dataLabel];
+    
 }
-
 
 -(void)userClickedOnLineKeyPoint:(CGPoint)point lineIndex:(NSInteger)lineIndex pointIndex:(NSInteger)pointIndex{
     NSLog(@"Click Key on line %f, %f line index is %d and point index is %d",point.x, point.y,(int)lineIndex, (int)pointIndex);
+    NSMutableArray *array = _lineChart.pathPoints;
+    for (NSArray *arr in array) {
+        CGPoint pt = [[arr objectAtIndex:pointIndex] CGPointValue];
+        NSLog(@"%f", pt.x);
+        self.dataLabel.text = [NSString stringWithFormat:@"%@", [self.dataSource objectAtIndex:pointIndex]];
+        [self.dataLabel setFrame:CGRectMake(pt.x - 25, pt.y - 29, 50, 40)];
+    }
 }
 
 -(void)userClickedOnLinePoint:(CGPoint)point lineIndex:(NSInteger)lineIndex{
     NSLog(@"Click on line %f, %f, line index is %d",point.x, point.y, (int)lineIndex);
+}
+
+- (void)showLinesPoint {
+    NSMutableArray *array = _lineChart.pathPoints;
+    for (NSArray *arr in array) {
+        for (int i = 0; i < arr.count; i++) {
+            CGPoint pt = [[arr objectAtIndex:i] CGPointValue];
+            NSLog(@"%f", pt.x);
+        }
+    }
 }
 
 @end
