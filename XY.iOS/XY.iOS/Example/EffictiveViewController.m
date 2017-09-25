@@ -8,7 +8,7 @@
 
 #import "EffictiveViewController.h"
 #import "EffictiveObjc.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 
 static const NSString *EOCMyAlertViewKey = @"EOCMyAlertViewKey";
 

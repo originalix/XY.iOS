@@ -10,5 +10,7 @@
 #define PrefixHeader_pch
 
 #import "WHC_ModelSqlite.h"
+#import <LSDeviceComponent/LSDeviceComponent.h>
+#import "XYWristbandConst.h"
 
 #endif /* PrefixHeader_pch */

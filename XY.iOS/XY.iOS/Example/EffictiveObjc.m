@@ -7,7 +7,7 @@
 //
 
 #import "EffictiveObjc.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 
 #define ANIMATION_DURATION 0.3 //NOT GOOD
 

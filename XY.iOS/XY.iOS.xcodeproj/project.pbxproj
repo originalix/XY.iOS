@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */; };
+		561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25451F6A522B0033959F /* XYXMainViewController.m */; };
+		561F25491F6A63300033959F /* XYXImageZip.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25481F6A63300033959F /* XYXImageZip.m */; };
+		56206FA81F74B13100AE2183 /* XYXChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56206FA71F74B13100AE2183 /* XYXChartViewController.m */; };
 		5649140D1F0F7FE600693F51 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140C1F0F7FE600693F51 /* CameraController.m */; };
 		564914101F0F82CA00693F51 /* FaceDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140F1F0F82C900693F51 /* FaceDetect.m */; };
 		564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564AFD101F57AC26004BE2A5 /* RichTextViewController.m */; };
@@ -25,6 +29,15 @@
 		567B20E31F061BC800B970CB /* SGHeartHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B20E21F061BC800B970CB /* SGHeartHelperTests.m */; };
 		567C2DD91F415D9100565FFF /* MyFancyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2DD81F415D9100565FFF /* MyFancyMenuViewController.swift */; };
 		567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2DDB1F416BE700565FFF /* MainViewController.swift */; };
+		568A6AB31F70F8DC0023F6AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39491F13364D00D6C597 /* QuartzCore.framework */; };
+		568A6ABA1F70FAE70023F6AC /* XYLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568A6AB91F70FAE70023F6AC /* XYLayerViewController.m */; };
+		56A39DE31F78B4E400C9F3B5 /* SGStepLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A39DE21F78B4E400C9F3B5 /* SGStepLineChartView.m */; };
+		56A39DE61F78C66D00C9F3B5 /* XYXTestChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A39DE51F78C66D00C9F3B5 /* XYXTestChartViewController.m */; };
+		56B12E301F69044300F7FAED /* LSDeviceComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */; };
+		56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E381F69075D00F7FAED /* XYSearchViewController.m */; };
+		56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E3B1F690BC800F7FAED /* XYMainViewController.m */; };
+		56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC394D1F13377D00D6C597 /* libsqlite3.tbd */; };
+		56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E401F69113600F7FAED /* XYDeviceManager.m */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
 		56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39291F132F5600D6C597 /* libc++.tbd */; };
@@ -64,6 +77,14 @@
 		403ADC937E724FCC7A3BD248 /* Pods-XY.iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOS/Pods-XY.iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4464DB901B05F8C4CFAF425D /* Pods-XY.iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		53C60691B6620450D1A44F9C /* Pods-XY.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOS/Pods-XY.iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		561F25411F6A4DF90033959F /* XYXNetWorkFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXNetWorkFetcher.h; sourceTree = "<group>"; };
+		561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXNetWorkFetcher.m; sourceTree = "<group>"; };
+		561F25441F6A522B0033959F /* XYXMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXMainViewController.h; sourceTree = "<group>"; };
+		561F25451F6A522B0033959F /* XYXMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXMainViewController.m; sourceTree = "<group>"; };
+		561F25471F6A63300033959F /* XYXImageZip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXImageZip.h; sourceTree = "<group>"; };
+		561F25481F6A63300033959F /* XYXImageZip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXImageZip.m; sourceTree = "<group>"; };
+		56206FA61F74B13100AE2183 /* XYXChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXChartViewController.h; sourceTree = "<group>"; };
+		56206FA71F74B13100AE2183 /* XYXChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXChartViewController.m; sourceTree = "<group>"; };
 		5649140B1F0F7FE600693F51 /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
 		5649140C1F0F7FE600693F51 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 		5649140E1F0F82C900693F51 /* FaceDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
@@ -97,6 +118,22 @@
 		567B20E21F061BC800B970CB /* SGHeartHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeartHelperTests.m; sourceTree = "<group>"; };
 		567C2DD81F415D9100565FFF /* MyFancyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFancyMenuViewController.swift; sourceTree = "<group>"; };
 		567C2DDB1F416BE700565FFF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		568A6AB81F70FAE70023F6AC /* XYLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLayerViewController.h; sourceTree = "<group>"; };
+		568A6AB91F70FAE70023F6AC /* XYLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLayerViewController.m; sourceTree = "<group>"; };
+		56A32E081F6A6FB30015FCA0 /* face1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face1.jpg; sourceTree = "<group>"; };
+		56A32E091F6A6FB30015FCA0 /* face123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face123.jpg; sourceTree = "<group>"; };
+		56A39DE11F78B4E400C9F3B5 /* SGStepLineChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGStepLineChartView.h; sourceTree = "<group>"; };
+		56A39DE21F78B4E400C9F3B5 /* SGStepLineChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGStepLineChartView.m; sourceTree = "<group>"; };
+		56A39DE41F78C66D00C9F3B5 /* XYXTestChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXTestChartViewController.h; sourceTree = "<group>"; };
+		56A39DE51F78C66D00C9F3B5 /* XYXTestChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXTestChartViewController.m; sourceTree = "<group>"; };
+		56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LSDeviceComponent.framework; sourceTree = "<group>"; };
+		56B12E371F69075D00F7FAED /* XYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSearchViewController.h; sourceTree = "<group>"; };
+		56B12E381F69075D00F7FAED /* XYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSearchViewController.m; sourceTree = "<group>"; };
+		56B12E3A1F690BC800F7FAED /* XYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYMainViewController.h; sourceTree = "<group>"; };
+		56B12E3B1F690BC800F7FAED /* XYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYMainViewController.m; sourceTree = "<group>"; };
+		56B12E3E1F69110000F7FAED /* XYWristbandConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYWristbandConst.h; sourceTree = "<group>"; };
+		56B12E3F1F69113600F7FAED /* XYDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYDeviceManager.h; sourceTree = "<group>"; };
+		56B12E401F69113600F7FAED /* XYDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYDeviceManager.m; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
 		56D5BF671F3C323D003CB716 /* EffictiveObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffictiveObjc.m; sourceTree = "<group>"; };
 		56D5BF691F3C325F003CB716 /* EffictiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveViewController.h; sourceTree = "<group>"; };
@@ -133,15 +170,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56DC39521F1337E900D6C597 /* CoreTelephony.framework in Frameworks */,
-				56DC39511F1337E100D6C597 /* CoreAudio.framework in Frameworks */,
+				568A6AB31F70F8DC0023F6AC /* QuartzCore.framework in Frameworks */,
 				56DC394F1F1337B100D6C597 /* libstdc++.tbd in Frameworks */,
 				56DC394C1F1336EC00D6C597 /* libz.tbd in Frameworks */,
+				56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */,
+				56DC39521F1337E900D6C597 /* CoreTelephony.framework in Frameworks */,
+				56DC39511F1337E100D6C597 /* CoreAudio.framework in Frameworks */,
 				56DC393A1F13355F00D6C597 /* iflyMSC.framework in Frameworks */,
 				56DC39341F132F8300D6C597 /* CoreGraphics.framework in Frameworks */,
 				56DC39301F132F7100D6C597 /* MobileCoreServices.framework in Frameworks */,
 				56DC392E1F132F6900D6C597 /* SystemConfiguration.framework in Frameworks */,
 				56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */,
+				56B12E301F69044300F7FAED /* LSDeviceComponent.framework in Frameworks */,
 				A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +243,80 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		561F253D1F6A4DA20033959F /* EffectiveObjc */ = {
+			isa = PBXGroup;
+			children = (
+				561F253E1F6A4DA20033959F /* C */,
+				561F253F1F6A4DA20033959F /* M */,
+				561F25401F6A4DA20033959F /* V */,
+			);
+			path = EffectiveObjc;
+			sourceTree = "<group>";
+		};
+		561F253E1F6A4DA20033959F /* C */ = {
+			isa = PBXGroup;
+			children = (
+				561F25441F6A522B0033959F /* XYXMainViewController.h */,
+				561F25451F6A522B0033959F /* XYXMainViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		561F253F1F6A4DA20033959F /* M */ = {
+			isa = PBXGroup;
+			children = (
+				561F25411F6A4DF90033959F /* XYXNetWorkFetcher.h */,
+				561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */,
+				561F25471F6A63300033959F /* XYXImageZip.h */,
+				561F25481F6A63300033959F /* XYXImageZip.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		561F25401F6A4DA20033959F /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		56206FA21F74B11400AE2183 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				56206FA31F74B11400AE2183 /* C */,
+				56206FA41F74B11400AE2183 /* M */,
+				56206FA51F74B11400AE2183 /* V */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		56206FA31F74B11400AE2183 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				56206FA61F74B13100AE2183 /* XYXChartViewController.h */,
+				56206FA71F74B13100AE2183 /* XYXChartViewController.m */,
+				56A39DE41F78C66D00C9F3B5 /* XYXTestChartViewController.h */,
+				56A39DE51F78C66D00C9F3B5 /* XYXTestChartViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		56206FA41F74B11400AE2183 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		56206FA51F74B11400AE2183 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				56A39DE11F78B4E400C9F3B5 /* SGStepLineChartView.h */,
+				56A39DE21F78B4E400C9F3B5 /* SGStepLineChartView.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 		567B209A1F0604A200B970CB = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +342,10 @@
 		567B20A51F0604A200B970CB /* XY.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				56A32E081F6A6FB30015FCA0 /* face1.jpg */,
+				56A32E091F6A6FB30015FCA0 /* face123.jpg */,
+				56B12E311F6906FF00F7FAED /* Sections */,
+				56B12E2E1F69042900F7FAED /* Vendor */,
 				567B20DA1F06091300B970CB /* Example */,
 				567B20D41F06064F00B970CB /* resources */,
 				567B20A61F0604A200B970CB /* AppDelegate.swift */,
@@ -298,6 +416,96 @@
 				564AFD101F57AC26004BE2A5 /* RichTextViewController.m */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		568A6AB41F70F9440023F6AC /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				568A6AB51F70F9440023F6AC /* C */,
+				568A6AB61F70F9440023F6AC /* M */,
+				568A6AB71F70F9440023F6AC /* V */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		568A6AB51F70F9440023F6AC /* C */ = {
+			isa = PBXGroup;
+			children = (
+				568A6AB81F70FAE70023F6AC /* XYLayerViewController.h */,
+				568A6AB91F70FAE70023F6AC /* XYLayerViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		568A6AB61F70F9440023F6AC /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		568A6AB71F70F9440023F6AC /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		56B12E2E1F69042900F7FAED /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		56B12E311F6906FF00F7FAED /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				56206FA21F74B11400AE2183 /* Chart */,
+				568A6AB41F70F9440023F6AC /* CoreAnimation */,
+				561F253D1F6A4DA20033959F /* EffectiveObjc */,
+				56B12E321F6906FF00F7FAED /* Wristband */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		56B12E321F6906FF00F7FAED /* Wristband */ = {
+			isa = PBXGroup;
+			children = (
+				56B12E331F6906FF00F7FAED /* C */,
+				56B12E341F6906FF00F7FAED /* M */,
+				56B12E351F6906FF00F7FAED /* V */,
+			);
+			path = Wristband;
+			sourceTree = "<group>";
+		};
+		56B12E331F6906FF00F7FAED /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		56B12E341F6906FF00F7FAED /* M */ = {
+			isa = PBXGroup;
+			children = (
+				56B12E371F69075D00F7FAED /* XYSearchViewController.h */,
+				56B12E381F69075D00F7FAED /* XYSearchViewController.m */,
+				56B12E3A1F690BC800F7FAED /* XYMainViewController.h */,
+				56B12E3B1F690BC800F7FAED /* XYMainViewController.m */,
+				56B12E3E1F69110000F7FAED /* XYWristbandConst.h */,
+				56B12E3F1F69113600F7FAED /* XYDeviceManager.h */,
+				56B12E401F69113600F7FAED /* XYDeviceManager.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		56B12E351F6906FF00F7FAED /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,19 +748,29 @@
 			files = (
 				567B20A91F0604A200B970CB /* ViewController.swift in Sources */,
 				56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */,
+				561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */,
 				564914101F0F82CA00693F51 /* FaceDetect.m in Sources */,
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
+				56206FA81F74B13100AE2183 /* XYXChartViewController.m in Sources */,
+				568A6ABA1F70FAE70023F6AC /* XYLayerViewController.m in Sources */,
+				561F25491F6A63300033959F /* XYXImageZip.m in Sources */,
+				561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */,
+				56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,
 				567C2DD91F415D9100565FFF /* MyFancyMenuViewController.swift in Sources */,
 				566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */,
 				566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */,
+				56A39DE31F78B4E400C9F3B5 /* SGStepLineChartView.m in Sources */,
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
 				567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */,
+				56A39DE61F78C66D00C9F3B5 /* XYXTestChartViewController.m in Sources */,
 				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
+				56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
 				564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */,
 				5649140D1F0F7FE600693F51 /* CameraController.m in Sources */,
+				56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */,
 				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,11 +925,14 @@
 			baseConfigurationReference = 53C60691B6620450D1A44F9C /* Pods-XY.iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XY.iOS/lib",
+					"$(PROJECT_DIR)/XY.iOS/Vendor",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XY.iOS/PrefixHeader.pch";
@@ -733,11 +954,14 @@
 			baseConfigurationReference = 403ADC937E724FCC7A3BD248 /* Pods-XY.iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R92MB35B2J;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XY.iOS/lib",
+					"$(PROJECT_DIR)/XY.iOS/Vendor",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XY.iOS/PrefixHeader.pch";
