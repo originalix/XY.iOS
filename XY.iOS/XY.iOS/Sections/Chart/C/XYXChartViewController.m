@@ -41,7 +41,7 @@
     [_lineChart setXLabels:@[@"第21周",@"第22周",@"第23周",@"第24周",@"第25周"]];
     
     // Line Chart No.1
-    NSArray * data01Array = @[@6666, @160000, @126400, @66778, @280000];
+    NSArray * data01Array = @[@0, @0, @0, @0, @0];
     self.dataSource = [NSMutableArray arrayWithArray:data01Array];
     PNLineChartData *data01 = [PNLineChartData new];
     data01.inflexionPointStyle = PNLineChartPointStyleNone;

@@ -14,19 +14,19 @@
 #define kLineColor PNFreshGreen
 #define kSublineColor [UIColor lightGrayColor]
 #define kCicleColor [UIColor redColor]
+#define kSelectedLabelColor [UIColor redColor]
+#define kDeSelectedLabelColor [UIColor blackColor]
 
 static const CGFloat kInflexionPointWidth = 6.f;
-static const CGFloat kLineWidth = 4.f;
-static const CGFloat kSublineBottomMargin = 40.f;
-static const CGFloat kSublineWidth = 1.f;
-static const CGFloat kCicleWidth = 5.f;
-static const CGFloat kDataLabelFontSize = 13.f;
+static const CGFloat kLineWidth = 6.f;
+static const NSInteger kMaxIndex = 9999;
 
 @interface SGStepLineChartView() <PNChartDelegate>
 
 @property (nonatomic, strong) PNLineChart *lineChart;
 @property (nonatomic, strong) UILabel *dataLabel;
 @property (nonatomic, strong) NSMutableArray *pointViewArray;
+@property (nonatomic, assign) NSInteger oldSelectedIndex;
 
 @end
 
@@ -44,12 +44,20 @@ static const CGFloat kDataLabelFontSize = 13.f;
 - (instancetype)initWithFrame:(CGRect)frame XLabel:(NSArray *)xLabel YLabel:(NSArray *)yLabel {
     self = [super initWithFrame:frame];
     if (self) {
-        _lineChart = [[PNLineChart alloc] initWithFrame:frame];
+        _lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         self.xLabels = xLabel;
         self.dataSource = yLabel;
         [self p_setupLineView];
+        _oldSelectedIndex = kMaxIndex;
     }
     return self;
+}
+
+/**
+ 重绘折线图
+ */
+- (void)strokeChart {
+    [self.lineChart strokeChart];
 }
 
 #pragma mark - 创建折线图View
@@ -64,6 +72,7 @@ static const CGFloat kDataLabelFontSize = 13.f;
     data.lineWidth = kLineWidth;
     data.alpha = 1.f;
     data.color = kLineColor;
+    
     data.itemCount = _lineChart.xLabels.count;
     data.getData = ^(NSUInteger index) {
         CGFloat yValue = [self.dataSource[index] floatValue];
@@ -80,6 +89,7 @@ static const CGFloat kDataLabelFontSize = 13.f;
 - (void)p_setupCicleViewAndSublineView {
     for (NSArray *arr in self.lineChart.pathPoints) {
         self.pointViewArray = [NSMutableArray array];
+        NSLog(@"%@", arr);
         for (int i = 0; i < [arr count]; i++) {
             CGPoint point = [[arr objectAtIndex:i] CGPointValue];
             [self p_createCicleViewAndSublineViewWithPoint:point];
@@ -87,12 +97,20 @@ static const CGFloat kDataLabelFontSize = 13.f;
     }
     _dataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     _dataLabel.backgroundColor = [UIColor clearColor];
+    
+    static const CGFloat kDataLabelFontSize = 13.f;
+    
     _dataLabel.font = [UIFont systemFontOfSize:kDataLabelFontSize];
     _dataLabel.textAlignment = NSTextAlignmentCenter;
     [self.lineChart addSubview:_dataLabel];
 }
 
 - (void)p_createCicleViewAndSublineViewWithPoint:(CGPoint)point {
+    
+    static const CGFloat kSublineBottomMargin = 40.f;
+    static const CGFloat kSublineWidth = 1.f;
+    static const CGFloat kCicleWidth = 10.f;
+    
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(point.x, 0, kSublineWidth, _lineChart.frame.size.height - kSublineBottomMargin)];
     lineView.backgroundColor = kSublineColor;
     
@@ -105,20 +123,46 @@ static const CGFloat kDataLabelFontSize = 13.f;
     
     UIView *cicleView = [[UIView alloc] initWithFrame:CGRectMake(point.x - kCicleWidth / 2, point.y - kCicleWidth / 2, kCicleWidth, kCicleWidth)];
     cicleView.layer.masksToBounds = true;
-    cicleView.layer.cornerRadius = 3.f;
+    cicleView.layer.cornerRadius = 6.f;
     cicleView.backgroundColor = kCicleColor;
     [self.pointViewArray addObject:cicleView];
     
     [self.lineChart addSubview:cicleView];
 }
 
-- (void)strokeChart {
-    [self.lineChart strokeChart];
-}
-
 #pragma mark - PNChartDelegate
 - (void)userClickedOnLineKeyPoint:(CGPoint)point lineIndex:(NSInteger)lineIndex pointIndex:(NSInteger)pointIndex {
     NSLog(@"Click Key on line %f, %f line index is %d and point index is %d",point.x, point.y,(int)lineIndex, (int)pointIndex);
+    
+    static const CGFloat kDataLabelWidth = 50.f;
+    static const CGFloat kDataLabelHeight = 40.f;
+    static const CGFloat kDataLabelOffSetX = 25.f;
+    static const CGFloat kDataLabelOffSetY = 32.f;
+    
+    if (_oldSelectedIndex < kMaxIndex) {
+        // 恢复之前View状态
+        PNChartLabel *chartLabel = [self.lineChart.xChartLabels objectAtIndex:_oldSelectedIndex];
+        chartLabel.textColor = kDeSelectedLabelColor;
+        UIView *pointView = [self.pointViewArray objectAtIndex:_oldSelectedIndex];
+        [pointView removeFromSuperview];
+        pointView.backgroundColor = kDeSelectedLabelColor;
+        [self.lineChart addSubview:pointView];
+    }
+    
+    _oldSelectedIndex = pointIndex;
+    
+    for (NSArray *arr in self.lineChart.pathPoints) {
+        CGPoint point = [[arr objectAtIndex:pointIndex] CGPointValue];
+        self.dataLabel.text = [NSString stringWithFormat:@"%@", [self.dataSource objectAtIndex:pointIndex]];
+        [self.dataLabel setFrame:CGRectMake(point.x - kDataLabelOffSetX, point.y - kDataLabelOffSetY, kDataLabelWidth, kDataLabelHeight)];
+    }
+    
+    PNChartLabel *chartLabel = [self.lineChart.xChartLabels objectAtIndex:pointIndex];
+    chartLabel.textColor = kSelectedLabelColor;
+    UIView *pointView = [self.pointViewArray objectAtIndex:pointIndex];
+    [pointView removeFromSuperview];
+    pointView.backgroundColor = kSelectedLabelColor;
+    [self.lineChart addSubview:pointView];
 }
 
 @end

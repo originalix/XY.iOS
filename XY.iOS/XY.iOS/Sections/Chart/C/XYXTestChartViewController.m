@@ -19,7 +19,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     NSArray *xLabel = @[@"第21周",@"第22周",@"第23周",@"第24周",@"第25周"];
-    NSArray *yLabel = @[@6666, @160000, @126400, @66778, @280000];
+    NSArray *yLabel = @[@18000, @21000, @162340, @214567, @9000];
     SGStepLineChartView *chartView = [[SGStepLineChartView alloc] initWithFrame:CGRectMake(0, 100, 350, 180) XLabel:xLabel YLabel:yLabel];
     [self.view addSubview:chartView];
 //    [chartView strokeChart];
