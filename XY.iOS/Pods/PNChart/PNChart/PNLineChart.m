@@ -116,7 +116,7 @@
     } else {
         yLabelHeight = (self.frame.size.height) / [yLabels count];
     }
-
+    
     return [self setYLabels:yLabels withHeight:yLabelHeight];
 }
 
@@ -1030,7 +1030,8 @@
     CATextLayer *textLayer = [[CATextLayer alloc] init];
     [textLayer setAlignmentMode:kCAAlignmentCenter];
     [textLayer setForegroundColor:[chartData.pointLabelColor CGColor]];
-    [textLayer setBackgroundColor:[[[UIColor whiteColor] colorWithAlphaComponent:0.8] CGColor]];
+//    [textLayer setBackgroundColor:[[[UIColor whiteColor] colorWithAlphaComponent:0.8] CGColor]];
+    [textLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
     [textLayer setCornerRadius:textLayer.fontSize / 8.0];
 
     if (chartData.pointLabelFont != nil) {

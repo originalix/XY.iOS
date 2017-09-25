@@ -107,4 +107,7 @@
 + (CGPoint)midPointBetweenPoint1:(CGPoint)point1 andPoint2:(CGPoint)point2;
 + (CGPoint)controlPointBetweenPoint1:(CGPoint)point1 andPoint2:(CGPoint)point2;
 
+#pragma mark - 增加在Y轴上显示数值
+@property (nonatomic, assign) BOOL yLabelInLine;
+
 @end

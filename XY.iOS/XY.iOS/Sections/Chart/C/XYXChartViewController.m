@@ -45,6 +45,9 @@
     data01.inflexionPointColor = [UIColor redColor];
     data01.color = PNFreshGreen;
     data01.itemCount = lineChart.xLabels.count;
+    data01.showPointLabel = true;
+    data01.pointLabelFont = [UIFont systemFontOfSize:10.f];
+    data01.pointLabelColor = [UIColor blackColor];
     data01.getData = ^(NSUInteger index) {
         CGFloat yValue = [data01Array[index] floatValue];
         return [PNLineChartDataItem dataItemWithY:yValue];
