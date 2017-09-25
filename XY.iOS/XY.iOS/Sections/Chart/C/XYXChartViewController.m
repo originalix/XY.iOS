@@ -8,12 +8,14 @@
 
 #import "XYXChartViewController.h"
 #import "PNChart.h"
+#import "PNChartLabel.h"
 
 @interface XYXChartViewController () <PNChartDelegate>
 
 @property (nonatomic, strong) PNLineChart *lineChart;
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) UILabel *dataLabel;
+@property (nonatomic, strong) NSMutableArray *pointArray;
 
 @end
 
@@ -67,17 +69,26 @@
     NSLog(@"line1 = %@", _lineChart.pathPoints);
     NSMutableArray *array = _lineChart.pathPoints;
     for (NSArray *arr in array) {
+        self.pointArray = [NSMutableArray array];
         for (int i = 0; i < arr.count; i++) {
             CGPoint pt = [[arr objectAtIndex:i] CGPointValue];
             NSLog(@"%f", pt.x);
             UIView *line = [[UIView alloc] initWithFrame:CGRectMake(pt.x, 0, 1, _lineChart.frame.size.height - 40)];
             line.backgroundColor = [UIColor lightGrayColor];
+            
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapView:)];
+            tap.numberOfTapsRequired = 1;
+            tap.numberOfTouchesRequired = 1;
+            [line addGestureRecognizer:tap];
+
+            
             [_lineChart addSubview:line];
             
             UIView *cicle = [[UIView alloc] initWithFrame:CGRectMake(pt.x - 2.5, pt.y - 2.5, 5, 5)];
             cicle.layer.masksToBounds = true;
             cicle.layer.cornerRadius = 3.f;
             cicle.backgroundColor = [UIColor redColor];
+            [self.pointArray addObject:cicle];
             [_lineChart addSubview:cicle];
         }
     }
@@ -99,10 +110,24 @@
         self.dataLabel.text = [NSString stringWithFormat:@"%@", [self.dataSource objectAtIndex:pointIndex]];
         [self.dataLabel setFrame:CGRectMake(pt.x - 25, pt.y - 29, 50, 40)];
     }
+    
+    NSLog(@"xLabel = %@", _lineChart.xLabels);
+    NSLog(@"x pointLabel = %@", _lineChart.xChartLabels);
+    
+    PNChartLabel *chartLabel = [_lineChart.xChartLabels objectAtIndex:pointIndex];
+    chartLabel.textColor = [UIColor redColor];
+    
+    UIView *pointView = [self.pointArray objectAtIndex:pointIndex];
+    [pointView removeFromSuperview];
+    pointView.backgroundColor = [UIColor yellowColor];
+    [_lineChart addSubview:pointView];
 }
 
 -(void)userClickedOnLinePoint:(CGPoint)point lineIndex:(NSInteger)lineIndex{
     NSLog(@"Click on line %f, %f, line index is %d",point.x, point.y, (int)lineIndex);
+}
+
+- (void)tapAction {
 }
 
 - (void)showLinesPoint {
@@ -113,6 +138,12 @@
             NSLog(@"%f", pt.x);
         }
     }
+}
+
+#pragma mark --- UITapGestureRecognizer 轻拍手势事件 ---
+
+-(void)tapView:(UITapGestureRecognizer *)sender{
+    NSLog(@"Hello world");
 }
 
 @end
