@@ -13,4 +13,8 @@
 @property (nonatomic, copy) NSArray *xLabels;
 @property (nonatomic, copy) NSArray *dataSource;
 
+- (instancetype)initWithFrame:(CGRect)frame XLabel:(NSArray *)xLabel YLabel:(NSArray *)yLabel;
+
+- (void)strokeChart;
+
 @end

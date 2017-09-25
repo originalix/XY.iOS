@@ -11,6 +11,7 @@
 #import "XYXImageZip.h"
 #import "XYLayerViewController.h"
 #import "XYXChartViewController.h"
+#import "XYXTestChartViewController.h"
 
 @interface XYXMainViewController ()
 
@@ -58,8 +59,10 @@
 }
 
 - (IBAction)go2ChartController:(id)sender {
-    XYXChartViewController *chartVC = [[XYXChartViewController alloc] init];
-    [self.navigationController pushViewController:chartVC animated:true];
+//    XYXChartViewController *chartVC = [[XYXChartViewController alloc] init];
+//    [self.navigationController pushViewController:chartVC animated:true];
+    XYXTestChartViewController *vc = [[XYXTestChartViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 @end

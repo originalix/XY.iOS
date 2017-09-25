@@ -30,7 +30,16 @@ static const CGFloat kLineWidth = 4.f;
 {
     self = [super initWithFrame:frame];
     if (self) {
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame XLabel:(NSArray *)xLabel YLabel:(NSArray *)yLabel {
+    self = [super initWithFrame:frame];
+    if (self) {
         _lineChart = [[PNLineChart alloc] initWithFrame:frame];
+        self.xLabels = xLabel;
+        self.dataSource = yLabel;
         [self p_setupLineView];
     }
     return self;
@@ -55,12 +64,16 @@ static const CGFloat kLineWidth = 4.f;
     
     _lineChart.chartData = @[data];
     _lineChart.delegate = self;
+    [self addSubview: _lineChart];
 }
 
 - (void)strokeChart {
     [self.lineChart strokeChart];
 }
 
-
+#pragma mark - PNChartDelegate
+- (void)userClickedOnLineKeyPoint:(CGPoint)point lineIndex:(NSInteger)lineIndex pointIndex:(NSInteger)pointIndex {
+    NSLog(@"Click Key on line %f, %f line index is %d and point index is %d",point.x, point.y,(int)lineIndex, (int)pointIndex);
+}
 
 @end
