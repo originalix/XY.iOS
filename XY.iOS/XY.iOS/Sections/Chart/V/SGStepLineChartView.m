@@ -11,13 +11,13 @@
 #import "PNChartLabel.h"
 
 #define kInflexionPointColor [UIColor redColor]
-#define kLineColor PNFreshGreen
-#define kSublineColor [UIColor lightGrayColor]
-#define kCicleColor [UIColor redColor]
-#define kSelectedLabelColor [UIColor redColor]
-#define kDeSelectedLabelColor [UIColor blackColor]
+#define kLineColor [UIColor colorWithRed:19.f/255.f green:176.f/255.f blue:197.f/255.f alpha:1.f]
+#define kSublineColor [UIColor colorWithRed:160.f/255.f green:160.f/255.f blue:160.f/255.f alpha:1.f]
+#define kSelectedCicleColor [UIColor colorWithRed:235.f/255.f green:97.f/255.f blue:0.f/255.f alpha:1.f]
+#define kDeSelectedCicleColor [UIColor colorWithRed:196.f/255.f green:196.f/255.f blue:195.f/255.f alpha:1.f]
+#define kSelectedLabelColor [UIColor colorWithRed:255.f/255.f green:167.f/255.f blue:102.f/255.f alpha:1.f]
+#define kDeSelectedLabelColor [UIColor colorWithRed:196.f/255.f green:196.f/255.f blue:196.f/255.f alpha:1.f]
 
-static const CGFloat kInflexionPointWidth = 16.f;
 static const CGFloat kLineWidth = 5.f;
 static const NSInteger kMaxIndex = 9999;
 
@@ -31,7 +31,10 @@ static const NSInteger kMaxIndex = 9999;
 
 @end
 
-@implementation SGStepLineChartView
+@implementation SGStepLineChartView {
+    CGFloat _sublineTopPadding;
+    CGFloat _sublineHeight;
+}
 
 #pragma mark - initialize
 - (instancetype)initWithFrame:(CGRect)frame
@@ -91,11 +94,10 @@ static const NSInteger kMaxIndex = 9999;
 - (void)p_setupLineView {
     _lineChart.showGenYLabels = false;
     _lineChart.showSmoothLines = true;
+    _lineChart.xLabelColor = kDeSelectedLabelColor;
     [_lineChart setXLabels:self.xLabels];
     PNLineChartData *data = [PNLineChartData new];
     data.inflexionPointStyle = PNLineChartPointStyleNone;
-    data.inflexionPointColor = kInflexionPointColor;
-    data.inflexionPointWidth = kInflexionPointWidth;
     data.lineWidth = kLineWidth;
     data.alpha = 1.f;
     data.color = kLineColor;
@@ -117,6 +119,16 @@ static const NSInteger kMaxIndex = 9999;
  生成折线图的圆点和辅助线
  */
 - (void)p_setupCicleViewAndSublineView {
+    _sublineTopPadding = 0;
+    _sublineHeight = 0;
+    
+    NSArray *sortedArray = [self sortedForPointY];
+    if (sortedArray.count > 0) {
+        _sublineTopPadding = [sortedArray.firstObject CGPointValue].y;
+        CGFloat fixBottomPadding = [sortedArray.lastObject CGPointValue].y;
+        _sublineHeight = _lineChart.frame.size.height - (_lineChart.frame.size.height - fixBottomPadding) - _sublineTopPadding;
+    }
+    
     for (NSArray *arr in self.lineChart.pathPoints) {
         self.pointViewArray = [NSMutableArray array];
         NSLog(@"%@", arr);
@@ -136,17 +148,37 @@ static const NSInteger kMaxIndex = 9999;
 }
 
 /**
+ 给所有坐标点排序 计算辅助线高度和padding
+
+ @return 排序后的数组（升序）
+ */
+- (NSArray *)sortedForPointY {
+    NSArray *sortedArray = [NSArray array];
+    for (NSArray *arr in self.lineChart.pathPoints) {
+        sortedArray = [arr sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            CGPoint pt1 = [obj1 CGPointValue];
+            CGPoint pt2 = [obj2 CGPointValue];
+            
+            NSComparisonResult result = pt1.y > pt2.y;
+            return result == NSOrderedDescending;
+        }];
+        NSLog(@"排序数组 %@", sortedArray);
+    }
+    return sortedArray;
+}
+
+/**
  创建折线图的辅助线以及圆点的辅助函数
 
  @param point 点的位置
  */
 - (void)p_createCicleViewAndSublineViewWithPoint:(CGPoint)point {
     
-    static const CGFloat kSublineBottomMargin = 40.f;
     static const CGFloat kSublineWidth = 1.f;
     static const CGFloat kCicleWidth = 8.f;
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(point.x, 0, kSublineWidth, _lineChart.frame.size.height - kSublineBottomMargin)];
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(point.x, _sublineTopPadding, kSublineWidth, _sublineHeight)];
     lineView.backgroundColor = kSublineColor;
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(strokeChart)];
@@ -159,7 +191,7 @@ static const NSInteger kMaxIndex = 9999;
     UIView *cicleView = [[UIView alloc] initWithFrame:CGRectMake(point.x - kCicleWidth / 2, point.y - kCicleWidth / 2, kCicleWidth, kCicleWidth)];
     cicleView.layer.masksToBounds = true;
     cicleView.layer.cornerRadius = 4.f;
-    cicleView.backgroundColor = kCicleColor;
+    cicleView.backgroundColor = kDeSelectedCicleColor;
     [self.pointViewArray addObject:cicleView];
     
     [self.lineChart addSubview:cicleView];
@@ -211,10 +243,10 @@ static const NSInteger kMaxIndex = 9999;
     [pointView removeFromSuperview];
     if (!selected) {
         chartLabel.textColor = kDeSelectedLabelColor;
-        pointView.backgroundColor = [UIColor redColor];
+        pointView.backgroundColor = kDeSelectedCicleColor;
     } else {
         chartLabel.textColor = kSelectedLabelColor;
-        pointView.backgroundColor = kSelectedLabelColor;
+        pointView.backgroundColor = kSelectedCicleColor;
     }
     [self.lineChart addSubview:pointView];
 }

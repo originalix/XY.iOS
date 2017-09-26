@@ -20,7 +20,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     NSMutableArray *xLabel = [NSMutableArray array];
     NSMutableArray *yLabel = [NSMutableArray array];
-    NSInteger N = 7;
+    NSInteger N = 100;
     for (int i = 1; i <= N; i++) {
         [xLabel addObject: [NSString stringWithFormat:@"第%d周", i]];
         NSNumber *step = [NSNumber numberWithInteger: arc4random() % 200000];
