@@ -17,8 +17,8 @@
 #define kSelectedLabelColor [UIColor redColor]
 #define kDeSelectedLabelColor [UIColor blackColor]
 
-static const CGFloat kInflexionPointWidth = 6.f;
-static const CGFloat kLineWidth = 6.f;
+static const CGFloat kInflexionPointWidth = 16.f;
+static const CGFloat kLineWidth = 5.f;
 static const NSInteger kMaxIndex = 9999;
 
 @interface SGStepLineChartView() <PNChartDelegate>
@@ -72,12 +72,22 @@ static const NSInteger kMaxIndex = 9999;
 }
 
 #pragma mark - 创建折线图View
+
+/**
+ 设置ScrollView
+
+ @param offsetX 横坐标偏移量
+ */
 - (void)p_setupScrollViewWithOffsetX:(CGFloat)offsetX {
     _scrollView.contentSize = _lineChart.bounds.size;
     _scrollView.bounces = true;
     _scrollView.showsHorizontalScrollIndicator = false;
     [_scrollView setContentOffset:CGPointMake(offsetX, 0) animated:true];
 }
+
+/**
+ 生成折线图
+ */
 - (void)p_setupLineView {
     _lineChart.showGenYLabels = false;
     _lineChart.showSmoothLines = true;
@@ -103,6 +113,9 @@ static const NSInteger kMaxIndex = 9999;
     [self p_setupCicleViewAndSublineView];
 }
 
+/**
+ 生成折线图的圆点和辅助线
+ */
 - (void)p_setupCicleViewAndSublineView {
     for (NSArray *arr in self.lineChart.pathPoints) {
         self.pointViewArray = [NSMutableArray array];
@@ -122,11 +135,16 @@ static const NSInteger kMaxIndex = 9999;
     [self.lineChart addSubview:_dataLabel];
 }
 
+/**
+ 创建折线图的辅助线以及圆点的辅助函数
+
+ @param point 点的位置
+ */
 - (void)p_createCicleViewAndSublineViewWithPoint:(CGPoint)point {
     
     static const CGFloat kSublineBottomMargin = 40.f;
     static const CGFloat kSublineWidth = 1.f;
-    static const CGFloat kCicleWidth = 10.f;
+    static const CGFloat kCicleWidth = 8.f;
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(point.x, 0, kSublineWidth, _lineChart.frame.size.height - kSublineBottomMargin)];
     lineView.backgroundColor = kSublineColor;
@@ -140,7 +158,7 @@ static const NSInteger kMaxIndex = 9999;
     
     UIView *cicleView = [[UIView alloc] initWithFrame:CGRectMake(point.x - kCicleWidth / 2, point.y - kCicleWidth / 2, kCicleWidth, kCicleWidth)];
     cicleView.layer.masksToBounds = true;
-    cicleView.layer.cornerRadius = 6.f;
+    cicleView.layer.cornerRadius = 4.f;
     cicleView.backgroundColor = kCicleColor;
     [self.pointViewArray addObject:cicleView];
     
@@ -153,6 +171,11 @@ static const NSInteger kMaxIndex = 9999;
     [self p_refreshSelectedViewWithPointIndex:pointIndex];
 }
 
+/**
+ 点击折线图中的点之后的操作
+ 
+ @param pointIndex 点的Index
+ */
 - (void)p_refreshSelectedViewWithPointIndex:(NSInteger)pointIndex {
     
     static const CGFloat kDataLabelWidth = 50.f;
@@ -176,6 +199,12 @@ static const NSInteger kMaxIndex = 9999;
     [self p_selectedChartLabelWithIndex:pointIndex Selected:true];
 }
 
+/**
+ 点击折线图中的点之后的操作的辅助函数
+
+ @param pointIndex 点的Index
+ @param selected 是否选中
+ */
 - (void)p_selectedChartLabelWithIndex:(NSInteger)pointIndex Selected:(BOOL)selected {
     PNChartLabel *chartLabel = [self.lineChart.xChartLabels objectAtIndex:pointIndex];
     UIView *pointView = [self.pointViewArray objectAtIndex:pointIndex];
