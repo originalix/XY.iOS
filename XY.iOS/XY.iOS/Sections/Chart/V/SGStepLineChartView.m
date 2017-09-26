@@ -24,6 +24,7 @@ static const NSInteger kMaxIndex = 9999;
 @interface SGStepLineChartView() <PNChartDelegate>
 
 @property (nonatomic, strong) PNLineChart *lineChart;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UILabel *dataLabel;
 @property (nonatomic, strong) NSMutableArray *pointViewArray;
 @property (nonatomic, assign) NSInteger oldSelectedIndex;
@@ -44,7 +45,16 @@ static const NSInteger kMaxIndex = 9999;
 - (instancetype)initWithFrame:(CGRect)frame XLabel:(NSArray *)xLabel YLabel:(NSArray *)yLabel {
     self = [super initWithFrame:frame];
     if (self) {
-        _lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        if ([xLabel count] <= 10) {
+            _lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+            _scrollView.scrollEnabled = false;
+        } else {
+            _lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 0, 50 * xLabel.count, frame.size.height)];
+            _scrollView.contentSize = _lineChart.bounds.size;
+        }
+        [self addSubview:_scrollView];
+        
         self.xLabels = xLabel;
         self.dataSource = yLabel;
         [self p_setupLineView];
@@ -81,8 +91,9 @@ static const NSInteger kMaxIndex = 9999;
     
     _lineChart.chartData = @[data];
     _lineChart.delegate = self;
+//    [self addSubview: _lineChart];
+    [self.scrollView addSubview:_lineChart];
     [_lineChart strokeChart];
-    [self addSubview: _lineChart];
     [self p_setupCicleViewAndSublineView];
 }
 
