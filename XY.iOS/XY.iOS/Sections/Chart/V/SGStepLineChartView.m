@@ -46,12 +46,13 @@ static const NSInteger kMaxIndex = 9999;
     self = [super initWithFrame:frame];
     if (self) {
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        if ([xLabel count] <= 10) {
+        if ([xLabel count] <= 7) {
             _lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
             _scrollView.scrollEnabled = false;
         } else {
             _lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 0, 50 * xLabel.count, frame.size.height)];
-            _scrollView.contentSize = _lineChart.bounds.size;
+            CGFloat offSetX = 50 * xLabel.count - SCREEN_WIDTH;
+            [self p_setupScrollViewWithOffsetX:offSetX];
         }
         [self addSubview:_scrollView];
         
@@ -71,6 +72,12 @@ static const NSInteger kMaxIndex = 9999;
 }
 
 #pragma mark - 创建折线图View
+- (void)p_setupScrollViewWithOffsetX:(CGFloat)offsetX {
+    _scrollView.contentSize = _lineChart.bounds.size;
+    _scrollView.bounces = true;
+    _scrollView.showsHorizontalScrollIndicator = false;
+    [_scrollView setContentOffset:CGPointMake(offsetX, 0) animated:true];
+}
 - (void)p_setupLineView {
     _lineChart.showGenYLabels = false;
     _lineChart.showSmoothLines = true;
@@ -91,7 +98,6 @@ static const NSInteger kMaxIndex = 9999;
     
     _lineChart.chartData = @[data];
     _lineChart.delegate = self;
-//    [self addSubview: _lineChart];
     [self.scrollView addSubview:_lineChart];
     [_lineChart strokeChart];
     [self p_setupCicleViewAndSublineView];

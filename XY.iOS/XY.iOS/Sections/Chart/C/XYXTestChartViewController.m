@@ -22,13 +22,14 @@
 //    NSArray *yLabel = @[@18000, @21000, @162340, @214567, @9000, @27000, @50000];
     NSMutableArray *xLabel = [NSMutableArray array];
     NSMutableArray *yLabel = [NSMutableArray array];
-    NSInteger N = 9;
+    NSInteger N = 7;
     for (int i = 1; i <= N; i++) {
         [xLabel addObject: [NSString stringWithFormat:@"第%d周", i]];
         NSNumber *step = [NSNumber numberWithInteger: arc4random() % 200000];
         [yLabel addObject: step];
     }
-    SGStepLineChartView *chartView = [[SGStepLineChartView alloc] initWithFrame:CGRectMake(0, 100, 350, 180) XLabel:xLabel YLabel:yLabel];
+    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
+    SGStepLineChartView *chartView = [[SGStepLineChartView alloc] initWithFrame:CGRectMake(0, 100, screenWidth, 180) XLabel:xLabel YLabel:yLabel];
     [self.view addSubview:chartView];
 }
 
