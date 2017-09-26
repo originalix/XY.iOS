@@ -10,7 +10,6 @@
 #import "PNChart.h"
 #import "PNChartLabel.h"
 
-#define kInflexionPointColor [UIColor redColor]
 #define kLineColor [UIColor colorWithRed:19.f/255.f green:176.f/255.f blue:197.f/255.f alpha:1.f]
 #define kSublineColor [UIColor colorWithRed:160.f/255.f green:160.f/255.f blue:160.f/255.f alpha:1.f]
 #define kSelectedCicleColor [UIColor colorWithRed:235.f/255.f green:97.f/255.f blue:0.f/255.f alpha:1.f]
@@ -224,7 +223,12 @@ static const NSInteger kMaxIndex = 9999;
     
     for (NSArray *arr in self.lineChart.pathPoints) {
         CGPoint point = [[arr objectAtIndex:pointIndex] CGPointValue];
-        self.dataLabel.text = [NSString stringWithFormat:@"%@", [self.dataSource objectAtIndex:pointIndex]];
+        if ([self.dataSource count] >= pointIndex) {
+            self.dataLabel.text = [NSString stringWithFormat:@"%@", [self.dataSource objectAtIndex:pointIndex]];
+        } else {
+            self.dataLabel.text = [NSString stringWithFormat:@"0"];
+        }
+        self.dataLabel.textColor = kSelectedLabelColor;
         [self.dataLabel setFrame:CGRectMake(point.x - kDataLabelOffSetX, point.y - kDataLabelOffSetY, kDataLabelWidth, kDataLabelHeight)];
     }
     
