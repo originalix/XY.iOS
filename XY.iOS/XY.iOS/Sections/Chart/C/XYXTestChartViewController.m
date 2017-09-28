@@ -10,6 +10,7 @@
 #import "SGStepLineChartView.h"
 #import "XY_iOS-Swift.h"
 #import "SwViewCapture-Swift.h"
+#import "XYXImageViewController.h"
 
 @interface XYXTestChartViewController ()
 
@@ -22,7 +23,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"计步";
     [self setupLineChartView];
-    [self screenshotCapture];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Capture" style:UIBarButtonItemStylePlain target:self action:@selector(screenshotCapture)];
 }
@@ -47,7 +47,12 @@
 }
 
 - (void)screenshotCapture {
-    
+    [self.view swCapture:^(UIImage * _Nullable image) {
+        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+        XYXImageViewController *vc = [[XYXImageViewController alloc] init];
+        vc.image = image;
+        [self.navigationController pushViewController:vc animated:true];
+    }];
 }
 
 @end

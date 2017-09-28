@@ -10,4 +10,6 @@
 
 @interface XYXImageViewController : UIViewController
 
+@property (nonatomic, strong) UIImage *image;
+
 @end
