@@ -11,6 +11,7 @@ target 'XY.iOS' do
     pod 'SCLAlertView'
     pod 'YALSideMenu', '~> 2.0'
     pod 'PNChart'
+    pod "SwViewCapture"
 end
 
 target 'XY.iOSTests' do
