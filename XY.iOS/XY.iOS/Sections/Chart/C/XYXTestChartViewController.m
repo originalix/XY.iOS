@@ -8,6 +8,7 @@
 
 #import "XYXTestChartViewController.h"
 #import "SGStepLineChartView.h"
+#import "XY_iOS-Swift.h"
 
 @interface XYXTestChartViewController ()
 
@@ -18,6 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"计步";
+    [self setupLineChartView];
+    [self screenshotCapture];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+#pragma mark - initialize for line chart view
+- (void)setupLineChartView {
     NSMutableArray *xLabel = [NSMutableArray array];
     NSMutableArray *yLabel = [NSMutableArray array];
     NSInteger N = 7;
@@ -26,13 +38,53 @@
         NSNumber *step = [NSNumber numberWithInteger: arc4random() % 200000];
         [yLabel addObject: step];
     }
-    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
-    SGStepLineChartView *chartView = [[SGStepLineChartView alloc] initWithFrame:CGRectMake(0, 100, screenWidth, 180) XLabel:xLabel YLabel:yLabel];
+    CGFloat ScreenWidth = [[UIScreen mainScreen] bounds].size.width;
+    SGStepLineChartView *chartView = [[SGStepLineChartView alloc] initWithFrame:CGRectMake(0, 75, ScreenWidth, 150) XLabel:xLabel YLabel:yLabel];
     [self.view addSubview:chartView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)screenshotCapture {
+    UIImage *img = [self imageFromView:[UIApplication sharedApplication].keyWindow.rootViewController.view];
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
+    CGFloat ScreenWidth = [[UIScreen mainScreen] bounds].size.width;
+    [imgView setFrame:CGRectMake(0, 300, ScreenWidth,  300)];
+    [self.view addSubview:imgView];
+}
+
+//获得屏幕图像
+- (UIImage *)imageFromView:(UIView *)view {
+    UIGraphicsBeginImageContext(view.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:context];
+    
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return theImage;
+}
+
+ //获得某个范围内的屏幕图像
+ - (UIImage *)imageFromView:(UIView *)view atFrame:(CGRect)rect {
+     UIGraphicsBeginImageContext(view.frame.size);
+     CGContextRef context = UIGraphicsGetCurrentContext();
+     CGContextSaveGState(context);
+     UIRectClip(rect);
+     [view.layer renderInContext:context];
+     
+     UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+     UIGraphicsEndImageContext();
+     
+     return theImage;
+}
+
+-(void)fullScreenshots {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    UIWindow *screenWindow = appDelegate.window;
+    UIGraphicsBeginImageContext(screenWindow.frame.size);
+    [screenWindow.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil); //将截图存入相册
 }
 
 @end
