@@ -14,6 +14,7 @@
 		5649140D1F0F7FE600693F51 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140C1F0F7FE600693F51 /* CameraController.m */; };
 		564914101F0F82CA00693F51 /* FaceDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140F1F0F82C900693F51 /* FaceDetect.m */; };
 		564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564AFD101F57AC26004BE2A5 /* RichTextViewController.m */; };
+		565477071F7C982C001F312C /* XYXImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565477061F7C982C001F312C /* XYXImageViewController.m */; };
 		566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCC81F20809300EDA8C4 /* VueController.swift */; };
 		566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */; };
 		567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20A61F0604A200B970CB /* AppDelegate.swift */; };
@@ -91,6 +92,8 @@
 		5649140F1F0F82C900693F51 /* FaceDetect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetect.m; sourceTree = "<group>"; };
 		564AFD0F1F57AC26004BE2A5 /* RichTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichTextViewController.h; sourceTree = "<group>"; };
 		564AFD101F57AC26004BE2A5 /* RichTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RichTextViewController.m; sourceTree = "<group>"; };
+		565477051F7C982C001F312C /* XYXImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXImageViewController.h; sourceTree = "<group>"; };
+		565477061F7C982C001F312C /* XYXImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXImageViewController.m; sourceTree = "<group>"; };
 		566EDCC81F20809300EDA8C4 /* VueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VueController.swift; sourceTree = "<group>"; };
 		566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		567B20A31F0604A200B970CB /* XY.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XY.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +300,8 @@
 				56206FA71F74B13100AE2183 /* XYXChartViewController.m */,
 				56A39DE41F78C66D00C9F3B5 /* XYXTestChartViewController.h */,
 				56A39DE51F78C66D00C9F3B5 /* XYXTestChartViewController.m */,
+				565477051F7C982C001F312C /* XYXImageViewController.h */,
+				565477061F7C982C001F312C /* XYXImageViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -758,6 +763,7 @@
 				56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,
 				567C2DD91F415D9100565FFF /* MyFancyMenuViewController.swift in Sources */,
+				565477071F7C982C001F312C /* XYXImageViewController.m in Sources */,
 				566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */,
 				566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */,
 				56A39DE31F78B4E400C9F3B5 /* SGStepLineChartView.m in Sources */,

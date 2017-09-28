@@ -12,6 +12,7 @@ PODS:
   - SCLAlertView (0.7.0)
   - SSZipArchive (1.8.1)
   - SwiftyJSON (3.1.4)
+  - SwViewCapture (1.0.6)
   - UICountingLabel (1.2.0)
   - WHC_ModelSqliteKit (1.2.6):
     - WHC_ModelSqliteKit/standard (= 1.2.6)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - LNTS_HttpClient (~> 0.1.0)
   - PNChart
   - SCLAlertView
+  - SwViewCapture
   - WHC_ModelSqliteKit
   - YALSideMenu (~> 2.0)
 
@@ -35,10 +37,11 @@ SPEC CHECKSUMS:
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwViewCapture: edf1ea74e164f47af005fbdfdc6fc18ec373ec69
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   WHC_ModelSqliteKit: 8600471b427856c5babe389686297d97ed94f5d8
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: 4ecf65a5db636892c233963b726a71dd1f3296fd
+PODFILE CHECKSUM: c2a5ebd836f7eda807094bf8193d2adf61a9b2aa
 
 COCOAPODS: 1.2.1
