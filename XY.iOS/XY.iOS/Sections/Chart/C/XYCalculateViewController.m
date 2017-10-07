@@ -9,29 +9,41 @@
 #import "XYCalculateViewController.h"
 
 @interface XYCalculateViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (nonatomic, strong) NSMutableString *firstStr;
+@property (nonatomic, strong) NSMutableString *secondStr;
+@property (nonatomic, assign) BOOL isFirst;
 @end
 
 @implementation XYCalculateViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.isFirst = true;
+    self.firstStr = [NSMutableString string];
+    self.secondStr = [NSMutableString string];
+    self.label.text = @"0";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)showNumbers:(UIButton *)sender {
+    [self.firstStr appendString:[self realNumber:sender.tag]];
+    self.label.text = self.firstStr;
 }
-*/
+
+- (NSString *)realNumber:(NSInteger)tag {
+    return [NSString stringWithFormat:@"%ld", tag - 100];
+}
+
+- (IBAction)plusFunction:(id)sender {
+    
+}
+
+- (IBAction)resultFunction:(id)sender {
+    
+}
 
 @end
