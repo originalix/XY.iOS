@@ -12,6 +12,7 @@
 #import "XYLayerViewController.h"
 #import "XYXChartViewController.h"
 #import "XYXTestChartViewController.h"
+#import "XYCalculateViewController.h"
 
 @interface XYXMainViewController ()
 
@@ -62,6 +63,12 @@
 //    XYXChartViewController *chartVC = [[XYXChartViewController alloc] init];
 //    [self.navigationController pushViewController:chartVC animated:true];
     XYXTestChartViewController *vc = [[XYXTestChartViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:true];
+}
+
+- (IBAction)go2CalculatorController:(id)sender {
+    XYCalculateViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"XYCalculateViewController"];
+//    XYCalculateViewController *vc = [[XYCalculateViewController alloc] init];
     [self.navigationController pushViewController:vc animated:true];
 }
 
