@@ -39,6 +39,7 @@
 		56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E3B1F690BC800F7FAED /* XYMainViewController.m */; };
 		56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC394D1F13377D00D6C597 /* libsqlite3.tbd */; };
 		56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E401F69113600F7FAED /* XYDeviceManager.m */; };
+		56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
 		56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39291F132F5600D6C597 /* libc++.tbd */; };
@@ -137,6 +138,8 @@
 		56B12E3E1F69110000F7FAED /* XYWristbandConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYWristbandConst.h; sourceTree = "<group>"; };
 		56B12E3F1F69113600F7FAED /* XYDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYDeviceManager.h; sourceTree = "<group>"; };
 		56B12E401F69113600F7FAED /* XYDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYDeviceManager.m; sourceTree = "<group>"; };
+		56CE57E81F88FED900A1FCD1 /* XYCalculateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCalculateViewController.h; sourceTree = "<group>"; };
+		56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCalculateViewController.m; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
 		56D5BF671F3C323D003CB716 /* EffictiveObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffictiveObjc.m; sourceTree = "<group>"; };
 		56D5BF691F3C325F003CB716 /* EffictiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveViewController.h; sourceTree = "<group>"; };
@@ -302,6 +305,8 @@
 				56A39DE51F78C66D00C9F3B5 /* XYXTestChartViewController.m */,
 				565477051F7C982C001F312C /* XYXImageViewController.h */,
 				565477061F7C982C001F312C /* XYXImageViewController.m */,
+				56CE57E81F88FED900A1FCD1 /* XYCalculateViewController.h */,
+				56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -775,6 +780,7 @@
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
 				564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */,
+				56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */,
 				5649140D1F0F7FE600693F51 /* CameraController.m in Sources */,
 				56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */,
 				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,

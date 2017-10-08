@@ -285,13 +285,6 @@
                                     <action selector="imageDataAction:" destination="AeI-5n-N0G" eventType="touchUpInside" id="0NL-7n-eth"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wpx-7P-aEH">
-                                <rect key="frame" x="60" y="348" width="255" height="299"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="255" id="GOt-E9-jms"/>
-                                    <constraint firstAttribute="height" constant="299" id="pJ4-1S-ndf"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-QE-sxl">
                                 <rect key="frame" x="159" y="248" width="58" height="30"/>
                                 <state key="normal" title="CALayer"/>
@@ -306,19 +299,35 @@
                                     <action selector="go2ChartController:" destination="AeI-5n-N0G" eventType="touchUpInside" id="BSn-MQ-ASt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhZ-3V-iWk">
+                                <rect key="frame" x="164" y="348" width="46" height="30"/>
+                                <state key="normal" title="计算器"/>
+                                <connections>
+                                    <action selector="go2CalculatorController:" destination="AeI-5n-N0G" eventType="touchUpInside" id="bR9-wG-lz6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wpx-7P-aEH">
+                                <rect key="frame" x="61" y="406" width="255" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="GOt-E9-jms"/>
+                                    <constraint firstAttribute="height" constant="299" id="pJ4-1S-ndf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GGr-aJ-EJl" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="ERW-OQ-4II"/>
+                            <constraint firstItem="jdI-PC-7HB" firstAttribute="top" secondItem="Wpx-7P-aEH" secondAttribute="bottom" constant="20" id="Fv4-NZ-a8m"/>
+                            <constraint firstItem="mhZ-3V-iWk" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="Mjd-TR-Yce"/>
                             <constraint firstItem="M7d-QE-sxl" firstAttribute="top" secondItem="hWr-ye-XK3" secondAttribute="bottom" constant="20" id="NmQ-fL-QqY"/>
                             <constraint firstItem="6Jc-Aw-6DS" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="Wrg-pI-YRu"/>
-                            <constraint firstItem="6Jc-Aw-6DS" firstAttribute="top" secondItem="otd-k6-9Or" secondAttribute="bottom" constant="84" id="X8a-Oh-qTI"/>
+                            <constraint firstItem="mhZ-3V-iWk" firstAttribute="top" secondItem="GGr-aJ-EJl" secondAttribute="bottom" constant="20" id="YqR-uX-vTi"/>
                             <constraint firstItem="Wpx-7P-aEH" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="b7m-Bg-toF"/>
+                            <constraint firstItem="6Jc-Aw-6DS" firstAttribute="top" secondItem="otd-k6-9Or" secondAttribute="bottom" constant="84" id="bYA-ZO-nDp"/>
                             <constraint firstItem="M7d-QE-sxl" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="bcV-NB-5GB"/>
                             <constraint firstItem="Wpx-7P-aEH" firstAttribute="top" secondItem="hWr-ye-XK3" secondAttribute="bottom" constant="120" id="c8p-VM-A4N"/>
                             <constraint firstItem="hWr-ye-XK3" firstAttribute="centerX" secondItem="JwN-nj-hXl" secondAttribute="centerX" id="fLY-le-xHl"/>
                             <constraint firstItem="GGr-aJ-EJl" firstAttribute="top" secondItem="M7d-QE-sxl" secondAttribute="bottom" constant="20" id="hek-uu-A4X"/>
-                            <constraint firstItem="jdI-PC-7HB" firstAttribute="top" secondItem="Wpx-7P-aEH" secondAttribute="bottom" constant="20" id="hhF-bi-olj"/>
                             <constraint firstItem="hWr-ye-XK3" firstAttribute="top" secondItem="6Jc-Aw-6DS" secondAttribute="bottom" constant="20" id="v06-So-8oG"/>
                         </constraints>
                     </view>
@@ -330,6 +339,155 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFL-zM-ZAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="77.599999999999994" y="3020.2398800599703"/>
+        </scene>
+        <!--Calculate View Controller-->
+        <scene sceneID="pNL-OQ-G9S">
+            <objects>
+                <viewController storyboardIdentifier="XYCalculateViewController" id="IS8-hc-4hb" customClass="XYCalculateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="moE-zT-tV7"/>
+                        <viewControllerLayoutGuide type="bottom" id="dqK-Rw-VYz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2zj-tt-MRP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="108" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTg-4B-oT9">
+                                <rect key="frame" x="68" y="203" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="oom-iy-glf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="109" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgo-uV-24M">
+                                <rect key="frame" x="118" y="203" width="30" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="9"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="KeI-z3-ZHz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLK-9O-jFZ">
+                                <rect key="frame" x="20" y="251" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="XWF-Lk-TfG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu7-Xg-ulh">
+                                <rect key="frame" x="68" y="251" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="Mjk-Hp-gzW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pw7-OT-eAL">
+                                <rect key="frame" x="108" y="251" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="0yX-WV-KjL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIS-Qx-jZL">
+                                <rect key="frame" x="24" y="299" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="4hh-0t-PHW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXl-Z0-nwC">
+                                <rect key="frame" x="72" y="299" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="H3x-OL-13V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xom-TZ-vaf">
+                                <rect key="frame" x="108" y="299" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="5Fn-Im-c3E"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzD-Fc-LdQ">
+                                <rect key="frame" x="0.0" y="30" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="RL1-xP-xOi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se2-rm-8as">
+                                <rect key="frame" x="24" y="347" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="UNu-cz-iPy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh7-gT-JXR">
+                                <rect key="frame" x="319" y="216" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="除"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0W-rV-H6H">
+                                <rect key="frame" x="319" y="251" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="乘"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Po-S0-S0Z">
+                                <rect key="frame" x="319" y="297" width="40" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="减"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubg-An-jDN">
+                                <rect key="frame" x="319" y="343" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="加"/>
+                                <connections>
+                                    <action selector="plusFunction:" destination="IS8-hc-4hb" eventType="touchUpInside" id="p3f-Ml-OqD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ese-fz-thV">
+                                <rect key="frame" x="319" y="391" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="="/>
+                                <connections>
+                                    <action selector="resultFunction:" destination="IS8-hc-4hb" eventType="touchUpInside" id="9xA-aX-gJX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="107" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39n-9c-CWV">
+                                <rect key="frame" x="20" y="203" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="7"/>
+                                <connections>
+                                    <action selector="showNumbers:" destination="IS8-hc-4hb" eventType="touchUpInside" id="FGa-z9-gWp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bzD-Fc-LdQ" secondAttribute="trailing" id="Gid-Lq-oVN"/>
+                            <constraint firstItem="bzD-Fc-LdQ" firstAttribute="top" secondItem="moE-zT-tV7" secondAttribute="bottom" constant="10" id="dyY-VH-8Id"/>
+                            <constraint firstItem="bzD-Fc-LdQ" firstAttribute="leading" secondItem="2zj-tt-MRP" secondAttribute="leading" id="xfO-9S-wNc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="bzD-Fc-LdQ" id="iBQ-DM-dVZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwf-Gw-KV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77.599999999999994" y="3696.7016491754125"/>
         </scene>
         <!--Layer View Controller-->
         <scene sceneID="FTZ-5Q-KlV">
