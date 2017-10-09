@@ -56,6 +56,7 @@
 		56F29AA21F8B55DF0093689E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39411F13362D00D6C597 /* AddressBook.framework */; };
 		56F29AA61F8B5B420093689E /* XYSearchDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F29AA41F8B5B420093689E /* XYSearchDeviceCell.m */; };
 		56F29AA71F8B5B420093689E /* XYSearchDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F29AA51F8B5B420093689E /* XYSearchDeviceCell.xib */; };
+		56F29AAA1F8B5DC80093689E /* LSEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F29AA91F8B5DC80093689E /* LSEDevice.m */; };
 		A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */; };
 		EDD47BCA96D8F15E1024F496 /* Pods_XY_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -173,6 +174,8 @@
 		56F29AA31F8B5B420093689E /* XYSearchDeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSearchDeviceCell.h; sourceTree = "<group>"; };
 		56F29AA41F8B5B420093689E /* XYSearchDeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSearchDeviceCell.m; sourceTree = "<group>"; };
 		56F29AA51F8B5B420093689E /* XYSearchDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYSearchDeviceCell.xib; sourceTree = "<group>"; };
+		56F29AA81F8B5DC80093689E /* LSEDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSEDevice.h; sourceTree = "<group>"; };
+		56F29AA91F8B5DC80093689E /* LSEDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSEDevice.m; sourceTree = "<group>"; };
 		CD685FCC1C835A141CDD9F60 /* Pods-XY.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XY_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -514,6 +517,8 @@
 				56B12E3E1F69110000F7FAED /* XYWristbandConst.h */,
 				56B12E3F1F69113600F7FAED /* XYDeviceManager.h */,
 				56B12E401F69113600F7FAED /* XYDeviceManager.m */,
+				56F29AA81F8B5DC80093689E /* LSEDevice.h */,
+				56F29AA91F8B5DC80093689E /* LSEDevice.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -777,6 +782,7 @@
 				561F25491F6A63300033959F /* XYXImageZip.m in Sources */,
 				561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */,
 				56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */,
+				56F29AAA1F8B5DC80093689E /* LSEDevice.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,
 				567C2DD91F415D9100565FFF /* MyFancyMenuViewController.swift in Sources */,
 				565477071F7C982C001F312C /* XYXImageViewController.m in Sources */,
