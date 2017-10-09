@@ -27,7 +27,7 @@
 
 #pragma mark - Button Action
 - (IBAction)searchDevice:(id)sender {
-    XYSearchViewController *searchVC = [[XYSearchViewController alloc] init];
+    XYSearchViewController *searchVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"XYSearchViewController"];
     [self.navigationController pushViewController:searchVC animated:true];
 }
 
