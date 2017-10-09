@@ -53,6 +53,7 @@
 		56DC39521F1337E900D6C597 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC393F1F13362600D6C597 /* CoreTelephony.framework */; };
 		56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC39541F134AD500D6C597 /* FaceConfig.m */; };
 		56DC39581F13578100D6C597 /* DetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC39571F13578100D6C597 /* DetectViewController.m */; };
+		56F29AA21F8B55DF0093689E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39411F13362D00D6C597 /* AddressBook.framework */; };
 		A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */; };
 		EDD47BCA96D8F15E1024F496 /* Pods_XY_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -176,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F29AA21F8B55DF0093689E /* AddressBook.framework in Frameworks */,
 				568A6AB31F70F8DC0023F6AC /* QuartzCore.framework in Frameworks */,
 				56DC394F1F1337B100D6C597 /* libstdc++.tbd in Frameworks */,
 				56DC394C1F1336EC00D6C597 /* libz.tbd in Frameworks */,
@@ -952,6 +954,35 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CuteLog\"",
+					"-framework",
+					"\"LNTS_HttpClient\"",
+					"-framework",
+					"\"PNChart\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"SCLAlertView\"",
+					"-framework",
+					"\"SSZipArchive\"",
+					"-framework",
+					"\"SideMenu\"",
+					"-framework",
+					"\"SwViewCapture\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"UICountingLabel\"",
+					"-framework",
+					"\"WHC_ModelSqliteKit\"",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Lix.XY-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XY.iOS/resources/XY.iOS-Bridging-Header.h";
@@ -981,6 +1012,35 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CuteLog\"",
+					"-framework",
+					"\"LNTS_HttpClient\"",
+					"-framework",
+					"\"PNChart\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"SCLAlertView\"",
+					"-framework",
+					"\"SSZipArchive\"",
+					"-framework",
+					"\"SideMenu\"",
+					"-framework",
+					"\"SwViewCapture\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"UICountingLabel\"",
+					"-framework",
+					"\"WHC_ModelSqliteKit\"",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Lix.XY-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XY.iOS/resources/XY.iOS-Bridging-Header.h";

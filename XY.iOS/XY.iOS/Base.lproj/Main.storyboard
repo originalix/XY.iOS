@@ -252,7 +252,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="AeI-5n-N0G" kind="relationship" relationship="rootViewController" id="LnO-YP-v3D"/>
+                        <segue destination="kBF-nA-SvE" kind="relationship" relationship="rootViewController" id="VfD-ip-SaO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNZ-cH-EsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -271,14 +271,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-Aw-6DS">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-Aw-6DS">
                                 <rect key="frame" x="165" y="148" width="44" height="30"/>
                                 <state key="normal" title="Cache"/>
                                 <connections>
                                     <action selector="cacheButtonAction:" destination="AeI-5n-N0G" eventType="touchUpInside" id="SaZ-Vt-uKH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-ye-XK3">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-ye-XK3">
                                 <rect key="frame" x="127" y="198" width="122" height="30"/>
                                 <state key="normal" title="ImageDataLength"/>
                                 <connections>

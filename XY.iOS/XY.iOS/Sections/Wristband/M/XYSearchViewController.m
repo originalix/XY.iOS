@@ -7,6 +7,7 @@
 //
 
 #import "XYSearchViewController.h"
+#import "XYDeviceManager.h"
 
 @interface XYSearchViewController ()<LSScanDeviceDelegate>
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [[XYDeviceManager shared] initializeSDK];
     [self startSearch];
 }
 

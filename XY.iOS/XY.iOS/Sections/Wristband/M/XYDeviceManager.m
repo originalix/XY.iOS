@@ -22,6 +22,7 @@ IMSingletonM()
 }
 
 - (void)deviceManagerInitFinish:(BOOL)bSuccess {
+    
 }
 
 - (void)deviceManagerBleState:(LSBluetoothState)state {
