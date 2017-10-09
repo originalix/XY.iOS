@@ -13,13 +13,17 @@
 
 @interface XYSearchViewController ()<LSScanDeviceDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation XYSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"XYSearchDeviceCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
     [self startSearch];
 }
 
@@ -51,6 +55,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+//    XYSearchDeviceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    if (cell == nil) {
+//        cell = [[[NSBundle mainBundle] loadNibNamed:@"XYSearchDeviceCell" owner:self options:nil] firstObject];
+//    }
     
     XYSearchDeviceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     LSEDevice *device = [[LSEDevice alloc] init];

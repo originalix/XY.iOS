@@ -11,6 +11,7 @@
 		561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25451F6A522B0033959F /* XYXMainViewController.m */; };
 		561F25491F6A63300033959F /* XYXImageZip.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25481F6A63300033959F /* XYXImageZip.m */; };
 		56206FA81F74B13100AE2183 /* XYXChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56206FA71F74B13100AE2183 /* XYXChartViewController.m */; };
+		5632AAF61F8B72B100711DAA /* XYSearchDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5632AAF51F8B72B100711DAA /* XYSearchDeviceCell.xib */; };
 		5649140D1F0F7FE600693F51 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140C1F0F7FE600693F51 /* CameraController.m */; };
 		564914101F0F82CA00693F51 /* FaceDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140F1F0F82C900693F51 /* FaceDetect.m */; };
 		564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564AFD101F57AC26004BE2A5 /* RichTextViewController.m */; };
@@ -55,7 +56,6 @@
 		56DC39581F13578100D6C597 /* DetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC39571F13578100D6C597 /* DetectViewController.m */; };
 		56F29AA21F8B55DF0093689E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39411F13362D00D6C597 /* AddressBook.framework */; };
 		56F29AA61F8B5B420093689E /* XYSearchDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F29AA41F8B5B420093689E /* XYSearchDeviceCell.m */; };
-		56F29AA71F8B5B420093689E /* XYSearchDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F29AA51F8B5B420093689E /* XYSearchDeviceCell.xib */; };
 		56F29AAA1F8B5DC80093689E /* LSEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F29AA91F8B5DC80093689E /* LSEDevice.m */; };
 		A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */; };
 		EDD47BCA96D8F15E1024F496 /* Pods_XY_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */; };
@@ -91,6 +91,7 @@
 		561F25481F6A63300033959F /* XYXImageZip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXImageZip.m; sourceTree = "<group>"; };
 		56206FA61F74B13100AE2183 /* XYXChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXChartViewController.h; sourceTree = "<group>"; };
 		56206FA71F74B13100AE2183 /* XYXChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXChartViewController.m; sourceTree = "<group>"; };
+		5632AAF51F8B72B100711DAA /* XYSearchDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYSearchDeviceCell.xib; sourceTree = "<group>"; };
 		5649140B1F0F7FE600693F51 /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
 		5649140C1F0F7FE600693F51 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 		5649140E1F0F82C900693F51 /* FaceDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
@@ -173,7 +174,6 @@
 		56DC39571F13578100D6C597 /* DetectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectViewController.m; sourceTree = "<group>"; };
 		56F29AA31F8B5B420093689E /* XYSearchDeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSearchDeviceCell.h; sourceTree = "<group>"; };
 		56F29AA41F8B5B420093689E /* XYSearchDeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSearchDeviceCell.m; sourceTree = "<group>"; };
-		56F29AA51F8B5B420093689E /* XYSearchDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYSearchDeviceCell.xib; sourceTree = "<group>"; };
 		56F29AA81F8B5DC80093689E /* LSEDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSEDevice.h; sourceTree = "<group>"; };
 		56F29AA91F8B5DC80093689E /* LSEDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSEDevice.m; sourceTree = "<group>"; };
 		CD685FCC1C835A141CDD9F60 /* Pods-XY.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -528,7 +528,7 @@
 			children = (
 				56F29AA31F8B5B420093689E /* XYSearchDeviceCell.h */,
 				56F29AA41F8B5B420093689E /* XYSearchDeviceCell.m */,
-				56F29AA51F8B5B420093689E /* XYSearchDeviceCell.xib */,
+				5632AAF51F8B72B100711DAA /* XYSearchDeviceCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -653,7 +653,7 @@
 			files = (
 				567B20B11F0604A200B970CB /* LaunchScreen.storyboard in Resources */,
 				567B20AE1F0604A200B970CB /* Assets.xcassets in Resources */,
-				56F29AA71F8B5B420093689E /* XYSearchDeviceCell.xib in Resources */,
+				5632AAF61F8B72B100711DAA /* XYSearchDeviceCell.xib in Resources */,
 				567B20AC1F0604A200B970CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

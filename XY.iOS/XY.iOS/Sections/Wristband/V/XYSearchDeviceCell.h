@@ -11,6 +11,11 @@
 
 @interface XYSearchDeviceCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *macAddressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *RSSILabel;
+
+
 - (void)setContent:(LSEDevice *)device;
 
 @end

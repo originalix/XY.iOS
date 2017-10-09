@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IlN-K3-u0m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IlN-K3-u0m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -234,6 +234,11 @@
                                     <action selector="searchDevice:" destination="kBF-nA-SvE" eventType="touchUpInside" id="Cbd-O1-LN5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ev-yb-R54">
+                                <rect key="frame" x="154" y="271" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="tableview"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -244,32 +249,41 @@
             <point key="canvasLocation" x="906" y="2316"/>
         </scene>
         <!--Search View Controller-->
-        <scene sceneID="e9g-9q-TkU">
+        <scene sceneID="wxg-kP-vq2">
             <objects>
-                <tableViewController storyboardIdentifier="XYSearchViewController" id="FrO-Em-Z5u" customClass="XYSearchViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7eh-sH-G7N">
+                <viewController storyboardIdentifier="XYSearchViewController" id="cV2-kb-LVC" customClass="XYSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VfP-ko-G7c"/>
+                        <viewControllerLayoutGuide type="bottom" id="9bh-Xf-rNZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ku9-O0-4fp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aaA-1k-7sT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cV2-kb-LVC" id="plC-mU-GbF"/>
+                                    <outlet property="delegate" destination="cV2-kb-LVC" id="UtE-SP-h3M"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="70h-CV-t5e">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="70h-CV-t5e" id="a78-vr-xjy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FrO-Em-Z5u" id="6pf-S2-Mc1"/>
-                            <outlet property="delegate" destination="FrO-Em-Z5u" id="7ru-eu-aWy"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gn0-5h-7fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="aaA-1k-7sT" firstAttribute="leading" secondItem="ku9-O0-4fp" secondAttribute="leadingMargin" constant="-16" id="1lt-G4-wWT"/>
+                            <constraint firstItem="9bh-Xf-rNZ" firstAttribute="top" secondItem="aaA-1k-7sT" secondAttribute="bottom" id="5lb-XH-qhu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aaA-1k-7sT" secondAttribute="trailing" constant="-16" id="H3V-1W-PWc"/>
+                            <constraint firstItem="aaA-1k-7sT" firstAttribute="top" secondItem="VfP-ko-G7c" secondAttribute="bottom" constant="-20" id="mt6-HE-hDj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aaA-1k-7sT" id="mut-Xy-8OC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnR-Sj-am2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762" y="1929"/>
+            <point key="canvasLocation" x="1816.8" y="2315.8920539730138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ork-p9-GmV">
@@ -299,7 +313,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-Aw-6DS">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-Aw-6DS">
                                 <rect key="frame" x="165" y="148" width="44" height="30"/>
                                 <state key="normal" title="Cache"/>
                                 <connections>

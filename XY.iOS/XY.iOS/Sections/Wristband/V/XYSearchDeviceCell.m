@@ -10,10 +10,6 @@
 
 @interface XYSearchDeviceCell()
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *macAddressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *RSSILabel;
-
 @end
 
 @implementation XYSearchDeviceCell

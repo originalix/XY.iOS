@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYSearchViewController : UITableViewController
+@interface XYSearchViewController : UIViewController
 
 @end
