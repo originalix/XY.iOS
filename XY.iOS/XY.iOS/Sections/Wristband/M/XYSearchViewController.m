@@ -8,6 +8,8 @@
 
 #import "XYSearchViewController.h"
 #import "XYDeviceManager.h"
+#import "XYSearchDeviceCell.h"
+#import "LSEDevice.h"
 
 @interface XYSearchViewController ()<LSScanDeviceDelegate>
 
@@ -17,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView registerNib:[UINib nibWithNibName:@"XYSearchDeviceCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self startSearch];
 }
 
@@ -36,21 +39,26 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 20;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // 创建cell
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
-    
-    // 设置cell数据
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %zd", [self class], indexPath.row];
-    
+    XYSearchDeviceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    LSEDevice *device = [[LSEDevice alloc] init];
+    device.deviceInfo = [[LSScanDeviceInfo alloc] init];
+    device.deviceInfo.name = @"name!!!!";
+    device.deviceInfo.macAddress = @"12312312312";
+    device.deviceInfo.rssi = 2150;
+    [cell setContent:device];
     return cell;
 }
 

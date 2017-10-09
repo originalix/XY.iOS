@@ -8,17 +8,28 @@
 
 #import "XYSearchDeviceCell.h"
 
+@interface XYSearchDeviceCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *macAddressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *RSSILabel;
+
+@end
+
 @implementation XYSearchDeviceCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)setContent:(LSEDevice *)device {
+    [self.nameLabel setText:device.deviceInfo.name];
+    [self.macAddressLabel setText:device.deviceInfo.macAddress];
+    [self.RSSILabel setText:[NSString stringWithFormat:@"%li", device.deviceInfo.rssi]];
 }
 
 @end

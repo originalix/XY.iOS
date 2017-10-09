@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSEDevice.h"
 
 @interface XYSearchDeviceCell : UITableViewCell
+
+- (void)setContent:(LSEDevice *)device;
 
 @end
