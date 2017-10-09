@@ -22,7 +22,9 @@ IMSingletonM()
 }
 
 - (void)deviceManagerInitFinish:(BOOL)bSuccess {
-    
+    if (bSuccess) {
+        NSLog(@"sdk初始化成功");
+    }
 }
 
 - (void)deviceManagerBleState:(LSBluetoothState)state {
@@ -196,7 +198,7 @@ IMSingletonM()
 #pragma mark - Private Method
 
 - (void)hookLogCallback:(NSString *)tag content:(NSString *)content {
-
+    NSLog(@"---> %s, tag = %, content = %@", __func__, tag, content);
 }
 
 @end

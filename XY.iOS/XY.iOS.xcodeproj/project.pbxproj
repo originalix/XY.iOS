@@ -54,6 +54,8 @@
 		56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC39541F134AD500D6C597 /* FaceConfig.m */; };
 		56DC39581F13578100D6C597 /* DetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC39571F13578100D6C597 /* DetectViewController.m */; };
 		56F29AA21F8B55DF0093689E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39411F13362D00D6C597 /* AddressBook.framework */; };
+		56F29AA61F8B5B420093689E /* XYSearchDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F29AA41F8B5B420093689E /* XYSearchDeviceCell.m */; };
+		56F29AA71F8B5B420093689E /* XYSearchDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F29AA51F8B5B420093689E /* XYSearchDeviceCell.xib */; };
 		A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A9BB21EB5F6979CF67FC8 /* Pods_XY_iOS.framework */; };
 		EDD47BCA96D8F15E1024F496 /* Pods_XY_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -168,6 +170,9 @@
 		56DC39541F134AD500D6C597 /* FaceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceConfig.m; sourceTree = "<group>"; };
 		56DC39561F13578100D6C597 /* DetectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectViewController.h; sourceTree = "<group>"; };
 		56DC39571F13578100D6C597 /* DetectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectViewController.m; sourceTree = "<group>"; };
+		56F29AA31F8B5B420093689E /* XYSearchDeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSearchDeviceCell.h; sourceTree = "<group>"; };
+		56F29AA41F8B5B420093689E /* XYSearchDeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSearchDeviceCell.m; sourceTree = "<group>"; };
+		56F29AA51F8B5B420093689E /* XYSearchDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYSearchDeviceCell.xib; sourceTree = "<group>"; };
 		CD685FCC1C835A141CDD9F60 /* Pods-XY.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00F41A4905E8A36EFC78B00 /* Pods_XY_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XY_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -516,6 +521,9 @@
 		56B12E351F6906FF00F7FAED /* V */ = {
 			isa = PBXGroup;
 			children = (
+				56F29AA31F8B5B420093689E /* XYSearchDeviceCell.h */,
+				56F29AA41F8B5B420093689E /* XYSearchDeviceCell.m */,
+				56F29AA51F8B5B420093689E /* XYSearchDeviceCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -640,6 +648,7 @@
 			files = (
 				567B20B11F0604A200B970CB /* LaunchScreen.storyboard in Resources */,
 				567B20AE1F0604A200B970CB /* Assets.xcassets in Resources */,
+				56F29AA71F8B5B420093689E /* XYSearchDeviceCell.xib in Resources */,
 				567B20AC1F0604A200B970CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,6 +786,7 @@
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
 				567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */,
 				56A39DE61F78C66D00C9F3B5 /* XYXTestChartViewController.m in Sources */,
+				56F29AA61F8B5B420093689E /* XYSearchDeviceCell.m in Sources */,
 				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
 				56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,

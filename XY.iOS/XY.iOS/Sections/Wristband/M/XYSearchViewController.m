@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [[XYDeviceManager shared] initializeSDK];
     [self startSearch];
 }
 
@@ -32,6 +31,27 @@
 #pragma mark - LSScanDeviceDelegate
 - (void)onScanResult:(LSScanDeviceInfo *)deviceInfo {
     NSLog(@"deviceInfo = %@", [deviceInfo description]);
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 4;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // 创建cell
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+    // 设置cell数据
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %zd", [self class], indexPath.row];
+    
+    return cell;
 }
 
 @end
