@@ -11,7 +11,7 @@
 #import "XYSearchDeviceCell.h"
 #import "LSEDevice.h"
 
-@interface XYSearchViewController ()<LSScanDeviceDelegate, UITableViewDataSource, UITableViewDelegate, LSBindDeviceDelegate>
+@interface XYSearchViewController ()<LSScanDeviceDelegate, UITableViewDataSource, UITableViewDelegate, LSBindDeviceDelegate, LSDeviceDataDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *searchList;
@@ -28,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [XYDeviceManager shared].delegate = self;
+    
     self.searchList = [NSMutableArray array];
     self.filterRSSI = -100;
     self.filterName = @"";
@@ -53,6 +55,10 @@
 
 - (void)stopSearch {
     [[LSDeviceManager shared] stopScan];
+}
+
+- (void)didReceiveData:(NSString *)tag content:(NSString *)content {
+//    NSLog(@"%@", content);
 }
 
 #pragma mark - LSScanDeviceDelegate
@@ -133,6 +139,7 @@
     UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         LSEDevice *device = [self.searchList objectAtIndex:indexPath.row];
         [[LSDeviceManager shared] bindDevice:device.deviceInfo.macAddress delegate:self];
+//        [self disConnectDevice:device];
     }];
     UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
@@ -167,9 +174,45 @@
             item.detailInfo.deviceId = device.deviceId;
             
 //            [self addDeviceToDB:item];
+            if (item.connectState == LSEDeviceStateDisConnect) {
+                [self connectDevice:item];
+            }
             return;
         }
     }
+}
+
+- (void)connectDevice:(LSEDevice *)device {
+    device.connectState = LSEDeviceStateConnecting;
+//    [self saveDeviceToDB:device callback:nil];
+    
+    LSDevice *v_device = [[LSDevice alloc] init];
+    v_device.macAddress = device.deviceInfo.macAddress;
+    v_device.deviceId = device.detailInfo.deviceId;
+    [[LSDeviceManager shared] addDevice:v_device userInfo:[LSDeviceUserInfo new] block:^(LSDevice *device, LSAddDeviceCallBackCode code) {
+        NSLog(@"连接设备 code: %ld ", code);
+//        [[XYDeviceManager shared] addDelegate];
+    }];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+//        [[NSNotificationCenter defaultCenter] postNotificationName:DEVICE_CONNECT_STATE_CHANGE_KEY object:device];
+    });
+}
+
+- (void)disConnectDevice:(LSEDevice *)device
+{
+    device.connectState = LSEDeviceStateDisConnect;
+//    [self saveDeviceToDB:device callback:nil];
+    
+    LSDevice *v_device = [[LSDevice alloc] init];
+    v_device.macAddress = device.deviceInfo.macAddress;
+    v_device.deviceId = device.detailInfo.deviceId;
+    [[LSDeviceManager shared] removeDevice:v_device.deviceId block:^(LSDevice *device, LSRemoveDeviceCallBackCode code) {
+        NSLog(@"删除设备 code: %ld ", code);
+    }];
+    dispatch_async(dispatch_get_main_queue(), ^{
+//        [[NSNotificationCenter defaultCenter] postNotificationName:DEVICE_CONNECT_STATE_CHANGE_KEY object:device];
+    });
 }
 
 - (void)onBindDeviceProcess:(NSString *)macAddr code:(LSBindDeviceHandlerCode)code handler:(__weak id<LSBindDeviceHandlerDelegate>)handler {

@@ -21,6 +21,10 @@ IMSingletonM()
     [[LSDeviceManager shared] initManager];
 }
 
+- (void)addDelegate {
+    [[LSDeviceManager shared] addDelegate: self];
+}
+
 - (void)deviceManagerInitFinish:(BOOL)bSuccess {
     if (bSuccess) {
         NSLog(@"sdk初始化成功");
@@ -198,7 +202,11 @@ IMSingletonM()
 #pragma mark - Private Method
 
 - (void)hookLogCallback:(NSString *)tag content:(NSString *)content {
-    NSLog(@"---> %s, tag = %, content = %@", __func__, tag, content);
+    NSLog(@"content = %@",content);
+    if (self.delegate)
+    {
+        [self.delegate didReceiveData:tag content:content];
+    }
 }
 
 @end
