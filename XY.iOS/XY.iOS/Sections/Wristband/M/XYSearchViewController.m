@@ -11,7 +11,7 @@
 #import "XYSearchDeviceCell.h"
 #import "LSEDevice.h"
 
-@interface XYSearchViewController ()<LSScanDeviceDelegate, UITableViewDataSource, UITableViewDelegate, LSBindDeviceDelegate, LSDeviceDataDelegate>
+@interface XYSearchViewController ()<LSScanDeviceDelegate, UITableViewDataSource, UITableViewDelegate, LSBindDeviceDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *searchList;
@@ -28,7 +28,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [XYDeviceManager shared].delegate = self;
     
     self.searchList = [NSMutableArray array];
     self.filterRSSI = -100;
@@ -55,10 +54,6 @@
 
 - (void)stopSearch {
     [[LSDeviceManager shared] stopScan];
-}
-
-- (void)didReceiveData:(NSString *)tag content:(NSString *)content {
-//    NSLog(@"%@", content);
 }
 
 #pragma mark - LSScanDeviceDelegate
@@ -159,11 +154,11 @@
     } else if (code == LSBindDeviceFailedCodeDisconnect) {
         detail = @"绑定失败, 设备断开连接";
     }
-    NSLog(@"detail = %@, code = %ld", detail, code);
+    SGLog(@"detail = %@, code = %ld", detail, code);
 }
 
 - (void)onBindDeviceSuccess:(NSString *)macAddr device:(LSDevice *)device {
-    NSLog(@"开始添加设备...");
+    SGLog(@"开始添加设备...");
     
     for (LSEDevice *item in self.searchList) {
         if ([item.deviceInfo.macAddress isEqualToString:device.macAddress]) {
@@ -190,8 +185,7 @@
     v_device.macAddress = device.deviceInfo.macAddress;
     v_device.deviceId = device.detailInfo.deviceId;
     [[LSDeviceManager shared] addDevice:v_device userInfo:[LSDeviceUserInfo new] block:^(LSDevice *device, LSAddDeviceCallBackCode code) {
-        NSLog(@"连接设备 code: %ld ", code);
-//        [[XYDeviceManager shared] addDelegate];
+        SGLog(@"连接设备 code: %ld ", code);
     }];
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -208,7 +202,7 @@
     v_device.macAddress = device.deviceInfo.macAddress;
     v_device.deviceId = device.detailInfo.deviceId;
     [[LSDeviceManager shared] removeDevice:v_device.deviceId block:^(LSDevice *device, LSRemoveDeviceCallBackCode code) {
-        NSLog(@"删除设备 code: %ld ", code);
+        SGLog(@"删除设备 code: %ld ", code);
     }];
     dispatch_async(dispatch_get_main_queue(), ^{
 //        [[NSNotificationCenter defaultCenter] postNotificationName:DEVICE_CONNECT_STATE_CHANGE_KEY object:device];
@@ -229,7 +223,7 @@
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
 //                [SVProgressHUD setMinimumDismissTimeInterval:CGFLOAT_MAX];
 //                [SVProgressHUD showWithStatus:@"绑定中，请稍后..."];
-                NSLog(@"绑定中，请稍后...");
+                SGLog(@"绑定中，请稍后...");
                 [handler inputCode:macAddr code:self.pairNum];
                 [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:alertController.textFields.firstObject];
             }];
@@ -246,7 +240,7 @@
                 [alert dismissViewControllerAnimated:YES completion:nil];
 //                [SVProgressHUD setMinimumDismissTimeInterval:CGFLOAT_MAX];
 //                [SVProgressHUD showWithStatus:@"绑定中，请稍后..."];
-                NSLog(@"绑定中，请稍后...");
+                SGLog(@"绑定中，请稍后...");
                 [handler confirm:macAddr isConfirm:YES];
             }]];
             

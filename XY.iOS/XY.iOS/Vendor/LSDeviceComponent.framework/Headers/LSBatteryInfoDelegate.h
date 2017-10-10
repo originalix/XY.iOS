@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LSConstant.h"
 
 #pragma mark LSBatteryInfo
 
@@ -21,9 +22,9 @@
 @property (nonatomic, assign) BOOL isCharging;
 
 /**
- *  电量(范围:0~100)
+ *  电量(正常范围范围:0~100, -1:表示设备不支持或读取出错)
  */
-@property (nonatomic, assign) NSUInteger battery;
+@property (nonatomic, assign) NSInteger battery;
 
 @end
 
@@ -42,6 +43,6 @@
  @param deviceId 设备标识
  @param batteryInfo 电量信息，如果设备不支持读取或出错，则该变量为nil
  */
-- (void)didUploadBatteryInfo:(NSString *)deviceId batteryInfo:(LSBatteryInfo *)batteryInfo;
+- (void)didUploadBatteryInfo:(LSDeviceId)deviceId batteryInfo:(LSBatteryInfo *)batteryInfo;
 
 @end

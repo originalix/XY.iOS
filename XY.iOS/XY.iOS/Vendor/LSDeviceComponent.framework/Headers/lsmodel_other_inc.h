@@ -10,5 +10,6 @@
 #define lsmodel_other_inc_h
 
 #import "LSVibrationStyleCfg.h"
+#import "LSDeviceComponentConfig.h"
 
 #endif /* lsmodel_other_inc_h */

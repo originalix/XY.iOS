@@ -23,6 +23,6 @@
 /**
  根据mode值来使用实际的运动数据模型
  */
-@property (nonatomic, assign) LSBaseDataModel *data;
+@property (nonatomic, strong) LSBaseDataModel *data;
 
 @end

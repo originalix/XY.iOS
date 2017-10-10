@@ -13,4 +13,10 @@
 #import <LSDeviceComponent/LSDeviceComponent.h>
 #import "XYWristbandConst.h"
 
+#ifdef DEBUG
+#define SGLog(fmt, ...) NSLog((@"LixLog-> " fmt), ##__VA_ARGS__)
+#else
+#define SGLog(...)
+#endif
+
 #endif /* PrefixHeader_pch */

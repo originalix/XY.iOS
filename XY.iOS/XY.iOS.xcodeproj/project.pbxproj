@@ -18,6 +18,7 @@
 		565477071F7C982C001F312C /* XYXImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565477061F7C982C001F312C /* XYXImageViewController.m */; };
 		566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCC81F20809300EDA8C4 /* VueController.swift */; };
 		566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */; };
+		5679F1901F8CACE4009E87FE /* LSDeviceComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5679F18F1F8CACE4009E87FE /* LSDeviceComponent.framework */; };
 		567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20A61F0604A200B970CB /* AppDelegate.swift */; };
 		567B20A91F0604A200B970CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B20A81F0604A200B970CB /* ViewController.swift */; };
 		567B20AC1F0604A200B970CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B20AA1F0604A200B970CB /* Main.storyboard */; };
@@ -35,7 +36,6 @@
 		568A6ABA1F70FAE70023F6AC /* XYLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568A6AB91F70FAE70023F6AC /* XYLayerViewController.m */; };
 		56A39DE31F78B4E400C9F3B5 /* SGStepLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A39DE21F78B4E400C9F3B5 /* SGStepLineChartView.m */; };
 		56A39DE61F78C66D00C9F3B5 /* XYXTestChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A39DE51F78C66D00C9F3B5 /* XYXTestChartViewController.m */; };
-		56B12E301F69044300F7FAED /* LSDeviceComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */; };
 		56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E381F69075D00F7FAED /* XYSearchViewController.m */; };
 		56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E3B1F690BC800F7FAED /* XYMainViewController.m */; };
 		56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC394D1F13377D00D6C597 /* libsqlite3.tbd */; };
@@ -103,6 +103,7 @@
 		565477061F7C982C001F312C /* XYXImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXImageViewController.m; sourceTree = "<group>"; };
 		566EDCC81F20809300EDA8C4 /* VueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VueController.swift; sourceTree = "<group>"; };
 		566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
+		5679F18F1F8CACE4009E87FE /* LSDeviceComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LSDeviceComponent.framework; sourceTree = "<group>"; };
 		567B20A31F0604A200B970CB /* XY.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XY.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		567B20A61F0604A200B970CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		567B20A81F0604A200B970CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +137,6 @@
 		56A39DE21F78B4E400C9F3B5 /* SGStepLineChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGStepLineChartView.m; sourceTree = "<group>"; };
 		56A39DE41F78C66D00C9F3B5 /* XYXTestChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXTestChartViewController.h; sourceTree = "<group>"; };
 		56A39DE51F78C66D00C9F3B5 /* XYXTestChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXTestChartViewController.m; sourceTree = "<group>"; };
-		56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LSDeviceComponent.framework; sourceTree = "<group>"; };
 		56B12E371F69075D00F7FAED /* XYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSearchViewController.h; sourceTree = "<group>"; };
 		56B12E381F69075D00F7FAED /* XYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSearchViewController.m; sourceTree = "<group>"; };
 		56B12E3A1F690BC800F7FAED /* XYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYMainViewController.h; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 				56DC39301F132F7100D6C597 /* MobileCoreServices.framework in Frameworks */,
 				56DC392E1F132F6900D6C597 /* SystemConfiguration.framework in Frameworks */,
 				56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */,
-				56B12E301F69044300F7FAED /* LSDeviceComponent.framework in Frameworks */,
+				5679F1901F8CACE4009E87FE /* LSDeviceComponent.framework in Frameworks */,
 				A5D7D1A9FDA405F592170122 /* Pods_XY_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +478,7 @@
 		56B12E2E1F69042900F7FAED /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				56B12E2F1F69044300F7FAED /* LSDeviceComponent.framework */,
+				5679F18F1F8CACE4009E87FE /* LSDeviceComponent.framework */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
