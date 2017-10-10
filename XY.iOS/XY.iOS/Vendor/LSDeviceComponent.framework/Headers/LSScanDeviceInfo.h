@@ -24,6 +24,11 @@
 @property (nonatomic, strong) NSString *macAddress;
 
 /**
+ 服务ID列表
+ */
+@property (nonatomic, strong) NSArray<NSString *> *services;
+
+/**
  信号强度(负数，越小越大),如信号强度为0，则说明这个设备为系统配对设备
  */
 @property (nonatomic, assign) NSInteger rssi;

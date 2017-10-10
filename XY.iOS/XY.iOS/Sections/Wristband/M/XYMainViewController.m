@@ -10,7 +10,7 @@
 #import "XYSearchViewController.h"
 #import "XYDeviceManager.h"
 
-@interface XYMainViewController ()
+@interface XYMainViewController ()<LSDeviceDataDelegate>
 
 @end
 
@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[XYDeviceManager shared] initializeSDK];
+    [XYDeviceManager shared].delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +30,10 @@
 - (IBAction)searchDevice:(id)sender {
     XYSearchViewController *searchVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"XYSearchViewController"];
     [self.navigationController pushViewController:searchVC animated:true];
+}
+
+- (void)didReceiveData:(NSString *)tag content:(NSString *)content {
+    SGLog(@"tag = %@, content = %@", tag, content);
 }
 
 @end

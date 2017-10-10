@@ -9,6 +9,12 @@
 #import "LSBaseDataModel.h"
 #import "LSConstant.h"
 
+
+/**
+ 运动模式数据扩展：GPS
+ */
+extern NSString * const LSSportModeStateDataExtKeyGPS;
+
 /**
  运动模式状态数据
  */
@@ -28,5 +34,15 @@
  运动模式
  */
 @property (nonatomic, assign) LSSportMode sportMode;
+
+/**
+ 扩展属性
+ 
+ 当type=1时,ext={LSSportModeStateDataExtKeyGPS : @(isGPSOpen)}, LSSportModeStateDataExtKeyGPS代表进入轨迹跑时手机GPS是否有打开或者app是否有权限使用
+ 
+ 其他时候为@{}
+ 
+ */
+@property (nonatomic, strong) NSDictionary<NSString *, NSObject *> *ext;
 
 @end

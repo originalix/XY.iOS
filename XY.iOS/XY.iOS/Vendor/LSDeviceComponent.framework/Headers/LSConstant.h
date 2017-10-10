@@ -8,9 +8,21 @@
 
 #ifndef LSConstant_h
 #define LSConstant_h
+#import <Foundation/Foundation.h>
 
 @class LSSleepingData;
 @class LSDevice;
+
+
+/**
+ 配对流程中回调数据的Key,Code长度
+ */
+extern NSString * const LSBindDeviceHandlerDataKeyCodeLength;
+
+/**
+ 配对流程中回调数据的Key,设备信息
+ */
+extern NSString * const LSBindDeviceHandleDataKeyDeviceInfo;
 
 /**
  设备ID
@@ -419,7 +431,7 @@ typedef NS_ENUM(NSUInteger, LSSportMode)
     /**
      * 健走数据
      **/
-    LSSportDataBriskWalking,
+    LSSportModeBriskWalking,
     
     /**
      * 游泳模式
@@ -459,22 +471,23 @@ typedef NS_ENUM(NSUInteger, LSSportFlag)
 typedef NS_ENUM(NSUInteger, LSBindDeviceHandlerCode)
 {
     /**
-     *  输入代码
+     * 输入Code,部分设备可通过LSPairHanlderDataKeyCodeLength从回调的data中获取到\n
+     * 设备显示上的Code的长度
      */
     LSBindDeviceHandlerCodeInput,
     
     /**
-     *  确认绑定
+     * 确认配对,部分设备可通过LSPairHanlderDataKeyDeviceInfo从回调的data中获取到设备信息
      */
     LSBindDeviceHandlerCodeConfirm,
     
     /**
-     *  未注册
+     * 未注册通知,部分设备可通过LSPairHanlderDataKeyDeviceInfo从回调的data中获取到设备信息
      */
     LSBindDeviceHandlerCodeUnregister,
     
     /**
-     *  输入用户编号
+     * 输入用户编号,部分设备可通过LSPairHanlderDataKeyDeviceInfo从回调的data中获取到设备信息
      */
     LSBindDeviceHandlerCodeInputUserNo,
 };
@@ -940,7 +953,7 @@ typedef NS_OPTIONS(NSUInteger, LSTimeFlag)
 /**
  自动识别多运类型
  */
-typedef NS_ENUM(NSUInteger,LSAutomaticSportsType)
+typedef NS_ENUM(NSUInteger, LSAutomaticSportsType)
 {
     /**
      * 跑步
@@ -960,5 +973,20 @@ typedef NS_ENUM(NSUInteger,LSAutomaticSportsType)
     LSAutomaticSportsTypeSwimming,
 };
 
+/**
+ 人的类别
+ */
+typedef NS_ENUM(NSInteger, LSPeopleType)
+{
+    /**
+     * 普通
+     */
+    LSPeopleTypeNormal,
+    
+    /**
+     * 运动员
+     */
+    LSPeopleTypeSporter
+};
 
 #endif /* LSConstant_h */

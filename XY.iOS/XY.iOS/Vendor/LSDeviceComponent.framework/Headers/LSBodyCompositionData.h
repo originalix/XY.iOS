@@ -69,4 +69,9 @@
  */
 @property (nonatomic, assign) float bwm;
 
+/**
+ 阻抗
+ */
+@property (nonatomic, assign) float imp;
+
 @end

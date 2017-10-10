@@ -26,7 +26,7 @@
 + (instancetype)shared;
 
 /**
- @brief 初始化
+ @brief 初始化(使用默认配置)
  
  在调用该方法前,请先调用`addDelegate:`添加一个代理对象，避免有些回调缺失.
  
@@ -34,6 +34,19 @@
  
  */
 - (void)initManager;
+
+/**
+ @brief 初始化
+ 
+ 在调用该方法前,请先调用`addDelegate:`添加一个代理对象，避免有些回调缺失.
+
+ @param config 配置项，如果为nil，将会使用默认配置
+ 
+ @see addDelegate:
+
+ */
+- (void)initManagerWithConfig:(LSDeviceComponentConfig *)config;
+
 
 /**
  扫描设备
@@ -162,6 +175,13 @@
 - (void)bindDevice:(NSString *)macAddr delegate:(id<LSBindDeviceDelegate>)delegate;
 
 /**
+ 停止绑定设备流程
+
+ @param macAddr 设备Mac地址
+ */
+- (void)stopBindDevice:(NSString *)macAddr;
+
+/**
  @brief 升级设备固件
  
  如想终止升级，请调用`stopUpgrade:`
@@ -193,6 +213,16 @@
 - (void)setSyncInterface:(id<LSSyncDelegate>)delegate;
 
 /**
+ 获取设备支持的功能
+ 
+ @param model 设备型号
+ @param softwareVer 设备软件版本
+ @param hardwareVer 设备固件版本
+ @return 支持设置的功能列表
+ */
++ (NSArray <LSBaseFunction *> *)getDeviceSupportFunctions:(NSString *)model softwareVer:(NSString *)softwareVer hardwareVer:(NSString *)hardwareVer;
+
+/**
  * 获取Log目录路径
  *
  * @return log目录路径
@@ -207,6 +237,7 @@
  @return sdk版本信息
  */
 + (NSString *)version;
+
 
 @end
 

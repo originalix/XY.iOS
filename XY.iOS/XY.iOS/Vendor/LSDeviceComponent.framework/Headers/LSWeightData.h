@@ -30,7 +30,7 @@
 @property (nonatomic, assign) float weight;
 
 /**
- 时间戳
+ 体重测量的时间戳
  */
 @property (nonatomic, assign) NSUInteger time;
 

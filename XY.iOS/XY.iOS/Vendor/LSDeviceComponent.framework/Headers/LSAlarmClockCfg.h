@@ -15,7 +15,7 @@
 @interface LSAlarmClockCfg : NSObject
 
 /**
- 闹钟索引,默认:0
+ 闹钟索引,默认:1
  */
 @property (nonatomic, assign) NSUInteger index;
 

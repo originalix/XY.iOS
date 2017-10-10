@@ -34,7 +34,11 @@
  @param macAddr 设备mac地址
  @param code 流程操作代码
  @param handler 操作的接口(根据操作代码调用)
+ @param data 配对回调的数据,根据code从data里面取值,详细请看`LSBindDeviceHandlerCode`
+ 
+ @see LSBindDeviceHandlerCode
+ 
  */
-- (void)onBindDeviceProcess:(NSString *)macAddr code:(LSBindDeviceHandlerCode)code handler:(WEAK id<LSBindDeviceHandlerDelegate>)handler;
+- (void)onBindDeviceProcess:(NSString *)macAddr code:(LSBindDeviceHandlerCode)code handler:(WEAK id<LSBindDeviceHandlerDelegate>)handler data:(NSDictionary *)data;
 
 @end
