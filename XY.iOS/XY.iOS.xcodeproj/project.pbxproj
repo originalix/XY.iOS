@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561911861F8CB97B00D65D75 /* XYSeetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561911851F8CB97B00D65D75 /* XYSeetingController.m */; };
 		561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */; };
 		561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25451F6A522B0033959F /* XYXMainViewController.m */; };
 		561F25491F6A63300033959F /* XYXImageZip.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25481F6A63300033959F /* XYXImageZip.m */; };
@@ -84,6 +85,8 @@
 		403ADC937E724FCC7A3BD248 /* Pods-XY.iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOS/Pods-XY.iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4464DB901B05F8C4CFAF425D /* Pods-XY.iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOSTests/Pods-XY.iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		53C60691B6620450D1A44F9C /* Pods-XY.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOS/Pods-XY.iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		561911841F8CB97B00D65D75 /* XYSeetingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSeetingController.h; sourceTree = "<group>"; };
+		561911851F8CB97B00D65D75 /* XYSeetingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSeetingController.m; sourceTree = "<group>"; };
 		561F25411F6A4DF90033959F /* XYXNetWorkFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXNetWorkFetcher.h; sourceTree = "<group>"; };
 		561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXNetWorkFetcher.m; sourceTree = "<group>"; };
 		561F25441F6A522B0033959F /* XYXMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXMainViewController.h; sourceTree = "<group>"; };
@@ -507,6 +510,8 @@
 		56B12E331F6906FF00F7FAED /* C */ = {
 			isa = PBXGroup;
 			children = (
+				561911841F8CB97B00D65D75 /* XYSeetingController.h */,
+				561911851F8CB97B00D65D75 /* XYSeetingController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -796,6 +801,7 @@
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
 				567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */,
 				56A39DE61F78C66D00C9F3B5 /* XYXTestChartViewController.m in Sources */,
+				561911861F8CB97B00D65D75 /* XYSeetingController.m in Sources */,
 				56F29AA61F8B5B420093689E /* XYSearchDeviceCell.m in Sources */,
 				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
 				56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */,

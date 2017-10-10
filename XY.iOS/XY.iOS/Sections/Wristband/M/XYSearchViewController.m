@@ -186,6 +186,7 @@
     v_device.deviceId = device.detailInfo.deviceId;
     [[LSDeviceManager shared] addDevice:v_device userInfo:[LSDeviceUserInfo new] block:^(LSDevice *device, LSAddDeviceCallBackCode code) {
         SGLog(@"连接设备 code: %ld ", code);
+        [self stopSearch];
     }];
     
     dispatch_async(dispatch_get_main_queue(), ^{
