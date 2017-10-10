@@ -18,6 +18,10 @@
 @property (nonatomic, assign) NSInteger filterRSSI;
 @property (nonatomic, copy) NSString *filterName;
 
+@property (nonatomic, strong) NSString *pairNum;
+@property (nonatomic, strong) NSString *userNum;
+@property (nonatomic, strong) NSString *deviceIdToRegister;
+
 @end
 
 @implementation XYSearchViewController
@@ -53,7 +57,6 @@
 
 #pragma mark - LSScanDeviceDelegate
 - (void)onScanResult:(LSScanDeviceInfo *)deviceInfo {
-    NSLog(@"deviceInfo = %@", [deviceInfo description]);
     if (deviceInfo.rssi == 127) {
         return;
     }
@@ -136,8 +139,141 @@
     }];
     [alert addAction:sureAction];
     [alert addAction:cancleAction];
+    [self presentViewController:alert animated:true completion:nil];
 }
 
 // Bind delegate
+- (void)onBindDeviceFailed:(NSString *)macAddr code:(LSBindDeviceFailedCode)code {
+    NSString *detail = @"";
+    if (code == LSBindDeviceFailedCodeBLENotAvailable) {
+        detail = @"绑定失败,蓝牙未开启";
+    } else if (code == LSBindDeviceFailedCodeSDKNotAvailable) {
+        detail = @"绑定失败,SDK未初始化完成或未启动";
+    } else if (code == LSBindDeviceFailedCodeDisconnect) {
+        detail = @"绑定失败, 设备断开连接";
+    }
+    NSLog(@"detail = %@, code = %ld", detail, code);
+}
+
+- (void)onBindDeviceSuccess:(NSString *)macAddr device:(LSDevice *)device {
+    NSLog(@"开始添加设备...");
+    
+    for (LSEDevice *item in self.searchList) {
+        if ([item.deviceInfo.macAddress isEqualToString:device.macAddress]) {
+            if (!item.detailInfo)
+            {
+                item.detailInfo = [LSDeviceInfo new];
+            }
+            item.detailInfo.deviceId = device.deviceId;
+            
+//            [self addDeviceToDB:item];
+            return;
+        }
+    }
+}
+
+- (void)onBindDeviceProcess:(NSString *)macAddr code:(LSBindDeviceHandlerCode)code handler:(__weak id<LSBindDeviceHandlerDelegate>)handler {
+    
+    switch (code) {
+        case LSBindDeviceHandlerCodeInput:
+        {
+            NSString *message = @"请输入配对码";
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:@"温馨提示" preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pairNum:) name:UITextFieldTextDidChangeNotification object:textField];
+                textField.tag = 100;
+            }];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//                [SVProgressHUD setMinimumDismissTimeInterval:CGFLOAT_MAX];
+//                [SVProgressHUD showWithStatus:@"绑定中，请稍后..."];
+                NSLog(@"绑定中，请稍后...");
+                [handler inputCode:macAddr code:self.pairNum];
+                [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:alertController.textFields.firstObject];
+            }];
+            
+            [alertController addAction:cancelAction];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+            break;
+        case LSBindDeviceHandlerCodeConfirm:
+        {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否配对" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [alert dismissViewControllerAnimated:YES completion:nil];
+//                [SVProgressHUD setMinimumDismissTimeInterval:CGFLOAT_MAX];
+//                [SVProgressHUD showWithStatus:@"绑定中，请稍后..."];
+                NSLog(@"绑定中，请稍后...");
+                [handler confirm:macAddr isConfirm:YES];
+            }]];
+            
+            [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [alert dismissViewControllerAnimated:YES completion:nil];
+                [handler confirm:macAddr isConfirm:NO];
+            }]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        case LSBindDeviceHandlerCodeInputUserNo:
+        {
+            NSString *message = @"请输入用户号码绑定";
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:@"温馨提示" preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
+             {
+                 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pairNum:) name:UITextFieldTextDidChangeNotification object:textField];
+                 textField.secureTextEntry = YES;
+                 textField.tag = 101;
+             }];
+            UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action)
+                                         {
+                                             [handler inputUserNo:macAddr userNo:self.userNum];
+                                             [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:alertController.textFields.firstObject];
+                                         }];
+            [alertController addAction:sureAction];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+            break;
+        case LSBindDeviceHandlerCodeUnregister:
+        {
+            NSString *message = @"请先注册设备";
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:@"温馨提示" preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
+             {
+                 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pairNum:) name:UITextFieldTextDidChangeNotification object:textField];
+                 textField.secureTextEntry = YES;
+                 textField.tag = 102;
+             }];
+            UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action)
+                                         {
+                                             [handler registerDevice:macAddr deviceId:self.deviceIdToRegister];
+                                             [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:alertController.textFields.firstObject];
+                                         }];
+            [alertController addAction:sureAction];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)pairNum:(NSNotification *)notify {
+    UITextField *textFile = (UITextField *)notify.object;
+    if (textFile.tag == 100)
+    {
+        self.pairNum = textFile.text;
+    }
+    else if (textFile.tag == 101)
+    {
+        self.userNum = textFile.text;
+    }
+    else if (textFile.tag == 102)
+    {
+        self.deviceIdToRegister = textFile.text;
+    }
+}
+
 
 @end
