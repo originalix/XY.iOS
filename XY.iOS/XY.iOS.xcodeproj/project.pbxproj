@@ -40,6 +40,7 @@
 		56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E3B1F690BC800F7FAED /* XYMainViewController.m */; };
 		56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC394D1F13377D00D6C597 /* libsqlite3.tbd */; };
 		56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E401F69113600F7FAED /* XYDeviceManager.m */; };
+		56C04A051F8C8473004011A3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C04A041F8C8473004011A3 /* CoreBluetooth.framework */; };
 		56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
@@ -143,6 +144,7 @@
 		56B12E3E1F69110000F7FAED /* XYWristbandConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYWristbandConst.h; sourceTree = "<group>"; };
 		56B12E3F1F69113600F7FAED /* XYDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYDeviceManager.h; sourceTree = "<group>"; };
 		56B12E401F69113600F7FAED /* XYDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYDeviceManager.m; sourceTree = "<group>"; };
+		56C04A041F8C8473004011A3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		56CE57E81F88FED900A1FCD1 /* XYCalculateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCalculateViewController.h; sourceTree = "<group>"; };
 		56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCalculateViewController.m; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C04A051F8C8473004011A3 /* CoreBluetooth.framework in Frameworks */,
 				56F29AA21F8B55DF0093689E /* AddressBook.framework in Frameworks */,
 				568A6AB31F70F8DC0023F6AC /* QuartzCore.framework in Frameworks */,
 				56DC394F1F1337B100D6C597 /* libstdc++.tbd in Frameworks */,
@@ -223,6 +226,7 @@
 		469AB29FE5E9AC67E763B857 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56C04A041F8C8473004011A3 /* CoreBluetooth.framework */,
 				56DC39501F1337E100D6C597 /* CoreAudio.framework */,
 				56DC394D1F13377D00D6C597 /* libsqlite3.tbd */,
 				56DC394B1F1336EC00D6C597 /* libz.tbd */,
