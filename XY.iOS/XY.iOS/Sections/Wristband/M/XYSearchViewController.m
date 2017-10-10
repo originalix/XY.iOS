@@ -11,7 +11,7 @@
 #import "XYSearchDeviceCell.h"
 #import "LSEDevice.h"
 
-@interface XYSearchViewController ()<LSScanDeviceDelegate>
+@interface XYSearchViewController ()<LSScanDeviceDelegate, UITableViewDataSource, UITableViewDelegate, LSBindDeviceDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *searchList;
@@ -34,6 +34,10 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)dealloc {
+    [[LSDeviceManager shared] stopScan];
 }
 
 - (void)startSearch {
@@ -119,5 +123,21 @@
     [cell setContent:device];
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"确定添加设备?" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        LSEDevice *device = [self.searchList objectAtIndex:indexPath.row];
+        [[LSDeviceManager shared] bindDevice:device.deviceInfo.macAddress delegate:self];
+    }];
+    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:sureAction];
+    [alert addAction:cancleAction];
+}
+
+// Bind delegate
 
 @end
