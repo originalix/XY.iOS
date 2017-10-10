@@ -40,7 +40,9 @@ IMSingletonM()
 }
 
 - (void)deviceManagerReceiveDeviceInfo:(LSDeviceId)deviceId deviceInfo:(LSDeviceInfo *)deviceInfo {
-
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:DEVICE_DETAILINFO_KEY object:deviceInfo];
+    });
 }
 
 /**

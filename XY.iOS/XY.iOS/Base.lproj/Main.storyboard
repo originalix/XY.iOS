@@ -286,10 +286,10 @@
             </objects>
             <point key="canvasLocation" x="1816.8" y="2315.8920539730138"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Seeting Controller-->
         <scene sceneID="udD-gn-eMK">
             <objects>
-                <tableViewController id="5fV-Sa-KV0" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="XYSeetingController" id="5fV-Sa-KV0" customClass="XYSeetingController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VSP-sB-VSY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

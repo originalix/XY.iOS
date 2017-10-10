@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		561911861F8CB97B00D65D75 /* XYSeetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561911851F8CB97B00D65D75 /* XYSeetingController.m */; };
+		5619118B1F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 561911891F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m */; };
+		5619118C1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5619118A1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m */; };
 		561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */; };
 		561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25451F6A522B0033959F /* XYXMainViewController.m */; };
 		561F25491F6A63300033959F /* XYXImageZip.m in Sources */ = {isa = PBXBuildFile; fileRef = 561F25481F6A63300033959F /* XYXImageZip.m */; };
@@ -87,6 +89,10 @@
 		53C60691B6620450D1A44F9C /* Pods-XY.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XY.iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XY.iOS/Pods-XY.iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		561911841F8CB97B00D65D75 /* XYSeetingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSeetingController.h; sourceTree = "<group>"; };
 		561911851F8CB97B00D65D75 /* XYSeetingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSeetingController.m; sourceTree = "<group>"; };
+		561911871F8CBE8100D65D75 /* NSString+LSSettingFailureCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSSettingFailureCode.h"; sourceTree = "<group>"; };
+		561911881F8CBE8100D65D75 /* NSString+LSStrReverseOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSStrReverseOrder.h"; sourceTree = "<group>"; };
+		561911891F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSStrReverseOrder.m"; sourceTree = "<group>"; };
+		5619118A1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSSettingFailureCode.m"; sourceTree = "<group>"; };
 		561F25411F6A4DF90033959F /* XYXNetWorkFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXNetWorkFetcher.h; sourceTree = "<group>"; };
 		561F25421F6A4DF90033959F /* XYXNetWorkFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXNetWorkFetcher.m; sourceTree = "<group>"; };
 		561F25441F6A522B0033959F /* XYXMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXMainViewController.h; sourceTree = "<group>"; };
@@ -528,6 +534,10 @@
 				56B12E401F69113600F7FAED /* XYDeviceManager.m */,
 				56F29AA81F8B5DC80093689E /* LSEDevice.h */,
 				56F29AA91F8B5DC80093689E /* LSEDevice.m */,
+				561911871F8CBE8100D65D75 /* NSString+LSSettingFailureCode.h */,
+				5619118A1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m */,
+				561911881F8CBE8100D65D75 /* NSString+LSStrReverseOrder.h */,
+				561911891F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -790,7 +800,9 @@
 				568A6ABA1F70FAE70023F6AC /* XYLayerViewController.m in Sources */,
 				561F25491F6A63300033959F /* XYXImageZip.m in Sources */,
 				561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */,
+				5619118C1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m in Sources */,
 				56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */,
+				5619118B1F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m in Sources */,
 				56F29AAA1F8B5DC80093689E /* LSEDevice.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,
 				567C2DD91F415D9100565FFF /* MyFancyMenuViewController.swift in Sources */,

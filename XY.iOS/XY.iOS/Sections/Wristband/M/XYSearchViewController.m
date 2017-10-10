@@ -10,6 +10,8 @@
 #import "XYDeviceManager.h"
 #import "XYSearchDeviceCell.h"
 #import "LSEDevice.h"
+#import "XYSeetingController.h"
+#import "NSString+LSStrReverseOrder.h"
 
 @interface XYSearchViewController ()<LSScanDeviceDelegate, UITableViewDataSource, UITableViewDelegate, LSBindDeviceDelegate>
 
@@ -22,6 +24,8 @@
 @property (nonatomic, strong) NSString *userNum;
 @property (nonatomic, strong) NSString *deviceIdToRegister;
 
+@property (nonatomic, strong) LSEDevice *targetDevice;
+
 @end
 
 @implementation XYSearchViewController
@@ -29,10 +33,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self layoutItem];
     self.searchList = [NSMutableArray array];
     self.filterRSSI = -100;
     self.filterName = @"";
     [self.tableView registerNib:[UINib nibWithNibName:@"XYSearchDeviceCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onDeviceDetailInfo:)
+                                                 name:DEVICE_DETAILINFO_KEY
+                                               object:nil];
     
     [self startSearch];
 }
@@ -43,6 +53,11 @@
 
 - (void)dealloc {
     [[LSDeviceManager shared] stopScan];
+}
+
+- (void)layoutItem {
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"跳转" style:UIBarButtonItemStylePlain target:self action:@selector(goToSettingController)];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)startSearch {
@@ -171,6 +186,7 @@
 //            [self addDeviceToDB:item];
             if (item.connectState == LSEDeviceStateDisConnect) {
                 [self connectDevice:item];
+                self.targetDevice = item;
             }
             return;
         }
@@ -184,10 +200,14 @@
     LSDevice *v_device = [[LSDevice alloc] init];
     v_device.macAddress = device.deviceInfo.macAddress;
     v_device.deviceId = device.detailInfo.deviceId;
-    [[LSDeviceManager shared] addDevice:v_device userInfo:[LSDeviceUserInfo new] block:^(LSDevice *device, LSAddDeviceCallBackCode code) {
+    
+    __block LSEDevice *blockDevice = device;
+    
+    [[LSDeviceManager shared] addDevice:v_device userInfo:[LSDeviceUserInfo new] block:^(LSDevice *lsdevice, LSAddDeviceCallBackCode code) {
         SGLog(@"连接设备 code: %ld ", code);
         [self stopSearch];
     }];
+    
     
     dispatch_async(dispatch_get_main_queue(), ^{
 //        [[NSNotificationCenter defaultCenter] postNotificationName:DEVICE_CONNECT_STATE_CHANGE_KEY object:device];
@@ -313,5 +333,28 @@
     }
 }
 
+
+- (void)onDeviceDetailInfo:(NSNotification *)notification {
+    LSDeviceInfo *deviceInfo = notification.object;
+    NSString *reverseMac = [NSString formatStrWithReverseOrder:deviceInfo.macAddress];
+    
+    if (!self.targetDevice) {
+        return;
+    }
+    
+    if ([self.targetDevice.deviceInfo.macAddress caseInsensitiveCompare:deviceInfo.macAddress] == NSOrderedSame || [self.targetDevice.deviceInfo.macAddress caseInsensitiveCompare:reverseMac] == NSOrderedSame) {
+        self.targetDevice.detailInfo = deviceInfo;
+    }
+}
+
+- (void)goToSettingController {
+    XYSeetingController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"XYSeetingController"];
+    vc.device = [[LSDevice alloc] init];
+    vc.device.macAddress = self.targetDevice.deviceInfo.macAddress;
+    vc.device.deviceId = self.targetDevice.detailInfo.deviceId;
+    vc.connectState = self.targetDevice.connectState;
+    vc.detailInfo = self.targetDevice.detailInfo;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
