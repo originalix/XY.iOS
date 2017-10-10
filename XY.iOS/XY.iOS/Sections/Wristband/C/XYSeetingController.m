@@ -40,6 +40,8 @@ static NSString *KWSSynMeasureData = @"称同步测量数据设置";
 
 @interface XYSeetingController ()
 
+@property (nonatomic, strong)NSMutableArray *dataSource;
+
 @end
 
 @implementation XYSeetingController
@@ -53,7 +55,108 @@ static NSString *KWSSynMeasureData = @"称同步测量数据设置";
 }
 
 - (void)creatData {
-
+    for (LSBaseFunction *functionClass in self.detailInfo.functions)
+    {
+        if ([functionClass isKindOfClass:[LSSedentaryFunction class]])
+        {
+            [self.dataSource addObject:KSedentary];
+        }
+        else if ([functionClass isKindOfClass:[LSWeatherFunction class]])
+        {
+            [self.dataSource addObject:KWeather];
+            
+        }
+        else if ([functionClass isKindOfClass:[LSAlarmClockFunction class]])
+        {
+            [self.dataSource addObject:KAlarm];
+        }
+        else if ([functionClass isKindOfClass:[LSNightModeFunction class]])
+        {
+            [self.dataSource addObject:KNightMode];
+        }
+        else if ([functionClass isKindOfClass:[LSReminderFunction class]])
+        {
+            LSReminderFunction *remind = (LSReminderFunction *)functionClass;
+            for (NSNumber *type in remind.reminderTypes) {
+                LSReminderType remindType = (LSReminderType)[type intValue];
+                switch (remindType) {
+                    case LSReminderTypeCall:
+                        [self.dataSource addObject:KCall];
+                        break;
+                    case LSReminderTypeMsg:
+                        [self.dataSource addObject:KMessage];
+                        break;
+                    case LSReminderTypeSMS:
+                        [self.dataSource addObject:KSMS];
+                        break;
+                    case LSReminderTypeWechat:
+                        [self.dataSource addObject:KWeChat];
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        else if ([functionClass isKindOfClass:[LSHeartRateMeasureFunction class]])
+        {
+            [self.dataSource addObject:KHeart];
+        }
+        else if ([functionClass isKindOfClass:[LSHeartRateRangeFunction class]])
+        {
+            [self.dataSource addObject:KHeartRange];
+        }
+        else if ([functionClass isKindOfClass:[LSHeartRateAlertFunction class]])
+        {
+            [self.dataSource addObject:KHeartAlert];
+        }
+        else if ([functionClass isKindOfClass:[LSWristStyleFunction class]])
+        {
+            [self.dataSource addObject:KWearingWay];
+        }
+        else if ([functionClass isKindOfClass:[LSScreenDirectionFunction class]])
+        {
+            [self.dataSource addObject:KScreenDirection];
+        }
+        else if ([functionClass isKindOfClass:[LSScreenContentFunction class]])
+        {
+            [self.dataSource addObject:KScreenContent];
+        }
+        else if ([functionClass isKindOfClass:[LSUserInfoFunction class]])
+        {
+            [self.dataSource addObject:KUserInformation];
+        }
+        else if ([functionClass isKindOfClass:[LSEncourageFunction class]])
+        {
+            [self.dataSource addObject:KEncourageTarget];
+        }
+        else if ([functionClass isKindOfClass:[LSGPSFunction class]])
+        {
+            [self.dataSource addObject:KGPS];
+        }
+        else if ([functionClass isKindOfClass:[LSHourFormatFunction class]])
+        {
+            [self.dataSource addObject:KTimeUnit];
+        }
+        else if ([functionClass isKindOfClass:[LSDistanceUnitFunction class]])
+        {
+            [self.dataSource addObject:KLengthUnit];
+        }
+        else if ([functionClass isKindOfClass:[LSDialStyleFunction class]])
+        {
+            [self.dataSource addObject:KDial];
+        }
+        
+        else if ([functionClass isKindOfClass:[LSWeightTargetFunction class]])
+        {
+            [self.dataSource addObject:KWSTarget];
+        }
+        else if ([functionClass isKindOfClass:[LSWeightUnitFunction class]])
+        {
+            [self.dataSource addObject:KWSUnit];
+        }
+        
+    }
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
