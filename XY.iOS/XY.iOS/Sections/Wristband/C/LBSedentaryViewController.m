@@ -21,6 +21,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(settingEvent)];
     self.navigationItem.rightBarButtonItem = rightItem;
+    self.switchEnable.on = false;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,6 +9,7 @@
 #import "XYSeetingController.h"
 #import "LSScreenDirectionViewController.h"
 #import "LSCallReminderViewController.h"
+#import "LBSedentaryViewController.h"
 
 static NSString *KUpgrade=@"设备升级";
 static NSString *KRemoveDevice=@"删除设备";
@@ -209,6 +210,10 @@ static NSString *KWSSynMeasureData = @"称同步测量数据设置";
         LSCallReminderViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LSCallReminderViewController"];
         vc.device = _device;
         vc.type = LSReminderTypeMsg;
+        [self.navigationController pushViewController:vc animated:true];
+    } else if ([valueStr isEqualToString:KSedentary]) {
+        LBSedentaryViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LBSedentaryViewController"];
+        vc.device = _device;
         [self.navigationController pushViewController:vc animated:true];
     }
 }
