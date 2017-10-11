@@ -48,6 +48,8 @@ static NSString *KWSSynMeasureData = @"称同步测量数据设置";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dataSource = [NSMutableArray array];
+    [self creatData];
 }
 
 - (void)didReceiveMemoryWarning {
