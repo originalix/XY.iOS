@@ -10,6 +10,7 @@
 #import "LSScreenDirectionViewController.h"
 #import "LSCallReminderViewController.h"
 #import "LBSedentaryViewController.h"
+#import "LBAlarmViewController.h"
 
 static NSString *KUpgrade=@"设备升级";
 static NSString *KRemoveDevice=@"删除设备";
@@ -213,6 +214,10 @@ static NSString *KWSSynMeasureData = @"称同步测量数据设置";
         [self.navigationController pushViewController:vc animated:true];
     } else if ([valueStr isEqualToString:KSedentary]) {
         LBSedentaryViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LBSedentaryViewController"];
+        vc.device = _device;
+        [self.navigationController pushViewController:vc animated:true];
+    } else if ([valueStr isEqualToString:KAlarm]) {
+        LBAlarmViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LBAlarmViewController"];
         vc.device = _device;
         [self.navigationController pushViewController:vc animated:true];
     }
