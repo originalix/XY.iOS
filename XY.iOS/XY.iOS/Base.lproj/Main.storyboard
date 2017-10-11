@@ -249,6 +249,43 @@
             </objects>
             <point key="canvasLocation" x="906" y="2316"/>
         </scene>
+        <!--Screen Direction View Controller-->
+        <scene sceneID="nBs-XI-BR5">
+            <objects>
+                <viewController storyboardIdentifier="LSScreenDirectionViewController" id="sT5-zE-3FH" customClass="LSScreenDirectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q7p-qj-0yu"/>
+                        <viewControllerLayoutGuide type="bottom" id="iiH-Q2-tzW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JoC-jb-HXS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4sI-DA-BOp">
+                                <rect key="frame" x="92" y="126" width="191" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="191" id="h3H-V1-ugp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="横屏"/>
+                                    <segment title="竖屏"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4sI-DA-BOp" firstAttribute="top" secondItem="Q7p-qj-0yu" secondAttribute="bottom" constant="106" id="aFt-kO-Ol2"/>
+                            <constraint firstItem="4sI-DA-BOp" firstAttribute="centerX" secondItem="JoC-jb-HXS" secondAttribute="centerX" id="dgx-MQ-iyz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scDirection" destination="4sI-DA-BOp" id="N7D-cp-Nds"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0t4-0Q-EIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3352.8000000000002" y="2315.8920539730138"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="wxg-kP-vq2">
             <objects>
