@@ -46,6 +46,7 @@
 		56C04A051F8C8473004011A3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C04A041F8C8473004011A3 /* CoreBluetooth.framework */; };
 		56CB40C61F8DB82F00225384 /* LSScreenDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40C51F8DB82F00225384 /* LSScreenDirectionViewController.m */; };
 		56CB40C91F8DBE0F00225384 /* LSCallReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */; };
+		56CB40CC1F8DC53700225384 /* LBSedentaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */; };
 		56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
@@ -160,6 +161,8 @@
 		56CB40C51F8DB82F00225384 /* LSScreenDirectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSScreenDirectionViewController.m; sourceTree = "<group>"; };
 		56CB40C71F8DBE0F00225384 /* LSCallReminderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCallReminderViewController.h; sourceTree = "<group>"; };
 		56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCallReminderViewController.m; sourceTree = "<group>"; };
+		56CB40CA1F8DC53700225384 /* LBSedentaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBSedentaryViewController.h; sourceTree = "<group>"; };
+		56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBSedentaryViewController.m; sourceTree = "<group>"; };
 		56CE57E81F88FED900A1FCD1 /* XYCalculateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCalculateViewController.h; sourceTree = "<group>"; };
 		56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCalculateViewController.m; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
@@ -528,6 +531,8 @@
 				56CB40C51F8DB82F00225384 /* LSScreenDirectionViewController.m */,
 				56CB40C71F8DBE0F00225384 /* LSCallReminderViewController.h */,
 				56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */,
+				56CB40CA1F8DC53700225384 /* LBSedentaryViewController.h */,
+				56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -827,6 +832,7 @@
 				561911861F8CB97B00D65D75 /* XYSeetingController.m in Sources */,
 				56F29AA61F8B5B420093689E /* XYSearchDeviceCell.m in Sources */,
 				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
+				56CB40CC1F8DC53700225384 /* LBSedentaryViewController.m in Sources */,
 				56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,

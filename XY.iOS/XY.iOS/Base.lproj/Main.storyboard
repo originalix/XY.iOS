@@ -316,6 +316,36 @@
             </objects>
             <point key="canvasLocation" x="4098" y="2316"/>
         </scene>
+        <!--Sedentary View Controller-->
+        <scene sceneID="9EL-89-zSP">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYM-Za-sHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="LBSedentaryViewController" id="rfr-fO-VaG" customClass="LBSedentaryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fen-nh-XDZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wlY-BO-5Nl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1eq-ae-lKv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKl-B2-KtN">
+                                <rect key="frame" x="163" y="138" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WKl-B2-KtN" firstAttribute="top" secondItem="Fen-nh-XDZ" secondAttribute="bottom" constant="118" id="U1a-Xb-bXx"/>
+                            <constraint firstItem="WKl-B2-KtN" firstAttribute="centerX" secondItem="1eq-ae-lKv" secondAttribute="centerX" id="vPG-tq-jWS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="switchEnable" destination="WKl-B2-KtN" id="UkO-bT-2W9"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4818" y="2316"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="wxg-kP-vq2">
             <objects>
