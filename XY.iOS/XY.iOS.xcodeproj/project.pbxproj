@@ -47,6 +47,7 @@
 		56CB40C61F8DB82F00225384 /* LSScreenDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40C51F8DB82F00225384 /* LSScreenDirectionViewController.m */; };
 		56CB40C91F8DBE0F00225384 /* LSCallReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */; };
 		56CB40CC1F8DC53700225384 /* LBSedentaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */; };
+		56CB40CF1F8DCD5800225384 /* LBAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40CE1F8DCD5800225384 /* LBAlarmViewController.m */; };
 		56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
@@ -163,6 +164,8 @@
 		56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCallReminderViewController.m; sourceTree = "<group>"; };
 		56CB40CA1F8DC53700225384 /* LBSedentaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBSedentaryViewController.h; sourceTree = "<group>"; };
 		56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBSedentaryViewController.m; sourceTree = "<group>"; };
+		56CB40CD1F8DCD5800225384 /* LBAlarmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBAlarmViewController.h; sourceTree = "<group>"; };
+		56CB40CE1F8DCD5800225384 /* LBAlarmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBAlarmViewController.m; sourceTree = "<group>"; };
 		56CE57E81F88FED900A1FCD1 /* XYCalculateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCalculateViewController.h; sourceTree = "<group>"; };
 		56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCalculateViewController.m; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
@@ -533,6 +536,8 @@
 				56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */,
 				56CB40CA1F8DC53700225384 /* LBSedentaryViewController.h */,
 				56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */,
+				56CB40CD1F8DCD5800225384 /* LBAlarmViewController.h */,
+				56CB40CE1F8DCD5800225384 /* LBAlarmViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -827,6 +832,7 @@
 				566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */,
 				56A39DE31F78B4E400C9F3B5 /* SGStepLineChartView.m in Sources */,
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
+				56CB40CF1F8DCD5800225384 /* LBAlarmViewController.m in Sources */,
 				567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */,
 				56A39DE61F78C66D00C9F3B5 /* XYXTestChartViewController.m in Sources */,
 				561911861F8CB97B00D65D75 /* XYSeetingController.m in Sources */,

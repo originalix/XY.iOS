@@ -346,6 +346,36 @@
             </objects>
             <point key="canvasLocation" x="4818" y="2316"/>
         </scene>
+        <!--Alarm View Controller-->
+        <scene sceneID="tbH-ll-c4w">
+            <objects>
+                <viewController storyboardIdentifier="LBAlarmViewController" id="jQf-gj-a1R" customClass="LBAlarmViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fWb-Zu-imK"/>
+                        <viewControllerLayoutGuide type="bottom" id="be0-Nq-c5Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GUG-oe-AfK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBg-MZ-sdC">
+                                <rect key="frame" x="163" y="147" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cBg-MZ-sdC" firstAttribute="top" secondItem="fWb-Zu-imK" secondAttribute="bottom" constant="127" id="6a6-s7-9Xb"/>
+                            <constraint firstItem="cBg-MZ-sdC" firstAttribute="centerX" secondItem="GUG-oe-AfK" secondAttribute="centerX" id="ESS-nX-VWk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="switchEnable" destination="cBg-MZ-sdC" id="DEA-Z5-LJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gi-jZ-8WU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5567" y="2316"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="wxg-kP-vq2">
             <objects>
