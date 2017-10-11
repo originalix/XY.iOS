@@ -286,6 +286,36 @@
             </objects>
             <point key="canvasLocation" x="3352.8000000000002" y="2315.8920539730138"/>
         </scene>
+        <!--Call Reminder View Controller-->
+        <scene sceneID="glb-uj-8vq">
+            <objects>
+                <viewController storyboardIdentifier="LSCallReminderViewController" id="36I-x5-ZIM" customClass="LSCallReminderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2LA-mo-z8B"/>
+                        <viewControllerLayoutGuide type="bottom" id="rwt-sK-l8R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dBX-91-xRU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8Z-Am-9TX">
+                                <rect key="frame" x="163" y="138" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T8Z-Am-9TX" firstAttribute="top" secondItem="2LA-mo-z8B" secondAttribute="bottom" constant="118" id="Bf7-Hz-o4B"/>
+                            <constraint firstItem="T8Z-Am-9TX" firstAttribute="centerX" secondItem="dBX-91-xRU" secondAttribute="centerX" id="tdj-xk-AbA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="switchEnable" destination="T8Z-Am-9TX" id="3VD-pH-mwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gn4-4o-B7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4098" y="2316"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="wxg-kP-vq2">
             <objects>
