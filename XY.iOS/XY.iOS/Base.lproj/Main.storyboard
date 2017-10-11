@@ -249,6 +249,133 @@
             </objects>
             <point key="canvasLocation" x="906" y="2316"/>
         </scene>
+        <!--Screen Direction View Controller-->
+        <scene sceneID="nBs-XI-BR5">
+            <objects>
+                <viewController storyboardIdentifier="LSScreenDirectionViewController" id="sT5-zE-3FH" customClass="LSScreenDirectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q7p-qj-0yu"/>
+                        <viewControllerLayoutGuide type="bottom" id="iiH-Q2-tzW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JoC-jb-HXS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4sI-DA-BOp">
+                                <rect key="frame" x="92" y="126" width="191" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="191" id="h3H-V1-ugp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="横屏"/>
+                                    <segment title="竖屏"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4sI-DA-BOp" firstAttribute="top" secondItem="Q7p-qj-0yu" secondAttribute="bottom" constant="106" id="aFt-kO-Ol2"/>
+                            <constraint firstItem="4sI-DA-BOp" firstAttribute="centerX" secondItem="JoC-jb-HXS" secondAttribute="centerX" id="dgx-MQ-iyz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scDirection" destination="4sI-DA-BOp" id="N7D-cp-Nds"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0t4-0Q-EIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3352.8000000000002" y="2315.8920539730138"/>
+        </scene>
+        <!--Call Reminder View Controller-->
+        <scene sceneID="glb-uj-8vq">
+            <objects>
+                <viewController storyboardIdentifier="LSCallReminderViewController" id="36I-x5-ZIM" customClass="LSCallReminderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2LA-mo-z8B"/>
+                        <viewControllerLayoutGuide type="bottom" id="rwt-sK-l8R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dBX-91-xRU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8Z-Am-9TX">
+                                <rect key="frame" x="163" y="138" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T8Z-Am-9TX" firstAttribute="top" secondItem="2LA-mo-z8B" secondAttribute="bottom" constant="118" id="Bf7-Hz-o4B"/>
+                            <constraint firstItem="T8Z-Am-9TX" firstAttribute="centerX" secondItem="dBX-91-xRU" secondAttribute="centerX" id="tdj-xk-AbA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="switchEnable" destination="T8Z-Am-9TX" id="3VD-pH-mwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gn4-4o-B7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4098" y="2316"/>
+        </scene>
+        <!--Sedentary View Controller-->
+        <scene sceneID="9EL-89-zSP">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYM-Za-sHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="LBSedentaryViewController" id="rfr-fO-VaG" customClass="LBSedentaryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fen-nh-XDZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wlY-BO-5Nl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1eq-ae-lKv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKl-B2-KtN">
+                                <rect key="frame" x="163" y="138" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WKl-B2-KtN" firstAttribute="top" secondItem="Fen-nh-XDZ" secondAttribute="bottom" constant="118" id="U1a-Xb-bXx"/>
+                            <constraint firstItem="WKl-B2-KtN" firstAttribute="centerX" secondItem="1eq-ae-lKv" secondAttribute="centerX" id="vPG-tq-jWS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="switchEnable" destination="WKl-B2-KtN" id="UkO-bT-2W9"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4818" y="2316"/>
+        </scene>
+        <!--Alarm View Controller-->
+        <scene sceneID="tbH-ll-c4w">
+            <objects>
+                <viewController storyboardIdentifier="LBAlarmViewController" id="jQf-gj-a1R" customClass="LBAlarmViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fWb-Zu-imK"/>
+                        <viewControllerLayoutGuide type="bottom" id="be0-Nq-c5Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GUG-oe-AfK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBg-MZ-sdC">
+                                <rect key="frame" x="163" y="147" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cBg-MZ-sdC" firstAttribute="top" secondItem="fWb-Zu-imK" secondAttribute="bottom" constant="127" id="6a6-s7-9Xb"/>
+                            <constraint firstItem="cBg-MZ-sdC" firstAttribute="centerX" secondItem="GUG-oe-AfK" secondAttribute="centerX" id="ESS-nX-VWk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="switchEnable" destination="cBg-MZ-sdC" id="DEA-Z5-LJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gi-jZ-8WU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5567" y="2316"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="wxg-kP-vq2">
             <objects>

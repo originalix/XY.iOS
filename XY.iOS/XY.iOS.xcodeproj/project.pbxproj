@@ -44,6 +44,10 @@
 		56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC394D1F13377D00D6C597 /* libsqlite3.tbd */; };
 		56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E401F69113600F7FAED /* XYDeviceManager.m */; };
 		56C04A051F8C8473004011A3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C04A041F8C8473004011A3 /* CoreBluetooth.framework */; };
+		56CB40C61F8DB82F00225384 /* LSScreenDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40C51F8DB82F00225384 /* LSScreenDirectionViewController.m */; };
+		56CB40C91F8DBE0F00225384 /* LSCallReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */; };
+		56CB40CC1F8DC53700225384 /* LBSedentaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */; };
+		56CB40CF1F8DCD5800225384 /* LBAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40CE1F8DCD5800225384 /* LBAlarmViewController.m */; };
 		56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
@@ -154,6 +158,14 @@
 		56B12E3F1F69113600F7FAED /* XYDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYDeviceManager.h; sourceTree = "<group>"; };
 		56B12E401F69113600F7FAED /* XYDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYDeviceManager.m; sourceTree = "<group>"; };
 		56C04A041F8C8473004011A3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		56CB40C41F8DB82F00225384 /* LSScreenDirectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSScreenDirectionViewController.h; sourceTree = "<group>"; };
+		56CB40C51F8DB82F00225384 /* LSScreenDirectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSScreenDirectionViewController.m; sourceTree = "<group>"; };
+		56CB40C71F8DBE0F00225384 /* LSCallReminderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCallReminderViewController.h; sourceTree = "<group>"; };
+		56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCallReminderViewController.m; sourceTree = "<group>"; };
+		56CB40CA1F8DC53700225384 /* LBSedentaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBSedentaryViewController.h; sourceTree = "<group>"; };
+		56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBSedentaryViewController.m; sourceTree = "<group>"; };
+		56CB40CD1F8DCD5800225384 /* LBAlarmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBAlarmViewController.h; sourceTree = "<group>"; };
+		56CB40CE1F8DCD5800225384 /* LBAlarmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBAlarmViewController.m; sourceTree = "<group>"; };
 		56CE57E81F88FED900A1FCD1 /* XYCalculateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCalculateViewController.h; sourceTree = "<group>"; };
 		56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCalculateViewController.m; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
@@ -518,6 +530,14 @@
 			children = (
 				561911841F8CB97B00D65D75 /* XYSeetingController.h */,
 				561911851F8CB97B00D65D75 /* XYSeetingController.m */,
+				56CB40C41F8DB82F00225384 /* LSScreenDirectionViewController.h */,
+				56CB40C51F8DB82F00225384 /* LSScreenDirectionViewController.m */,
+				56CB40C71F8DBE0F00225384 /* LSCallReminderViewController.h */,
+				56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */,
+				56CB40CA1F8DC53700225384 /* LBSedentaryViewController.h */,
+				56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */,
+				56CB40CD1F8DCD5800225384 /* LBAlarmViewController.h */,
+				56CB40CE1F8DCD5800225384 /* LBAlarmViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -806,16 +826,19 @@
 				56F29AAA1F8B5DC80093689E /* LSEDevice.m in Sources */,
 				567B20E01F061A2500B970CB /* SGHeartHelper.m in Sources */,
 				567C2DD91F415D9100565FFF /* MyFancyMenuViewController.swift in Sources */,
+				56CB40C61F8DB82F00225384 /* LSScreenDirectionViewController.m in Sources */,
 				565477071F7C982C001F312C /* XYXImageViewController.m in Sources */,
 				566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */,
 				566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */,
 				56A39DE31F78B4E400C9F3B5 /* SGStepLineChartView.m in Sources */,
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
+				56CB40CF1F8DCD5800225384 /* LBAlarmViewController.m in Sources */,
 				567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */,
 				56A39DE61F78C66D00C9F3B5 /* XYXTestChartViewController.m in Sources */,
 				561911861F8CB97B00D65D75 /* XYSeetingController.m in Sources */,
 				56F29AA61F8B5B420093689E /* XYSearchDeviceCell.m in Sources */,
 				56DC39551F134AD500D6C597 /* FaceConfig.m in Sources */,
+				56CB40CC1F8DC53700225384 /* LBSedentaryViewController.m in Sources */,
 				56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
@@ -823,6 +846,7 @@
 				56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */,
 				5649140D1F0F7FE600693F51 /* CameraController.m in Sources */,
 				56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */,
+				56CB40C91F8DBE0F00225384 /* LSCallReminderViewController.m in Sources */,
 				567B20D81F06067700B970CB /* SGHeartModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

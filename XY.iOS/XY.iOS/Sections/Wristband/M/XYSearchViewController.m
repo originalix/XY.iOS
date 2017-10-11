@@ -344,6 +344,7 @@
     
     if ([self.targetDevice.deviceInfo.macAddress caseInsensitiveCompare:deviceInfo.macAddress] == NSOrderedSame || [self.targetDevice.deviceInfo.macAddress caseInsensitiveCompare:reverseMac] == NSOrderedSame) {
         self.targetDevice.detailInfo = deviceInfo;
+        SGLog(@"设置好手环所有的功能");
     }
 }
 
