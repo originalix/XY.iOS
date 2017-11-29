@@ -16,6 +16,7 @@ typedef enum : NSUInteger {
 } LSEDeviceConnectState;
 
 @interface LSEDevice : NSObject
+
 @property (nonatomic, assign) LSEDeviceConnectState connectState;
 @property (nonatomic ,strong) LSScanDeviceInfo *deviceInfo;
 @property (nonatomic, strong) LSDeviceInfo *detailInfo;
