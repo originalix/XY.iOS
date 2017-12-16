@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C54EA011FDB33BD17E45EA752457C343'
-               BlueprintName = 'YALSideMenu'
+               BlueprintIdentifier = '7891E2B724C54EF58FB1692B34F1455C'
+               BlueprintName = 'HMSegmentedControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'YALSideMenu.framework'>
+               BuildableName = 'HMSegmentedControl.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -12,6 +12,7 @@ target 'XY.iOS' do
     pod 'YALSideMenu', '~> 2.0'
     pod 'PNChart'
     pod "SwViewCapture"
+    pod "HMSegmentedControl"
 end
 
 target 'XY.iOSTests' do

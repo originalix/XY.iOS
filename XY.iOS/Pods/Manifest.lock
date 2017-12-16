@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.4.0)
   - CuteLog (0.0.2):
     - SSZipArchive (~> 1.8.1)
+  - HMSegmentedControl (1.5.4)
   - LNTS_HttpClient (0.1.0):
     - Alamofire (~> 4.4.0)
     - Reachability (~> 3.2)
@@ -21,6 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - CuteLog
+  - HMSegmentedControl
   - LNTS_HttpClient (~> 0.1.0)
   - PNChart
   - SCLAlertView
@@ -31,6 +33,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   CuteLog: f0113ec512f2ee06aba99408b4b1764d6c24cad3
+  HMSegmentedControl: b25bc4ec44766e073d62c473188fb354ee244b76
   LNTS_HttpClient: 327cc4702dd6121a76a77ad685b4dce13cb8536f
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
@@ -42,6 +45,6 @@ SPEC CHECKSUMS:
   WHC_ModelSqliteKit: 8600471b427856c5babe389686297d97ed94f5d8
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: c2a5ebd836f7eda807094bf8193d2adf61a9b2aa
+PODFILE CHECKSUM: 6485874b7d1578fd8b2a4d8be96461ad4bd93fda
 
 COCOAPODS: 1.2.1
