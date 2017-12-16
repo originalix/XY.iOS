@@ -34,7 +34,7 @@
     segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;
     segmentedControl.segmentWidthStyle = HMSegmentedControlSegmentWidthStyleFixed;
     [segmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:17.f]}];
-    
+    [segmentedControl setSelectedTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor]}];
     [segmentedControl addTarget:self action:@selector(titleSegmentControlChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:segmentedControl];
 }
