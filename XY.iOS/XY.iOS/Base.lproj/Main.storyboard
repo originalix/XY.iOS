@@ -703,10 +703,10 @@
             </objects>
             <point key="canvasLocation" x="78" y="4423"/>
         </scene>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="4pJ-Ax-zBi">
             <objects>
-                <viewController id="FH9-TG-oUp" sceneMemberID="viewController">
+                <viewController id="FH9-TG-oUp" customClass="HMRootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="21o-WI-Lst"/>
                         <viewControllerLayoutGuide type="bottom" id="D97-NF-4KJ"/>

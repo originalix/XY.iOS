@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.view.backgroundColor = [UIColor yellowColor];
     [self setupUIView];
 }
 
@@ -28,13 +29,18 @@
 
 - (void)setupUIView {
     HMSegmentedControl *segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"One", @"Two", @"Three"]];
-    segmentedControl.frame = CGRectMake(0, 0, kScreenWidth, 60);
-    [segmentedControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+    segmentedControl.frame = CGRectMake(0, 64, kScreenWidth, 60);
+    segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+    segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;
+    segmentedControl.segmentWidthStyle = HMSegmentedControlSegmentWidthStyleFixed;
+    [segmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:17.f]}];
+    
+    [segmentedControl addTarget:self action:@selector(titleSegmentControlChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:segmentedControl];
 }
 
-- (void)segmentedControlChangedValue:(NSInteger)index {
-    NSLog(@"%ld", index);
+- (void)titleSegmentControlChanged:(HMSegmentedControl *)segmentedControl {
+    NSLog(@"%ld", segmentedControl.selectedSegmentIndex);
 }
 
 @end
