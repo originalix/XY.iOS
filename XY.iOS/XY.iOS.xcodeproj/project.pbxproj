@@ -12,6 +12,7 @@
 		5610E38E1FE5F42F005B6058 /* SliderPageReuseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610E3891FE5F42F005B6058 /* SliderPageReuseManager.m */; };
 		5610E38F1FE5F42F005B6058 /* UITableView+Reuse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610E38B1FE5F42F005B6058 /* UITableView+Reuse.m */; };
 		5610E3901FE5F42F005B6058 /* UIViewController+Reuse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610E38D1FE5F42F005B6058 /* UIViewController+Reuse.m */; };
+		5610E3941FE63F27005B6058 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 5610E3931FE63F27005B6058 /* www */; };
 		561911861F8CB97B00D65D75 /* XYSeetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561911851F8CB97B00D65D75 /* XYSeetingController.m */; };
 		5619118B1F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 561911891F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m */; };
 		5619118C1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5619118A1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m */; };
@@ -106,6 +107,7 @@
 		5610E38B1FE5F42F005B6058 /* UITableView+Reuse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Reuse.m"; sourceTree = "<group>"; };
 		5610E38C1FE5F42F005B6058 /* UIViewController+Reuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Reuse.h"; sourceTree = "<group>"; };
 		5610E38D1FE5F42F005B6058 /* UIViewController+Reuse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Reuse.m"; sourceTree = "<group>"; };
+		5610E3931FE63F27005B6058 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		561911841F8CB97B00D65D75 /* XYSeetingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSeetingController.h; sourceTree = "<group>"; };
 		561911851F8CB97B00D65D75 /* XYSeetingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSeetingController.m; sourceTree = "<group>"; };
 		561911871F8CBE8100D65D75 /* NSString+LSSettingFailureCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSSettingFailureCode.h"; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 		567B209A1F0604A200B970CB = {
 			isa = PBXGroup;
 			children = (
+				5610E3931FE63F27005B6058 /* www */,
 				567B20A51F0604A200B970CB /* XY.iOS */,
 				567B20BA1F0604A200B970CB /* XY.iOSTests */,
 				567B20C51F0604A200B970CB /* XY.iOSUITests */,
@@ -731,6 +734,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5610E3941FE63F27005B6058 /* www in Resources */,
 				567B20B11F0604A200B970CB /* LaunchScreen.storyboard in Resources */,
 				567B20AE1F0604A200B970CB /* Assets.xcassets in Resources */,
 				5632AAF61F8B72B100711DAA /* XYSearchDeviceCell.xib in Resources */,
