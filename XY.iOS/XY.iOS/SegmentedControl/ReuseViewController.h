@@ -10,4 +10,8 @@
 
 @interface ReuseViewController : UIViewController
 
+@property (nonatomic, copy) NSString *contentURL;
+
+- (void)reloadData;
+
 @end

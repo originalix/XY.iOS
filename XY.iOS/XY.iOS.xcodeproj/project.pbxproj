@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5610E3831FE552C3005B6058 /* HMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610E3821FE552C3005B6058 /* HMRootViewController.m */; };
 		5610E3861FE5F34F005B6058 /* ReuseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610E3851FE5F34F005B6058 /* ReuseViewController.m */; };
+		5610E38E1FE5F42F005B6058 /* SliderPageReuseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610E3891FE5F42F005B6058 /* SliderPageReuseManager.m */; };
+		5610E38F1FE5F42F005B6058 /* UITableView+Reuse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610E38B1FE5F42F005B6058 /* UITableView+Reuse.m */; };
+		5610E3901FE5F42F005B6058 /* UIViewController+Reuse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5610E38D1FE5F42F005B6058 /* UIViewController+Reuse.m */; };
 		561911861F8CB97B00D65D75 /* XYSeetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561911851F8CB97B00D65D75 /* XYSeetingController.m */; };
 		5619118B1F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 561911891F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m */; };
 		5619118C1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5619118A1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m */; };
@@ -97,6 +100,12 @@
 		5610E3821FE552C3005B6058 /* HMRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMRootViewController.m; sourceTree = "<group>"; };
 		5610E3841FE5F34F005B6058 /* ReuseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReuseViewController.h; sourceTree = "<group>"; };
 		5610E3851FE5F34F005B6058 /* ReuseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReuseViewController.m; sourceTree = "<group>"; };
+		5610E3881FE5F42F005B6058 /* SliderPageReuseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderPageReuseManager.h; sourceTree = "<group>"; };
+		5610E3891FE5F42F005B6058 /* SliderPageReuseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderPageReuseManager.m; sourceTree = "<group>"; };
+		5610E38A1FE5F42F005B6058 /* UITableView+Reuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Reuse.h"; sourceTree = "<group>"; };
+		5610E38B1FE5F42F005B6058 /* UITableView+Reuse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Reuse.m"; sourceTree = "<group>"; };
+		5610E38C1FE5F42F005B6058 /* UIViewController+Reuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Reuse.h"; sourceTree = "<group>"; };
+		5610E38D1FE5F42F005B6058 /* UIViewController+Reuse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Reuse.m"; sourceTree = "<group>"; };
 		561911841F8CB97B00D65D75 /* XYSeetingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSeetingController.h; sourceTree = "<group>"; };
 		561911851F8CB97B00D65D75 /* XYSeetingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSeetingController.m; sourceTree = "<group>"; };
 		561911871F8CBE8100D65D75 /* NSString+LSSettingFailureCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSSettingFailureCode.h"; sourceTree = "<group>"; };
@@ -293,12 +302,26 @@
 		5610E3801FE5529C005B6058 /* SegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
+				5610E3871FE5F42F005B6058 /* SliderPageReuseManager */,
 				5610E3811FE552C3005B6058 /* HMRootViewController.h */,
 				5610E3821FE552C3005B6058 /* HMRootViewController.m */,
 				5610E3841FE5F34F005B6058 /* ReuseViewController.h */,
 				5610E3851FE5F34F005B6058 /* ReuseViewController.m */,
 			);
 			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
+		5610E3871FE5F42F005B6058 /* SliderPageReuseManager */ = {
+			isa = PBXGroup;
+			children = (
+				5610E3881FE5F42F005B6058 /* SliderPageReuseManager.h */,
+				5610E3891FE5F42F005B6058 /* SliderPageReuseManager.m */,
+				5610E38A1FE5F42F005B6058 /* UITableView+Reuse.h */,
+				5610E38B1FE5F42F005B6058 /* UITableView+Reuse.m */,
+				5610E38C1FE5F42F005B6058 /* UIViewController+Reuse.h */,
+				5610E38D1FE5F42F005B6058 /* UIViewController+Reuse.m */,
+			);
+			path = SliderPageReuseManager;
 			sourceTree = "<group>";
 		};
 		561F253D1F6A4DA20033959F /* EffectiveObjc */ = {
@@ -831,6 +854,7 @@
 			files = (
 				567B20A91F0604A200B970CB /* ViewController.swift in Sources */,
 				56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */,
+				5610E38E1FE5F42F005B6058 /* SliderPageReuseManager.m in Sources */,
 				561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */,
 				564914101F0F82CA00693F51 /* FaceDetect.m in Sources */,
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
@@ -847,9 +871,11 @@
 				56CB40C61F8DB82F00225384 /* LSScreenDirectionViewController.m in Sources */,
 				565477071F7C982C001F312C /* XYXImageViewController.m in Sources */,
 				566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */,
+				5610E3901FE5F42F005B6058 /* UIViewController+Reuse.m in Sources */,
 				566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */,
 				5610E3831FE552C3005B6058 /* HMRootViewController.m in Sources */,
 				56A39DE31F78B4E400C9F3B5 /* SGStepLineChartView.m in Sources */,
+				5610E38F1FE5F42F005B6058 /* UITableView+Reuse.m in Sources */,
 				56DC39581F13578100D6C597 /* DetectViewController.m in Sources */,
 				56CB40CF1F8DCD5800225384 /* LBAlarmViewController.m in Sources */,
 				567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */,
