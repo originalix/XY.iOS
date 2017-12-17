@@ -40,6 +40,9 @@
 
 - (void)reloadData {
     NSLog(@"----> %s", __func__);
+    if (_contentURL) {
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_contentURL]]];
+    }
 }
 
 - (void)prepareForReuse {
@@ -113,7 +116,7 @@
         config.requiresUserActionForMediaPlayback = false;
         config.allowsAirPlayForMediaPlayback = true;
         config.userContentController = userContentController;
-        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 45, kScreenWidth, kScreenHeight - 99) configuration:config];
+        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, self.view.frame.size.height) configuration:config];
         _webView.scrollView.scrollEnabled = true;
     }
     return _webView;

@@ -22,6 +22,7 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 
 @property (nonatomic, strong) NSArray *titles;
+@property (nonatomic, strong) NSArray *urls;
 
 @end
 
@@ -42,7 +43,20 @@
     _reuseManager.capacity = 3;
     [_reuseManager registerClass:[ReuseViewController class] forReuseIdentifier:@"reuseViewController"];
     
-    self.titles = @[@"百度", @"腾讯", @"阿里"];
+    self.titles = @[@"百度", @"腾讯", @"阿里", @"头条", @"新浪", @"搜狐", @"网易", @"V2EX", @"知乎", @"虎扑", @"京东"];
+    self.urls = @[
+                  @"http://www.baidu.com/",
+                  @"http://www.qq.com/",
+                  @"http://www.taobao.com/",
+                  @"http://www.toutiao.com/",
+                  @"http://www.sina.com/",
+                  @"http://www.sohu.com/",
+                  @"http://www.163.com/",
+                  @"http://www.v2ex.com/",
+                  @"http://www.zhihu.com/",
+                  @"http://www.hupu.com/",
+                  @"http://www.jd.com/",
+                  ];
     [self setupSegment];
     [self setupScrollView];
     [self sliderToViewAtIndex:0];
@@ -50,7 +64,7 @@
 }
 
 - (void)setupSegment {
-    _segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"One", @"Two", @"Three"]];
+    _segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:self.titles];
     _segmentedControl.frame = CGRectMake(0, 64, kScreenWidth, 60);
     _segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
     _segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;
@@ -73,11 +87,33 @@
 }
 
 - (void)sliderToViewAtIndex:(NSInteger)index {
+    NSLog(@"slider to %@",@(index));
+    NSInteger categoryId = index;
+    ReuseViewController *vc = [self.reuseManager dequeueReuseableViewControllerWithIdentifier:@"reuseViewController" forKey:[NSString stringWithFormat:@"%@", @(categoryId)]];
+    if (!vc.parentViewController) {
+        [self addChildViewController:vc];
+    }
     
+    vc.categoryId = categoryId;
+    vc.contentURL = self.urls[index];
+    
+    if (vc.isReused) {
+        [vc reloadData];
+    }
+    
+    [_scrollView layoutIfNeeded];
+    vc.view.frame = CGRectMake(kScreenWidth * index, 0, kScreenWidth, CGRectGetHeight(_scrollView.frame));
+    [_scrollView addSubview:vc.view];
+    
+    if (self.segmentedControl.selectedSegmentIndex != index) {
+        [self.segmentedControl setSelectedSegmentIndex:index animated:true];
+    }
+    
+    [_scrollView setContentOffset:CGPointMake(kScreenWidth * index, 0)];
 }
 
 - (void)titleSegmentControlChanged:(HMSegmentedControl *)segmentedControl {
-    NSLog(@"%ld", segmentedControl.selectedSegmentIndex);
+//    NSLog(@"%ld", segmentedControl.selectedSegmentIndex);
     [self sliderToViewAtIndex:segmentedControl.selectedSegmentIndex];
 }
 

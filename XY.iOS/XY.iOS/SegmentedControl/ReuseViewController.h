@@ -11,6 +11,7 @@
 @interface ReuseViewController : UIViewController
 
 @property (nonatomic, copy) NSString *contentURL;
+@property (nonatomic, assign) NSInteger categoryId;
 
 - (void)reloadData;
 
