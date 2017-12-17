@@ -110,7 +110,10 @@
         }
     }];
 //    self.webView.scrollView.hidden = false;
-    self.refreshView.hidden = true;
+    NSString *url = webView.URL.absoluteString;
+    if ([url isEqualToString:@"about:blank"]) {
+        return;
+    }
     [self.webView.scrollView.mj_header endRefreshing];
 }
 
@@ -152,7 +155,7 @@
 }
 
 - (NSString *)html {
-    return @"<!DOCTYPE html> <html lang='en'> <head> <meta charset='UTF-8'> <title></title> </head> <body> <h1>正在刷新昂</h1> </body> </html>";
+    return @"<!DOCTYPE html> <html lang='en'> <head> <meta charset='UTF-8'> <title>Document</title> <style type='text/css'> #hover { animation-name: lix; animation-duration: 1s; animation-timing-function: linear; animation-delay: 1s; animation-fill-mode: forwards; animation-direction: normal; animation-iteration-count: 3; } @keyframes lix { from { color: red } 50% { color: orange } to { color: yellow } } </style> </head> <body> <div id='hover'> <h1></h1> </div> </body> </html>";
 }
 
 @end
