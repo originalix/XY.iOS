@@ -43,14 +43,14 @@
     _reuseManager.capacity = 3;
     [_reuseManager registerClass:[ReuseViewController class] forReuseIdentifier:@"reuseViewController"];
     
-    self.titles = @[@"百度", @"腾讯", @"阿里", @"头条", @"新浪", @"搜狐", @"网易", @"V2EX", @"知乎", @"虎扑", @"京东"];
+    self.titles = @[@"百度", @"腾讯", @"阿里", @"头条", @"新浪", @"人民网", @"网易", @"V2EX", @"知乎", @"虎扑", @"京东"];
     self.urls = @[
                   @"http://www.baidu.com/",
                   @"http://www.qq.com/",
                   @"http://www.taobao.com/",
                   @"http://www.toutiao.com/",
                   @"http://www.sina.com/",
-                  @"http://www.sohu.com/",
+                  @"http://people.com.cn/",
                   @"http://www.163.com/",
                   @"http://www.v2ex.com/",
                   @"http://www.zhihu.com/",
