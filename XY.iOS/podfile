@@ -13,6 +13,7 @@ target 'XY.iOS' do
     pod 'PNChart'
     pod "SwViewCapture"
     pod "HMSegmentedControl"
+    pod "MJRefresh"
 end
 
 target 'XY.iOSTests' do
