@@ -104,7 +104,6 @@
     NSLog(@"----->error prov: %@", error.userInfo);
 }
 
-
 #pragma mark - get && set
 - (WKWebView *)webView {
     if (!_webView) {
