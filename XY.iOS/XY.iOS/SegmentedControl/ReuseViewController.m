@@ -63,7 +63,6 @@
     if (_contentURL) {
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_contentURL]]];
     }
-    //    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.0.104/list/web/index.php?r=test/comment&id=2150"]]];
 }
 
 
