@@ -9,6 +9,7 @@
 #import "ReuseViewController.h"
 #import <WebKit/WebKit.h>
 #import "UIViewController+Reuse.h"
+#import "MJRefresh.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -16,6 +17,7 @@
 @interface ReuseViewController ()<WKNavigationDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
+@property (nonatomic, strong) UIView *refreshView;
 
 @end
 
@@ -26,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViewUI];
+    [self.webView.scrollView.mj_header beginRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,13 +43,17 @@
 
 - (void)reloadData {
     NSLog(@"----> %s", __func__);
-    if (_contentURL) {
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_contentURL]]];
-    }
+//    if (_contentURL) {
+//        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_contentURL]]];
+//    }
 }
 
 - (void)prepareForReuse {
     NSLog(@"----> %s", __func__);
+//    self.webView.scrollView.hidden = true;
+//    [self.webView reload];
+    [self.webView loadHTMLString:[self html] baseURL:nil];
+    [self.webView.scrollView.mj_header beginRefreshing];
 }
 
 - (void)setupViewUI {
@@ -56,10 +63,21 @@
 - (void)setupWebView {
     
     self.webView.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
+    self.webView.scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
     [self.view addSubview:self.webView];
+//    [self.webView addSubview:self.refreshView];
+//    self.refreshView.frame = CGRectMake(self.webView.scrollView.frame.origin.x, self.webView.scrollView.frame.origin.y + self.webView.scrollView.mj_header.frame.size.height, self.webView.scrollView.frame.size.width, self.webView.scrollView.frame.size.height);
+//    self.refreshView.hidden = true;
     self.webView.navigationDelegate = self;
     [self.webView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:@"LNArticleDetailController"];
+
     _isRegisterObserver = true;
+    if (_contentURL) {
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_contentURL]]];
+    }
+}
+
+- (void)loadData {
     if (_contentURL) {
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_contentURL]]];
     }
@@ -91,6 +109,9 @@
             self.navigationItem.title = title;
         }
     }];
+//    self.webView.scrollView.hidden = false;
+    self.refreshView.hidden = true;
+    [self.webView.scrollView.mj_header endRefreshing];
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
@@ -119,6 +140,19 @@
         _webView.scrollView.scrollEnabled = true;
     }
     return _webView;
+}
+
+- (UIView *)refreshView {
+    if (!_refreshView) {
+        _refreshView = [[UIView alloc] init];
+        _refreshView.backgroundColor = [UIColor redColor];
+    }
+    
+    return _refreshView;
+}
+
+- (NSString *)html {
+    return @"<!DOCTYPE html> <html lang='en'> <head> <meta charset='UTF-8'> <title></title> </head> <body> <h1>正在刷新昂</h1> </body> </html>";
 }
 
 @end
