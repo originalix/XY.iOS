@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import SCLAlertView
 
-class BaseWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
+class BaseWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
 
     //MARK: - property
     public var url: String!
@@ -84,6 +84,7 @@ class BaseWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegat
     //MARK: - initialize
     public func initialzeWebView() {
         let userContentController = WKUserContentController()
+        userContentController.add(self, name: "appBridge")
         let config = WKWebViewConfiguration()
         config.userContentController = userContentController
         
@@ -249,6 +250,10 @@ class BaseWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegat
         }))
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print(message.name)
     }
     
     func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {

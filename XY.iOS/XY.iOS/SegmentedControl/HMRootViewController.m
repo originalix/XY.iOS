@@ -40,12 +40,12 @@
 
 - (void)setupUIView {
     _reuseManager = [[SliderPageReuseManager alloc] init];
-    _reuseManager.capacity = 3;
+    _reuseManager.capacity = 10;
     [_reuseManager registerClass:[ReuseViewController class] forReuseIdentifier:@"reuseViewController"];
     
     self.titles = @[@"百度", @"腾讯", @"阿里", @"头条", @"新浪", @"人民网", @"网易", @"V2EX", @"知乎", @"虎扑", @"京东"];
     self.urls = @[
-                  @"http://www.baidu.com/",
+                  @"http://baidu.com",
                   @"http://www.qq.com/",
                   @"http://www.taobao.com/",
                   @"http://www.toutiao.com/",
@@ -87,6 +87,10 @@
 }
 
 - (void)sliderToViewAtIndex:(NSInteger)index {
+    if (index == 1) {
+        [self.segmentedControl setSectionTitles:@[@"百度", @"腾讯", @"阿里", @"头条", @"新浪", @"人民网", @"网易", @"V2EX", @"知乎", @"虎扑", @"京东", @"新增的"]];
+    }
+    
     NSLog(@"slider to %@",@(index));
     NSInteger categoryId = index;
     ReuseViewController *vc = [self.reuseManager dequeueReuseableViewControllerWithIdentifier:@"reuseViewController" forKey:[NSString stringWithFormat:@"%@", @(categoryId)]];

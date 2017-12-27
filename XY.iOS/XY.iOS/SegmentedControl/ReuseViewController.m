@@ -43,15 +43,10 @@
 
 - (void)reloadData {
     NSLog(@"----> %s", __func__);
-//    if (_contentURL) {
-//        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_contentURL]]];
-//    }
 }
 
 - (void)prepareForReuse {
     NSLog(@"----> %s", __func__);
-//    self.webView.scrollView.hidden = true;
-//    [self.webView reload];
     [self.webView loadHTMLString:[self html] baseURL:nil];
     [self.webView.scrollView.mj_header beginRefreshing];
 }
@@ -65,9 +60,6 @@
     self.webView.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
     self.webView.scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
     [self.view addSubview:self.webView];
-//    [self.webView addSubview:self.refreshView];
-//    self.refreshView.frame = CGRectMake(self.webView.scrollView.frame.origin.x, self.webView.scrollView.frame.origin.y + self.webView.scrollView.mj_header.frame.size.height, self.webView.scrollView.frame.size.width, self.webView.scrollView.frame.size.height);
-//    self.refreshView.hidden = true;
     self.webView.navigationDelegate = self;
     [self.webView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:@"LNArticleDetailController"];
 
@@ -109,8 +101,11 @@
             self.navigationItem.title = title;
         }
     }];
-//    self.webView.scrollView.hidden = false;
-    self.refreshView.hidden = true;
+    NSString *url = webView.URL.absoluteString;
+
+    if ([url isEqualToString:@"about:blank"]) {
+        return;
+    }
     [self.webView.scrollView.mj_header endRefreshing];
 }
 
@@ -152,7 +147,7 @@
 }
 
 - (NSString *)html {
-    return @"<!DOCTYPE html> <html lang='en'> <head> <meta charset='UTF-8'> <title></title> </head> <body> <h1>正在刷新昂</h1> </body> </html>";
+    return @"<!DOCTYPE html> <html lang='en'> <head> <meta charset='UTF-8'> <title></title> </head> <body> </body> </html>";
 }
 
 @end
