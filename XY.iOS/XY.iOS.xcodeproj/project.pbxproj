@@ -55,6 +55,7 @@
 		56CB40CC1F8DC53700225384 /* LBSedentaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */; };
 		56CB40CF1F8DCD5800225384 /* LBAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40CE1F8DCD5800225384 /* LBAlarmViewController.m */; };
 		56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */; };
+		56D0921F1FF385CF00F0B060 /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0921E1FF385CF00F0B060 /* TestWebViewController.swift */; };
 		56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF671F3C323D003CB716 /* EffictiveObjc.m */; };
 		56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D5BF6A1F3C325F003CB716 /* EffictiveViewController.m */; };
 		56DC392A1F132F5600D6C597 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39291F132F5600D6C597 /* libc++.tbd */; };
@@ -185,6 +186,7 @@
 		56CB40CE1F8DCD5800225384 /* LBAlarmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBAlarmViewController.m; sourceTree = "<group>"; };
 		56CE57E81F88FED900A1FCD1 /* XYCalculateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCalculateViewController.h; sourceTree = "<group>"; };
 		56CE57E91F88FED900A1FCD1 /* XYCalculateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCalculateViewController.m; sourceTree = "<group>"; };
+		56D0921E1FF385CF00F0B060 /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		56D5BF661F3C323D003CB716 /* EffictiveObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveObjc.h; sourceTree = "<group>"; };
 		56D5BF671F3C323D003CB716 /* EffictiveObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffictiveObjc.m; sourceTree = "<group>"; };
 		56D5BF691F3C325F003CB716 /* EffictiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffictiveViewController.h; sourceTree = "<group>"; };
@@ -503,6 +505,7 @@
 				567C2DDB1F416BE700565FFF /* MainViewController.swift */,
 				564AFD0F1F57AC26004BE2A5 /* RichTextViewController.h */,
 				564AFD101F57AC26004BE2A5 /* RichTextViewController.m */,
+				56D0921E1FF385CF00F0B060 /* TestWebViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D0921F1FF385CF00F0B060 /* TestWebViewController.swift in Sources */,
 				567B20A91F0604A200B970CB /* ViewController.swift in Sources */,
 				56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */,
 				5610E38E1FE5F42F005B6058 /* SliderPageReuseManager.m in Sources */,
