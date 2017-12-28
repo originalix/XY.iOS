@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3C2661C9539C85102F5CFCAB2C9A0D0C'
-               BlueprintName = 'WHC_ModelSqliteKit'
+               BlueprintIdentifier = 'F8A49EA70386B4CFADC1A0140208782A'
+               BlueprintName = 'WebViewJavascriptBridge'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'WHC_ModelSqliteKit.framework'>
+               BuildableName = 'WebViewJavascriptBridge.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

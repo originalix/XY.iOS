@@ -42,11 +42,11 @@ class BaseWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegat
     
     //MARK: - Load and Clean Cache
     func requestData() {
-        if getNeedCache() {
-            webView.load(URLRequest.init(url: URL.init(string: url)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10))
-        } else {
-            webView.load(URLRequest.init(url: URL.init(string: url)!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10))
-        }
+//        if getNeedCache() {
+//            webView.load(URLRequest.init(url: URL.init(string: url)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10))
+//        } else {
+//            webView.load(URLRequest.init(url: URL.init(string: url)!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10))
+//        }
         //有网络的情况
 //        if false {
 //            refresh()
@@ -193,14 +193,14 @@ class BaseWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegat
         let failureUrl = error.userInfo["NSErrorFailingURLStringKey"] as? String
         if (failureUrl != nil) {
             if let url = URL.init(string: failureUrl!) {
-                if url.scheme != URL_SCHEME {
-                    //不符合的操作
-                    return
-                }
-                if (failureUrl?.hasPrefix("test://tel"))! {
-                    callPhoneNumber(failingUrl: failureUrl)
-                    return
-                }
+//                if url.scheme != URL_SCHEME {
+//                    //不符合的操作
+//                    return
+//                }
+//                if (failureUrl?.hasPrefix("test://tel"))! {
+//                    callPhoneNumber(failingUrl: failureUrl)
+//                    return
+//                }
 
                 let didOpen = UIApplication.shared.openURL(url)
                 if didOpen {

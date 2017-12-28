@@ -16,6 +16,7 @@ PODS:
   - SwiftyJSON (3.1.4)
   - SwViewCapture (1.0.6)
   - UICountingLabel (1.2.0)
+  - WebViewJavascriptBridge (6.0.3)
   - WHC_ModelSqliteKit (1.2.6):
     - WHC_ModelSqliteKit/standard (= 1.2.6)
   - WHC_ModelSqliteKit/standard (1.2.6)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - PNChart
   - SCLAlertView
   - SwViewCapture
+  - WebViewJavascriptBridge (~> 6.0)
   - WHC_ModelSqliteKit
   - YALSideMenu (~> 2.0)
 
@@ -45,9 +47,10 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwViewCapture: edf1ea74e164f47af005fbdfdc6fc18ec373ec69
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   WHC_ModelSqliteKit: 8600471b427856c5babe389686297d97ed94f5d8
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: 61e0752024e088403d57cbc220ca894e7dd0c661
+PODFILE CHECKSUM: d3daa9dfb2dd82b60f12b96da696b6afa6138d2d
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
