@@ -712,12 +712,31 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="KR3-AU-uGN" kind="relationship" relationship="rootViewController" id="WNU-Pg-8oW"/>
+                        <segue destination="bBT-qm-rv7" kind="relationship" relationship="rootViewController" id="qAQ-Lg-Ko7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwC-Ce-2Nb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44" y="5177"/>
+        </scene>
+        <!--Web Bridge View Controller-->
+        <scene sceneID="5vL-Sb-aCd">
+            <objects>
+                <viewController id="bBT-qm-rv7" customClass="WebBridgeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VgI-Vd-dgQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="osh-6h-60H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G9b-xh-rO5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AxM-bB-sAy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZe-Mb-TGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="5872"/>
         </scene>
         <!--Test Web View Controller-->
         <scene sceneID="Vw3-Gj-T8a">
