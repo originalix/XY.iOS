@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style type="text/css" rel="stylesheet">
-        *{
-            cursor: pointer;
+    <head>
+        <meta charset="UTF-8">
+            <title>Title</title>
+            <style type="text/css" rel="stylesheet">
+                *{
+                    cursor: pointer;
+                }
+            h5{
+                color: red;
+            }
+            </style>
+    </head>
+    <body>
+        <h5>该测试页面是模拟客户端将方法写到window.appBridge上的，如果调试需将window.appBridge这个对象注释掉</h5>
+        <div onclick="loginNXL()">登录</div>
+        </br>
+        <div onclick="invokePayment()">支付</div>
+        </br>
+        <div onclick="audioPlay()">音频播放</div>
+        </br>
+        <div onclick="audioPlay()">单集课程播放</div>
+        </br>
+        <div onclick="audioPlayList()">课程列表</div>
+        </br>
+        <div onclick="getAudioInfo()">获取当前音频播放信息</div>
+        </br>
+        <div onclick="showPlayer()">进入播放页面</div>
+        </br>
+        <div onclick="audioDownload(1)">下载音频</div>
+        </br>
+        <div onclick="joinChannel()">进入频道</div>
+        </br>
+        <div onclick="leaveChannel()">离开频道</div>
+        </br>
+        <div onclick="chatJoinPage()">进入咨询界面</div>
+        </br>
+        <div onclick="share()">分享按钮</div>
+        </br>
+        <div onclick="setTopBar()">设置setTopBar</div>
+        </br>
+        <div onclick="setLocalData()">存储</div>
+        </br>
+        <div onclick="getLocalData()">获取本地存储</div>
+    </body>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tools.js"></script>
+    <script>
+        
+        // iOS WebViewJavascriptBridge
+        function setupWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+            if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+            window.WVJBCallbacks = [callback];
+            var WVJBIframe = document.createElement('iframe');
+            WVJBIframe.style.display = 'none';
+            WVJBIframe.src = 'https://__bridge_loaded__';
+            document.documentElement.appendChild(WVJBIframe);
+            setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
         }
-        h5{
-            color: red;
-        }
-    </style>
-</head>
-<body>
-<h5>该测试页面是模拟客户端将方法写到window.appBridge上的，如果调试需将window.appBridge这个对象注释掉</h5>
-<div onclick="loginNXL()">登录</div>
-</br>
-<div onclick="invokePayment()">支付</div>
-</br>
-<div onclick="audioPlay()">音频播放</div>
-</br>
-<div onclick="audioPlay()">单集课程播放</div>
-</br>
-<div onclick="audioPlayList()">课程列表</div>
-</br>
-<div onclick="getAudioInfo()">获取当前音频播放信息</div>
-</br>
-<div onclick="showPlayer()">进入播放页面</div>
-</br>
-<div onclick="audioDownload(1)">下载音频</div>
-</br>
-<div onclick="joinChannel()">进入频道</div>
-</br>
-<div onclick="leaveChannel()">离开频道</div>
-</br>
-<div onclick="chatJoinPage()">进入咨询界面</div>
-</br>
-<div onclick="share()">分享按钮</div>
-</br>
-<div onclick="setTopBar()">设置setTopBar</div>
-</br>
-<div onclick="setLocalData()">存储</div>
-</br>
-<div onclick="getLocalData()">获取本地存储</div>
-</body>
-<script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/tools.js"></script>
-<script>
+    
     //该对象模拟客户端与网页交互的方法
-	
-   
     var userInfo = {
         company: {
             isProvidePhone: 0,
@@ -71,7 +82,7 @@
     //登陆暖心理
     function loginNXL() {
         var data = window.appBridge.getUserInfo();
-		alert(data);
+        alert(data);
         userInfo.thirdPartyId = data.thirdPartyId;
         userInfo.name = data.name;
         userInfo.photo = data.photo;
@@ -79,10 +90,10 @@
         userInfo.department = data.department;
         console.log(JSON.stringify(userInfo));
         ajax("/public/company/vendor/login", JSON.stringify(userInfo), function (resp) {
-            console.log(JSON.stringify(userInfo));
-            localStorage.setItem('userInfo', JSON.stringify(userInfo));
-            alert('暖心理注册成功');
-        })
+             console.log(JSON.stringify(userInfo));
+             localStorage.setItem('userInfo', JSON.stringify(userInfo));
+             alert('暖心理注册成功');
+             })
     }
     
     var payObj = {
@@ -95,70 +106,70 @@
     //调用支付
     function invokePayment() {
         window.appBridge.pay(payObj, function () {//调用支付成功的回调
-            var isSuccess = 1;
-            var timer = setInterval(function () {
-                if (isSuccess >= 5) {
-                    clearInterval(timer);
-                    $(".mask").hide();
-                    agent();
-                    return;
-                }
-                ajax('/public/payment/checkpaystatus', {
-                    "code": payObj.orderNo
-                }, function (resp) {
-                    if (!resp.content) {
-                        isSuccess++;
-                    } else {
-                        alert('支付轮询成功，跳转页面');
-                        clearInterval(timer);
-                    }
-                }, null, function () {
-                    window.location.href = 'start_normal.html?testDId=' + localStorage.getItem('testDId');
-                });
-            }, 1000);
-        }, function () {//调用失败的回调
-            alert("下单失败：" + text);
-        })
+                             var isSuccess = 1;
+                             var timer = setInterval(function () {
+                                                     if (isSuccess >= 5) {
+                                                     clearInterval(timer);
+                                                     $(".mask").hide();
+                                                     agent();
+                                                     return;
+                                                     }
+                                                     ajax('/public/payment/checkpaystatus', {
+                                                          "code": payObj.orderNo
+                                                          }, function (resp) {
+                                                          if (!resp.content) {
+                                                          isSuccess++;
+                                                          } else {
+                                                          alert('支付轮询成功，跳转页面');
+                                                          clearInterval(timer);
+                                                          }
+                                                          }, null, function () {
+                                                          window.location.href = 'start_normal.html?testDId=' + localStorage.getItem('testDId');
+                                                          });
+                                                     }, 1000);
+                             }, function () {//调用失败的回调
+                             alert("下单失败：" + text);
+                             })
     }
     
     //音频播放
     function audioPlay() {
         ajax('/public/interest-audio/3', null, function (resp) {
-            window.appBridge.audioPlay(resp);
-        });
+             window.appBridge.audioPlay(resp);
+             });
     }
-
+    
     //单集课程播放
     function audioPlay() {
         ajax('/public/course/1',null, function (resp) {
-            window.appBridge.audioPlay(resp);
-        });
+             window.appBridge.audioPlay(resp);
+             });
     }
-
+    
     //课程列表
     function audioPlayList() {
         ajax('/public/course/1', null ,function (resp) {
-            window.appBridge.audioPlayList(resp);
-        });
+             window.appBridge.audioPlayList(resp);
+             });
     }
-
+    
     //获取当前音频信息
     function getAudioInfo() {
         console.log(window.appBridge.audioInfo());
     }
-
+    
     //进入播放页面
     function showPlayer() {
         window.appBridge.audioShowPlayer();
     }
-
+    
     //下载音频
     function audioDownload(id) {
         ajax('/public/course/item/' + id, null , function (resp) {
-            window.appBridge.audioDownload(resp);
-        })
+             window.appBridge.audioDownload(resp);
+             })
     }
-
+    
     //进入频道
     function joinChannel() {
         var data = {
@@ -169,12 +180,12 @@
         };
         window.appBridge.callJoinChannel(data)
     }
-
+    
     //离开频道
     function leaveChannel() {
         window.appBridge.leaveChannel();
     }
-
+    
     //进入咨询界面
     function chatJoinPage() {
         var data = {
@@ -185,7 +196,7 @@
         };
         window.appBridge.chatJoin(data);
     }
-
+    
     //分享按钮接口
     function share() {
         var data = {
@@ -196,7 +207,7 @@
         };
         window.appBridge.share(data);
     }
-
+    
     //设置setTopBar
     function setTopBar() {
         var data = {
@@ -210,16 +221,63 @@
         };
         window.appBridge.setTopBar(data);
     }
-
+    
     //存储
-    function setLocalData() {
-        window.appBridge.saveLocalData("name","asd")
+    // function setLocalData() {
+    //     if (SG.ios) {
+    //         setupWebViewJavascriptBridge(function(bridge) {
+    //             bridge.callHandler('saveLocalData', {'name' : 'asd'});
+    //         });
+    //         return;
+    //     }
+    //     window.appBridge.saveLocalData("name","asd");
+    // }
+    
+    function postMessage(name, data) {
+        var jsonData = JSON.stringify(data)
+        if (SG.ios) {
+            if (!window.webkit || !window.webkit.messageHandlers) {
+                alert("no js bridge");
+                return;
+            }
+            eval ("window.webkit.messageHandlers." + name + ".postMessage(" + jsonData + ")");
+        } else if (SG.android) {
+            if(!window.appBridge || !window.appBridge.saveLocalData) {
+                return alert("no saveLocalData bridge");
+            }
+            eval ("window.appBridge." + name + "(" + jsonData ")");
+        }
     }
-
+    
+    function setLocalData() {
+        postMessage('saveLocalData', {'name' : 'lixxxx'});
+        // var data = {'name' : 'asd'};
+        // var bridge = window.webkit.messageHandlers.saveLocalData;
+        // bridge.postMessage(data);
+        // if (SG.ios) {
+        //     if (!window.webkit || !window.webkit.messageHandlers || !window.webkit.messageHandlers.saveLocalData) {
+        //         alert("no js bridge");
+        //         return;
+        //     }
+        // } else if (SG.android) {
+        //     if(!window.appBridge || !window.appBridge.saveLocalData) {
+        //         return alert("no saveLocalData bridge");
+        //     }
+        //     window.appBridge.saveLocalData(JSON.stringify(data));
+        // }
+    }
+    
     //获取本地存储数据
     function getLocalData() {
-        alert(window.appBridge.getLocalData("name"));
+        setupWebViewJavascriptBridge(function(bridge) {
+                                     // bridge.callHandler('saveLocalData', {'name' : 'asd'});
+                                     bridge.registerHandler('getLocalData', function(data) {
+                                                            alert(data);
+                                                            })
+                                     });
+                                     // alert(window.appBridge.getLocalData("name"));
     }
-
-</script>
+    
+        </script>
 </html>
+
