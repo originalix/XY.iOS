@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initWithWebView];
-    [self initBridge];
+//    [self initBridge];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refresh)];
     self.navigationItem.rightBarButtonItem = item;
     UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"Bridge" style:UIBarButtonItemStylePlain target:self action:@selector(testBridge)];
@@ -30,13 +30,13 @@
 }
 
 - (void)refresh {
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.0.112//yiidemo/basic/web/index.php?r=site/bridge"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.0.113/code-repo/bridge.html"]]];
 }
 
 - (void)testBridge {
-    [self.bridge callHandler:@"getLocalData" data:@"lixxxxxxxxxx" responseCallback:^(id responseData) {
-        NSLog(@"Current UIWebView page URL is : %@", responseData);
-    }];
+//    [self.bridge callHandler:@"getLocalData" data:@"lixxxxxxxxxx" responseCallback:^(id responseData) {
+//        NSLog(@"Current UIWebView page URL is : %@", responseData);
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +50,7 @@
     [userController addScriptMessageHandler:self name:@"saveLocalData"];
     self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) configuration:config];
     [self.view addSubview:self.webView];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.0.112//yiidemo/basic/web/index.php?r=site/bridge"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.0.113/code-repo/bridge.html"]]];
     self.webView.UIDelegate = self;
 }
 
@@ -68,20 +68,20 @@
     NSLog(@"%@", dic);
 }
 
-- (void)initBridge {
-    self.bridge = [WebViewJavascriptBridge bridgeForWebView:_webView];
-    [self.bridge registerHandler:@"ObjC Echo" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"ObjC Echo called with: %@", data);
-        responseCallback(data);
-    }];
-    
-    [self.bridge callHandler:@"JS Echo" data:nil responseCallback:^(id responseData) {
-        NSLog(@"ObjC received response: %@", responseData);
-    }];
-    
-    [self.bridge registerHandler:@"saveLocalData" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"save local data : %@", data);
-    }];
-}
+//- (void)initBridge {
+//    self.bridge = [WebViewJavascriptBridge bridgeForWebView:_webView];
+//    [self.bridge registerHandler:@"ObjC Echo" handler:^(id data, WVJBResponseCallback responseCallback) {
+//        NSLog(@"ObjC Echo called with: %@", data);
+//        responseCallback(data);
+//    }];
+//
+//    [self.bridge callHandler:@"JS Echo" data:nil responseCallback:^(id responseData) {
+//        NSLog(@"ObjC received response: %@", responseData);
+//    }];
+//
+//    [self.bridge registerHandler:@"saveLocalData" handler:^(id data, WVJBResponseCallback responseCallback) {
+//        NSLog(@"save local data : %@", data);
+//    }];
+//}
 
 @end

@@ -44,6 +44,7 @@
 		567C2DDC1F416BE700565FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2DDB1F416BE700565FFF /* MainViewController.swift */; };
 		568A6AB31F70F8DC0023F6AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC39491F13364D00D6C597 /* QuartzCore.framework */; };
 		568A6ABA1F70FAE70023F6AC /* XYLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568A6AB91F70FAE70023F6AC /* XYLayerViewController.m */; };
+		56A1A9492028258D008F7414 /* JSBridgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A1A9482028258D008F7414 /* JSBridgeController.m */; };
 		56A39DE31F78B4E400C9F3B5 /* SGStepLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A39DE21F78B4E400C9F3B5 /* SGStepLineChartView.m */; };
 		56A39DE61F78C66D00C9F3B5 /* XYXTestChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A39DE51F78C66D00C9F3B5 /* XYXTestChartViewController.m */; };
 		56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E381F69075D00F7FAED /* XYSearchViewController.m */; };
@@ -165,6 +166,8 @@
 		567C2DDB1F416BE700565FFF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		568A6AB81F70FAE70023F6AC /* XYLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLayerViewController.h; sourceTree = "<group>"; };
 		568A6AB91F70FAE70023F6AC /* XYLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLayerViewController.m; sourceTree = "<group>"; };
+		56A1A9472028258D008F7414 /* JSBridgeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSBridgeController.h; sourceTree = "<group>"; };
+		56A1A9482028258D008F7414 /* JSBridgeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBridgeController.m; sourceTree = "<group>"; };
 		56A32E081F6A6FB30015FCA0 /* face1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face1.jpg; sourceTree = "<group>"; };
 		56A32E091F6A6FB30015FCA0 /* face123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face123.jpg; sourceTree = "<group>"; };
 		56A39DE11F78B4E400C9F3B5 /* SGStepLineChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGStepLineChartView.h; sourceTree = "<group>"; };
@@ -548,6 +551,15 @@
 			path = V;
 			sourceTree = "<group>";
 		};
+		56A1A94620282575008F7414 /* JSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				56A1A9472028258D008F7414 /* JSBridgeController.h */,
+				56A1A9482028258D008F7414 /* JSBridgeController.m */,
+			);
+			path = JSBridge;
+			sourceTree = "<group>";
+		};
 		56B12E2E1F69042900F7FAED /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +571,7 @@
 		56B12E311F6906FF00F7FAED /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				56A1A94620282575008F7414 /* JSBridge */,
 				56206FA21F74B11400AE2183 /* Chart */,
 				568A6AB41F70F9440023F6AC /* CoreAnimation */,
 				561F253D1F6A4DA20033959F /* EffectiveObjc */,
@@ -922,6 +935,7 @@
 				56D5BF6B1F3C325F003CB716 /* EffictiveViewController.m in Sources */,
 				5610E38E1FE5F42F005B6058 /* SliderPageReuseManager.m in Sources */,
 				561F25431F6A4DF90033959F /* XYXNetWorkFetcher.m in Sources */,
+				56A1A9492028258D008F7414 /* JSBridgeController.m in Sources */,
 				564914101F0F82CA00693F51 /* FaceDetect.m in Sources */,
 				567B20DD1F06093000B970CB /* ExampleViewController.m in Sources */,
 				56206FA81F74B13100AE2183 /* XYXChartViewController.m in Sources */,
