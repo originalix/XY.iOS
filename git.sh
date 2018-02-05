@@ -12,7 +12,7 @@ pushFunc() {
         git add .
         git commit -m "[$*]"
         git push -u origin
-        git push -u os
+        git push -u lab
     fi
 }
 
