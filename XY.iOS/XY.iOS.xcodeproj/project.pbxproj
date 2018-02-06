@@ -52,6 +52,7 @@
 		56B12E3D1F690D0F00F7FAED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DC394D1F13377D00D6C597 /* libsqlite3.tbd */; };
 		56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B12E401F69113600F7FAED /* XYDeviceManager.m */; };
 		56C04A051F8C8473004011A3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C04A041F8C8473004011A3 /* CoreBluetooth.framework */; };
+		56C6C4F3202975DF001D1FC2 /* UIWebView+TS_JavaScriptContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C6C4F2202975DF001D1FC2 /* UIWebView+TS_JavaScriptContext.m */; };
 		56CB40C61F8DB82F00225384 /* LSScreenDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40C51F8DB82F00225384 /* LSScreenDirectionViewController.m */; };
 		56CB40C91F8DBE0F00225384 /* LSCallReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40C81F8DBE0F00225384 /* LSCallReminderViewController.m */; };
 		56CB40CC1F8DC53700225384 /* LBSedentaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB40CB1F8DC53700225384 /* LBSedentaryViewController.m */; };
@@ -182,6 +183,8 @@
 		56B12E3F1F69113600F7FAED /* XYDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYDeviceManager.h; sourceTree = "<group>"; };
 		56B12E401F69113600F7FAED /* XYDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYDeviceManager.m; sourceTree = "<group>"; };
 		56C04A041F8C8473004011A3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		56C6C4F1202975D7001D1FC2 /* UIWebView+TS_JavaScriptContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+TS_JavaScriptContext.h"; sourceTree = "<group>"; };
+		56C6C4F2202975DF001D1FC2 /* UIWebView+TS_JavaScriptContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TS_JavaScriptContext.m"; sourceTree = "<group>"; };
 		56CB40C41F8DB82F00225384 /* LSScreenDirectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSScreenDirectionViewController.h; sourceTree = "<group>"; };
 		56CB40C51F8DB82F00225384 /* LSScreenDirectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSScreenDirectionViewController.m; sourceTree = "<group>"; };
 		56CB40C71F8DBE0F00225384 /* LSCallReminderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCallReminderViewController.h; sourceTree = "<group>"; };
@@ -554,6 +557,8 @@
 		56A1A94620282575008F7414 /* JSBridge */ = {
 			isa = PBXGroup;
 			children = (
+				56C6C4F1202975D7001D1FC2 /* UIWebView+TS_JavaScriptContext.h */,
+				56C6C4F2202975DF001D1FC2 /* UIWebView+TS_JavaScriptContext.m */,
 				56A1A9472028258D008F7414 /* JSBridgeController.h */,
 				56A1A9482028258D008F7414 /* JSBridgeController.m */,
 			);
@@ -967,6 +972,7 @@
 				5610E3861FE5F34F005B6058 /* ReuseViewController.m in Sources */,
 				56B12E391F69075D00F7FAED /* XYSearchViewController.m in Sources */,
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
+				56C6C4F3202975DF001D1FC2 /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
 				564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */,
 				56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */,
