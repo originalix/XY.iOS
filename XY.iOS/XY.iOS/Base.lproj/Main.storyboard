@@ -712,17 +712,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="bBT-qm-rv7" kind="relationship" relationship="rootViewController" id="qAQ-Lg-Ko7"/>
+                        <segue destination="qVd-IC-sdE" kind="relationship" relationship="rootViewController" id="Fga-6T-B8W"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwC-Ce-2Nb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44" y="5177"/>
         </scene>
-        <!--View Controller-->
+        <!--Bridge Controller-->
         <scene sceneID="RlM-Ya-3m7">
             <objects>
-                <viewController id="qVd-IC-sdE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JSBridgeController" id="qVd-IC-sdE" customClass="JSBridgeController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6up-YG-hkS"/>
                         <viewControllerLayoutGuide type="bottom" id="k66-P3-mn4"/>
@@ -730,12 +730,28 @@
                     <view key="view" contentMode="scaleToFill" id="Jow-76-9b3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTL-jW-Nyc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rTL-jW-Nyc" firstAttribute="top" secondItem="Jow-76-9b3" secondAttribute="top" id="C8O-sq-igk"/>
+                            <constraint firstItem="rTL-jW-Nyc" firstAttribute="leading" secondItem="Jow-76-9b3" secondAttribute="leading" id="Com-ox-3ed"/>
+                            <constraint firstItem="k66-P3-mn4" firstAttribute="top" secondItem="rTL-jW-Nyc" secondAttribute="bottom" id="etC-gQ-lzY"/>
+                            <constraint firstAttribute="trailing" secondItem="rTL-jW-Nyc" secondAttribute="trailing" id="pBu-fM-q1y"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ltO-E0-dKf"/>
+                    <connections>
+                        <outlet property="webView" destination="rTL-jW-Nyc" id="KuN-uf-Ilo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm0-3S-kX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="5872"/>
+            <point key="canvasLocation" x="44" y="5871.8140929535239"/>
         </scene>
         <!--Web Bridge View Controller-->
         <scene sceneID="5vL-Sb-aCd">
