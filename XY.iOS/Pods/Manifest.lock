@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.4.0)
   - CuteLog (0.0.2):
     - SSZipArchive (~> 1.8.1)
+  - dsBridge (3.0.2)
   - HMSegmentedControl (1.5.4)
   - LNTS_HttpClient (0.1.0):
     - Alamofire (~> 4.4.0)
@@ -24,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - CuteLog
+  - dsBridge
   - HMSegmentedControl
   - LNTS_HttpClient (~> 0.1.0)
   - MJRefresh
@@ -37,6 +39,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   CuteLog: f0113ec512f2ee06aba99408b4b1764d6c24cad3
+  dsBridge: e3f0be728d736724a24503a24b7f82b17acdbb23
   HMSegmentedControl: b25bc4ec44766e073d62c473188fb354ee244b76
   LNTS_HttpClient: 327cc4702dd6121a76a77ad685b4dce13cb8536f
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
@@ -51,6 +54,6 @@ SPEC CHECKSUMS:
   WHC_ModelSqliteKit: 8600471b427856c5babe389686297d97ed94f5d8
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: d3daa9dfb2dd82b60f12b96da696b6afa6138d2d
+PODFILE CHECKSUM: 334c17cda7e4156ef55ffa8e2c36a2dbcce7ece4
 
 COCOAPODS: 1.3.1
