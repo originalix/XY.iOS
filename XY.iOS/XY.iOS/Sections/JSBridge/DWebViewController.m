@@ -9,6 +9,7 @@
 #import "DWebViewController.h"
 #import "DWKWebView.h"
 #import "JsApiTest.h"
+#import "JsApiShare.h"
 
 @interface DWebViewController ()
 
@@ -31,6 +32,8 @@
     [self.dwebView callHandler:@"addValue" arguments:@[@3, @5] completionHandler:^(id  _Nullable value) {
         NSLog(@"%@", value);
     }];
+    
+    [self.dwebView addJavascriptObject:[[JsApiShare alloc] init] namespace:@"share"];
 }
 
 - (void)didReceiveMemoryWarning {

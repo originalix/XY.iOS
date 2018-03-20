@@ -14,6 +14,13 @@
     return [msg stringByAppendingString:@"[ sync call ]"];
 }
 
+- (NSString *)testParams:(NSDictionary *)dic {
+    NSLog(@"%@", dic);
+//    NSLog(@"%@", dic2);
+    
+    return @"Hello world";
+}
+
 - (void)testAsyn:(NSString *)msg :(void (^) (NSString* _Nullable result, BOOL complete))completionHandler {
     completionHandler([msg stringByAppendingString:@"[ async call]"], YES);
 }

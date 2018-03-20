@@ -28,6 +28,7 @@
 		565477071F7C982C001F312C /* XYXImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565477061F7C982C001F312C /* XYXImageViewController.m */; };
 		566D0B292060D717005FFCC6 /* DWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566D0B282060D717005FFCC6 /* DWebViewController.m */; };
 		566D0B2C2060D8A1005FFCC6 /* JsApiTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 566D0B2B2060D8A1005FFCC6 /* JsApiTest.m */; };
+		566D0B2F2060FD30005FFCC6 /* JsApiShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 566D0B2E2060FD30005FFCC6 /* JsApiShare.m */; };
 		566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCC81F20809300EDA8C4 /* VueController.swift */; };
 		566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */; };
 		5679F1901F8CACE4009E87FE /* LSDeviceComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5679F18F1F8CACE4009E87FE /* LSDeviceComponent.framework */; };
@@ -143,6 +144,8 @@
 		566D0B282060D717005FFCC6 /* DWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWebViewController.m; sourceTree = "<group>"; };
 		566D0B2A2060D8A1005FFCC6 /* JsApiTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsApiTest.h; sourceTree = "<group>"; };
 		566D0B2B2060D8A1005FFCC6 /* JsApiTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsApiTest.m; sourceTree = "<group>"; };
+		566D0B2D2060FD30005FFCC6 /* JsApiShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsApiShare.h; sourceTree = "<group>"; };
+		566D0B2E2060FD30005FFCC6 /* JsApiShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsApiShare.m; sourceTree = "<group>"; };
 		566EDCC81F20809300EDA8C4 /* VueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VueController.swift; sourceTree = "<group>"; };
 		566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		5679F18F1F8CACE4009E87FE /* LSDeviceComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LSDeviceComponent.framework; sourceTree = "<group>"; };
@@ -571,6 +574,8 @@
 				566D0B282060D717005FFCC6 /* DWebViewController.m */,
 				566D0B2A2060D8A1005FFCC6 /* JsApiTest.h */,
 				566D0B2B2060D8A1005FFCC6 /* JsApiTest.m */,
+				566D0B2D2060FD30005FFCC6 /* JsApiShare.h */,
+				566D0B2E2060FD30005FFCC6 /* JsApiShare.m */,
 			);
 			path = JSBridge;
 			sourceTree = "<group>";
@@ -987,6 +992,7 @@
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				56C6C4F3202975DF001D1FC2 /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
+				566D0B2F2060FD30005FFCC6 /* JsApiShare.m in Sources */,
 				564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */,
 				56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */,
 				566D0B292060D717005FFCC6 /* DWebViewController.m in Sources */,
