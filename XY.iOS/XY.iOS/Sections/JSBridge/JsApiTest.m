@@ -84,4 +84,58 @@
     return @"Wi-Fi";
 }
 
+- (void)getLocation:(NSDictionary *)args :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSDictionary *dic = @{
+                          @"city": @"济南"
+                          };
+    completionHandler(dic, YES);
+}
+
+- (void)closeWindow:(NSDictionary *)args {
+    NSLog(@"关闭当前网页窗口");
+}
+
+- (void)takeOverBackBtn:(NSDictionary *)args :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSString *jscode = [args objectForKey:@"jscode"];
+    BOOL isTakeOver = [[args objectForKey:@"isTakeOver"] boolValue];
+    
+    NSLog(@"jscode = %@", jscode);
+    NSLog(isTakeOver ? @"Yes" : @"No");
+    
+    completionHandler(@{
+                        @"state": @"ok"
+                        }, YES);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TAKE_OVER_BACK_BTN" object:nil userInfo:args];
+}
+
+- (void)scanQRCode:(NSDictionary *)args :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSDictionary *dic = @{
+                          @"result": @"21502121212121",
+                          };
+    completionHandler(dic, YES);
+}
+
+- (void)chooseWXPay:(NSDictionary *)data :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSLog(@"微信支付信息 = %@", data);
+    NSLog(@"调起微信支付");
+    
+    NSString *state = @"cancel";
+    NSDictionary *dic = @{
+                          @"state": state
+                          };
+    completionHandler(dic, YES);
+}
+
+- (void)chooseAliPay:(NSDictionary *)data :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSLog(@"支付宝支付信息 = %@", data);
+    NSLog(@"调起支付宝支付");
+    
+    NSString *state = @"confirm";
+    NSDictionary *dic = @{
+                          @"state": state
+                          };
+    completionHandler(dic, YES);
+}
+
+
 @end
