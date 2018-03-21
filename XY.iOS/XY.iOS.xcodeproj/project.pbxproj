@@ -26,6 +26,9 @@
 		564914101F0F82CA00693F51 /* FaceDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649140F1F0F82C900693F51 /* FaceDetect.m */; };
 		564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564AFD101F57AC26004BE2A5 /* RichTextViewController.m */; };
 		565477071F7C982C001F312C /* XYXImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565477061F7C982C001F312C /* XYXImageViewController.m */; };
+		566D0B292060D717005FFCC6 /* DWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566D0B282060D717005FFCC6 /* DWebViewController.m */; };
+		566D0B2C2060D8A1005FFCC6 /* JsApiTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 566D0B2B2060D8A1005FFCC6 /* JsApiTest.m */; };
+		566D0B2F2060FD30005FFCC6 /* JsApiShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 566D0B2E2060FD30005FFCC6 /* JsApiShare.m */; };
 		566EDCC91F20809300EDA8C4 /* VueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCC81F20809300EDA8C4 /* VueController.swift */; };
 		566EDCCB1F20818D00EDA8C4 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */; };
 		5679F1901F8CACE4009E87FE /* LSDeviceComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5679F18F1F8CACE4009E87FE /* LSDeviceComponent.framework */; };
@@ -137,6 +140,12 @@
 		564AFD101F57AC26004BE2A5 /* RichTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RichTextViewController.m; sourceTree = "<group>"; };
 		565477051F7C982C001F312C /* XYXImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYXImageViewController.h; sourceTree = "<group>"; };
 		565477061F7C982C001F312C /* XYXImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYXImageViewController.m; sourceTree = "<group>"; };
+		566D0B272060D717005FFCC6 /* DWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWebViewController.h; sourceTree = "<group>"; };
+		566D0B282060D717005FFCC6 /* DWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWebViewController.m; sourceTree = "<group>"; };
+		566D0B2A2060D8A1005FFCC6 /* JsApiTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsApiTest.h; sourceTree = "<group>"; };
+		566D0B2B2060D8A1005FFCC6 /* JsApiTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsApiTest.m; sourceTree = "<group>"; };
+		566D0B2D2060FD30005FFCC6 /* JsApiShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsApiShare.h; sourceTree = "<group>"; };
+		566D0B2E2060FD30005FFCC6 /* JsApiShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsApiShare.m; sourceTree = "<group>"; };
 		566EDCC81F20809300EDA8C4 /* VueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VueController.swift; sourceTree = "<group>"; };
 		566EDCCA1F20818D00EDA8C4 /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		5679F18F1F8CACE4009E87FE /* LSDeviceComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LSDeviceComponent.framework; sourceTree = "<group>"; };
@@ -561,6 +570,12 @@
 				56C6C4F2202975DF001D1FC2 /* UIWebView+TS_JavaScriptContext.m */,
 				56A1A9472028258D008F7414 /* JSBridgeController.h */,
 				56A1A9482028258D008F7414 /* JSBridgeController.m */,
+				566D0B272060D717005FFCC6 /* DWebViewController.h */,
+				566D0B282060D717005FFCC6 /* DWebViewController.m */,
+				566D0B2A2060D8A1005FFCC6 /* JsApiTest.h */,
+				566D0B2B2060D8A1005FFCC6 /* JsApiTest.m */,
+				566D0B2D2060FD30005FFCC6 /* JsApiShare.h */,
+				566D0B2E2060FD30005FFCC6 /* JsApiShare.m */,
 			);
 			path = JSBridge;
 			sourceTree = "<group>";
@@ -870,6 +885,7 @@
 				"${BUILT_PRODUCTS_DIR}/WHC_ModelSqliteKit/WHC_ModelSqliteKit.framework",
 				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
 				"${BUILT_PRODUCTS_DIR}/YALSideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/dsBridge/dsBridge.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -888,6 +904,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WHC_ModelSqliteKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/dsBridge.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -947,6 +964,7 @@
 				568A6ABA1F70FAE70023F6AC /* XYLayerViewController.m in Sources */,
 				561F25491F6A63300033959F /* XYXImageZip.m in Sources */,
 				561F25461F6A522B0033959F /* XYXMainViewController.m in Sources */,
+				566D0B2C2060D8A1005FFCC6 /* JsApiTest.m in Sources */,
 				5619118C1F8CBE8200D65D75 /* NSString+LSSettingFailureCode.m in Sources */,
 				56B12E3C1F690BC800F7FAED /* XYMainViewController.m in Sources */,
 				5619118B1F8CBE8200D65D75 /* NSString+LSStrReverseOrder.m in Sources */,
@@ -974,8 +992,10 @@
 				567B20A71F0604A200B970CB /* AppDelegate.swift in Sources */,
 				56C6C4F3202975DF001D1FC2 /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				56D5BF681F3C323D003CB716 /* EffictiveObjc.m in Sources */,
+				566D0B2F2060FD30005FFCC6 /* JsApiShare.m in Sources */,
 				564AFD111F57AC26004BE2A5 /* RichTextViewController.m in Sources */,
 				56CE57EA1F88FED900A1FCD1 /* XYCalculateViewController.m in Sources */,
+				566D0B292060D717005FFCC6 /* DWebViewController.m in Sources */,
 				5649140D1F0F7FE600693F51 /* CameraController.m in Sources */,
 				56B12E411F69113600F7FAED /* XYDeviceManager.m in Sources */,
 				56CB40C91F8DBE0F00225384 /* LSCallReminderViewController.m in Sources */,

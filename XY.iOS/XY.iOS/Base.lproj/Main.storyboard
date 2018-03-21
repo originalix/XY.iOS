@@ -712,7 +712,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="qVd-IC-sdE" kind="relationship" relationship="rootViewController" id="Fga-6T-B8W"/>
+                        <segue destination="bBT-qm-rv7" kind="relationship" relationship="rootViewController" id="doY-EU-G24"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwC-Ce-2Nb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -753,10 +753,10 @@
             </objects>
             <point key="canvasLocation" x="44" y="5871.8140929535239"/>
         </scene>
-        <!--Web Bridge View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="5vL-Sb-aCd">
             <objects>
-                <viewController id="bBT-qm-rv7" customClass="WebBridgeViewController" sceneMemberID="viewController">
+                <viewController id="bBT-qm-rv7" customClass="DWebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VgI-Vd-dgQ"/>
                         <viewControllerLayoutGuide type="bottom" id="osh-6h-60H"/>

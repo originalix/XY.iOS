@@ -15,6 +15,7 @@ target 'XY.iOS' do
     pod "HMSegmentedControl"
     pod "MJRefresh"
     pod 'WebViewJavascriptBridge', '~> 6.0'
+    pod 'dsBridge'
 end
 
 target 'XY.iOSTests' do
