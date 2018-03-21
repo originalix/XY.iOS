@@ -84,4 +84,34 @@
     return @"Wi-Fi";
 }
 
+- (void)getLocation:(NSDictionary *)args :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSDictionary *dic = @{
+                          @"city": @"济南"
+                          };
+    completionHandler(dic, YES);
+}
+
+- (void)closeWindow:(NSDictionary *)args {
+    NSLog(@"关闭当前网页窗口");
+}
+
+- (void)takeOverBackBtn:(NSDictionary *)args :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSString *jscode = [args objectForKey:@"jscode"];
+    BOOL isTakeOver = [[args objectForKey:@"isTakeOver"] boolValue];
+    
+    NSLog(@"jscode = %@", jscode);
+    NSLog(isTakeOver ? @"Yes" : @"No");
+    
+    completionHandler(@{
+                        @"state": @"ok"
+                        }, YES);
+}
+
+- (void)scanQRCode:(NSDictionary *)args :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSDictionary *dic = @{
+                          @"result": @"21502121212121",
+                          };
+    completionHandler(dic, YES);
+}
+
 @end
