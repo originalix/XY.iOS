@@ -12,7 +12,20 @@
 
 - (void)shareTimeline:(NSDictionary *)data :(void (^) (NSString* _Nullable result, BOOL complete))completionHandler {
     NSLog(@"data = %@", data);
-    completionHandler(@"success", YES);
+    NSInteger state = [[data objectForKey:@"state"] integerValue];
+    NSString *result = @"confirm";
+    switch (state) {
+        case 1:
+            result = @"cancel";
+            break;
+        case 2:
+            result = @"fail";
+            break;
+        default:
+            result = @"confirm";
+            break;
+    }
+    completionHandler(result, YES);
 }
 
 @end
