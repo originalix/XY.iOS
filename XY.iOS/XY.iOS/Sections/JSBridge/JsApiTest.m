@@ -105,6 +105,7 @@
     completionHandler(@{
                         @"state": @"ok"
                         }, YES);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TAKE_OVER_BACK_BTN" object:nil userInfo:args];
 }
 
 - (void)scanQRCode:(NSDictionary *)args :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
@@ -113,5 +114,28 @@
                           };
     completionHandler(dic, YES);
 }
+
+- (void)chooseWXPay:(NSDictionary *)data :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSLog(@"微信支付信息 = %@", data);
+    NSLog(@"调起微信支付");
+    
+    NSString *state = @"cancel";
+    NSDictionary *dic = @{
+                          @"state": state
+                          };
+    completionHandler(dic, YES);
+}
+
+- (void)chooseAliPay:(NSDictionary *)data :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSLog(@"支付宝支付信息 = %@", data);
+    NSLog(@"调起支付宝支付");
+    
+    NSString *state = @"confirm";
+    NSDictionary *dic = @{
+                          @"state": state
+                          };
+    completionHandler(dic, YES);
+}
+
 
 @end

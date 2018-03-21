@@ -132,7 +132,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XY.iOS/Sections/JSBridge/JSBridgeController.m"
-            timestampString = "543228201.664222"
+            timestampString = "543314079.49529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -148,7 +148,7 @@
                   moduleName = "XY.iOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Lix/Documents/WorkDemo/XY.iOS/XY.iOS/XY.iOS/Sections/JSBridge/JSBridgeController.m"
-                  timestampString = "543305446.210215"
+                  timestampString = "543314079.56091"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
@@ -163,7 +163,7 @@
                   moduleName = "XY.iOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Lix/Documents/WorkDemo/XY.iOS/XY.iOS/XY.iOS/Sections/JSBridge/JSBridgeController.m"
-                  timestampString = "543305446.21198"
+                  timestampString = "543314079.562752"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -180,12 +180,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XY.iOS/Sections/JSBridge/DWebViewController.m"
-            timestampString = "543228201.664282"
+            timestampString = "543314079.495347"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-refresh"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XY.iOS/Sections/JSBridge/DWebViewController.m"
+            timestampString = "543314079.495658"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-takeoverBackBtn:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
