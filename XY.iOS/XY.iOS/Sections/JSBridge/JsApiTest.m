@@ -25,4 +25,20 @@
     completionHandler([msg stringByAppendingString:@"[ async call]"], YES);
 }
 
+- (void)chooseImage:(NSDictionary *)args :(void (^) (NSDictionary* _Nullable result, BOOL complete)) completionHandler {
+    NSDictionary *dic = @{
+                          @"srcList" : @[
+                                    @"https://google.com"
+                                    ],
+                          };
+    
+    completionHandler(dic, YES);
+}
+
+- (void)previewImage:(NSDictionary *)data {
+    NSLog(@"data = %@", data);
+    // data.current  data.urls
+    NSLog(@"调用图片浏览控件");
+}
+
 @end
