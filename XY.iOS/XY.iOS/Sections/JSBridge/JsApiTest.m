@@ -80,4 +80,8 @@
     }
 }
 
+- (NSString *)getNetworkType:(NSString *)data {
+    return @"Wi-Fi";
+}
+
 @end
